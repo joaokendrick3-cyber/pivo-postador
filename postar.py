@@ -8,7 +8,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 PASTA = Path(__file__).resolve().parent
@@ -16,6 +16,7 @@ API = "https://graph.instagram.com/v23.0"
 TOKEN = os.environ["IG_TOKEN"].strip()
 BASE_URL = os.environ["BASE_URL"].rstrip("/")
 DRY_RUN = os.environ.get("DRY_RUN", "") == "1"
+JANELA_MIN = 6  # o gatilho externo chega ~2 min antes da hora; o robô prepara e espera
 MAX_POR_RODADA = 20 if DRY_RUN else 4
 
 
@@ -46,6 +47,10 @@ def publicar(item, uid):
                 raise RuntimeError(f"processamento falhou: {st}")
         else:
             raise RuntimeError("processamento demorou demais")
+        espera = (datetime.fromisoformat(item["quando"]) - datetime.now(timezone.utc)).total_seconds()
+        if espera > 0 and not DRY_RUN:  # container pronto antes da hora: espera e publica no minuto certo
+            print("aguardando", int(espera), "s para", item["id"], flush=True)
+            time.sleep(espera)
         if DRY_RUN:  # teste a seco: o item foi aceito pelo Instagram, mas NÃO é publicado
             return "TESTE-" + cid
         return chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
@@ -62,7 +67,7 @@ def main():
     for item in sorted(agenda, key=lambda x: x["quando"]):
         if item["id"] in postados:
             continue
-        if datetime.fromisoformat(item["quando"]) > agora and not DRY_RUN:
+        if datetime.fromisoformat(item["quando"]) > agora + timedelta(minutes=JANELA_MIN) and not DRY_RUN:
             continue
         if feitos >= MAX_POR_RODADA:
             break
