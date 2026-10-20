@@ -1,0 +1,34 @@
+name: teste a seco
+# Cria cada item no Instagram só para conferir se o vídeo e a capa são aceitos. NÃO publica nada.
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - ".github/workflows/teste_a_seco.yml"
+concurrency:
+  group: postar
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Teste a seco (nada é publicado)
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          DRY_RUN: "1"
+        run: |
+          for i in 1 2 3 4; do python postar.py; done
+      - name: Guardar o relatório
+        run: |
+          git config user.name "robo-pivo"
+          git config user.email "robo@pivo.local"
+          git add teste_a_seco.json || true
+          git diff --cached --quiet || (git commit -m "relatorio do teste a seco" && git pull --rebase && git push)
