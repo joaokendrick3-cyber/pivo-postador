@@ -1,0 +1,530 @@
+[
+ {
+  "id": "mr03",
+  "tipo": "reel",
+  "quando": "2026-10-29T20:00:00+00:00",
+  "video": "videos/mr03.mp4",
+  "capa": "capas/mr03.jpg",
+  "legenda": "Imposto de renda: o economista André Roncaglia conta o caso de um contribuinte que ganhou R$ 1,3 bilhão em um ano e pagou imposto sobre só R$ 100 milhões, enquanto o trabalhador paga 27,5% na fonte. Segundo ele, o exemplo foi usado por um pesquisador do Ipea.\n\nContexto do PIVÔ: o caso específico não foi localizado pelo PIVÔ (é a fala do convidado). O que os dados oficiais mostram: a Fazenda (SPE) apontou que quase 70% da renda do 0,01% mais rico é isenta (lucros e dividendos, por exemplo). 27,5% é a alíquota máxima da tabela progressiva do IR.\n\nVocê acha justo o trabalhador pagar na fonte e o topo pagar menos? Conta nos comentários.\n\nManda pra quem acha que quem ganha mais sempre paga mais imposto e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: SPE/Ministério da Fazenda, Relatório da Distribuição Pessoal da Renda (IRPF 2023).\n#impostoderenda #imposto #desigualdade #economia #pivoeconomico"
+ },
+ {
+  "id": "mr05",
+  "tipo": "reel",
+  "quando": "2026-10-30T16:00:00+00:00",
+  "video": "videos/mr05.mp4",
+  "capa": "capas/mr05.jpg",
+  "legenda": "Bets: segundo o economista Eduardo Moreira, aposta esportiva gera zero de riqueza nova, é só transferência de renda: um pedacinho vai para quem ganha e um pedação para a banca.\n\nContexto do PIVÔ: é uma opinião do convidado (ele se diz muito crítico do tamanho que as apostas tomaram). Em economia, o jogo de soma zero redistribui dinheiro entre jogadores e a casa fica com a margem. A Lei 14.790/2023 regulamentou as apostas de quota fixa no Brasil.\n\nVocê já apostou ou conhece alguém que vive disso? Conta aqui, sem julgamento.\n\nManda pra quem acha que bet é investimento e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: Lei 14.790/2023.\n#bets #apostas #economia #educacaofinanceira #pivoeconomico"
+ },
+ {
+  "id": "mr06",
+  "tipo": "reel",
+  "quando": "2026-10-30T18:00:00+00:00",
+  "video": "videos/mr06.mp4",
+  "capa": "capas/mr06.jpg",
+  "legenda": "Juros da dívida: segundo o economista Eduardo Moreira, o multiplicador dos juros da dívida é 0,7, ou seja, cada real pago em juros da dívida pública vira menos de um real de crescimento econômico.\n\nContexto do PIVÔ: multiplicador fiscal é quanto o PIB muda para cada real de gasto do governo. O valor 0,7 é a estimativa citada por ele e não é consenso entre economistas; vale ler a fonte antes de repetir o número. No Brasil, o governo pagou 8,86% do PIB em juros nos 12 meses até agosto de 2026 (Banco Central).\n\nPara você, o que pesa mais: os juros da dívida ou o tamanho da dívida? Conta aqui.\n\nManda pra quem acha que juro da dívida não afeta o seu bolso e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: Banco Central (juros nominais do setor público, ago/2026).\n#juros #dividapublica #selic #economia #pivoeconomico"
+ },
+ {
+  "id": "mr08",
+  "tipo": "reel",
+  "quando": "2026-10-30T22:00:00+00:00",
+  "video": "videos/mr08.mp4",
+  "capa": "capas/mr08.jpg",
+  "legenda": "Investimento: o economista André Roncaglia diz que, num estudo dele, a Coreia do Sul investe 102% da renda dos 10% mais ricos, e a elite brasileira, algo em torno de 30%.\n\nContexto do PIVÔ: a conta é de um estudo citado pelo convidado e não foi conferida pelo PIVÔ; o que ele quer mostrar é que os ricos coreanos reinvestiram bem mais do que os brasileiros no desenvolvimento do país. Investir mais que a própria renda significa usar também crédito e lucro acumulado.\n\nPor que você acha que o investimento no Brasil é tão baixo? Conta aqui.\n\nManda pra quem acha que o Brasil investe o suficiente e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia.\n#investimento #coreiadosul #desenvolvimento #economia #pivoeconomico"
+ },
+ {
+  "id": "mr09",
+  "tipo": "reel",
+  "quando": "2026-10-31T16:00:00+00:00",
+  "video": "videos/mr09.mp4",
+  "capa": "capas/mr09.jpg",
+  "legenda": "Pré-sal: segundo o economista André Roncaglia, a Petrobras assumiu o risco de perfurar a cerca de 7 mil metros, num cenário em que ninguém tinha certeza do que havia embaixo, e achou bilhões de barris de petróleo.\n\nContexto do PIVÔ: o pré-sal fica sob uma camada de sal a milhares de metros abaixo do fundo do mar, e a Petrobras anunciou as primeiras grandes descobertas em 2006 e 2007 (campo de Tupi). O argumento do convidado é que algumas atividades de muito risco e retorno incerto foram bancadas pelo Estado.\n\nPara você, quem deve correr esse tipo de risco: Estado ou empresas privadas? Conta aqui.\n\nManda pra quem acha que o Estado nunca fez nada de útil e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: Petrobras (descoberta de Tupi, 2006/2007).\n#petrobras #presal #petroleo #economia #pivoeconomico"
+ },
+ {
+  "id": "mr10",
+  "tipo": "reel",
+  "quando": "2026-10-31T18:00:00+00:00",
+  "video": "videos/mr10.mp4",
+  "capa": "capas/mr10.jpg",
+  "legenda": "Meritocracia: o economista André Roncaglia diz que nunca viu milionário caracterizado por imensa inteligência: segundo ele, eles estão apenas bem posicionados, muitas vezes por herança ou contatos, e associar dinheiro a inteligência revela a máxima da desigualdade.\n\nContexto do PIVÔ: é uma opinião, não uma pesquisa. Estudos sobre mobilidade social mostram que a origem familiar pesa muito na renda futura, mas também há quem enriqueça por esforço e risco próprio.\n\nVocê acredita em meritocracia? Conta nos comentários.\n\nManda pra quem acredita que todo rico enriqueceu só por mérito e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia.\n#meritocracia #desigualdade #riqueza #economia #pivoeconomico"
+ },
+ {
+  "id": "md01",
+  "tipo": "reel",
+  "quando": "2026-11-01T16:00:00+00:00",
+  "video": "videos/md01.mp4",
+  "capa": "capas/md01.jpg",
+  "legenda": "Golpe do \"10% ao mês\": segundo Charles Mendlowicz, quem tem um negócio que rende isso não precisa procurar você para investir.\n\nContexto do PIVÔ: 10% ao mês, com juros compostos, dá cerca de 214% ao ano (1,10 elevado a 12). Nenhum ativo regulado entrega isso de forma segura e contínua. Antes de aplicar, consulte o CNPJ e a autorização da empresa no site da CVM e do Banco Central.\n\nVocê já recebeu uma proposta de investimento que parecia boa demais? Conta nos comentários.\n\nManda pra quem já foi chamado pra \"investir 10% ao mês\" e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#golpe #investimentos #educacaofinanceira #economia #pivoeconomico"
+ },
+ {
+  "id": "md02",
+  "tipo": "reel",
+  "quando": "2026-11-01T18:00:00+00:00",
+  "video": "videos/md02.mp4",
+  "capa": "capas/md02.jpg",
+  "legenda": "Golpe de Madoff: Charles Mendlowicz lembra que o maior esquema de pirâmide financeira dos EUA durou mais de 20 anos e prometia retornos de 8% a 10% ao ano, não ao mês.\n\nContexto do PIVÔ: Bernard Madoff, ex-presidente da Nasdaq, foi preso em dezembro de 2008 e condenado a 150 anos de prisão. Os extratos falsos somavam cerca de US$ 65 bilhões; o prejuízo real dos investidores foi estimado em quase US$ 20 bilhões. A lição: retorno estável demais, sem explicação clara, também é sinal de alerta.\n\nVocê desconfiaria de um gestor que entrega sempre 10% ao ano? Conta nos comentários.\n\nManda pra quem acha que golpe só promete retorno absurdo e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#madoff #golpe #investimentos #economia #pivoeconomico"
+ },
+ {
+  "id": "md03",
+  "tipo": "reel",
+  "quando": "2026-11-01T20:00:00+00:00",
+  "video": "videos/md03.mp4",
+  "capa": "capas/md03.jpg",
+  "legenda": "Pirâmide financeira: Charles Mendlowicz conta que todo amigo que estava em uma pirâmide não acreditou quando ele avisou que era golpe.\n\nContexto do PIVÔ: o dinheiro de quem entra paga quem já está dentro, até o fluxo de novos participantes acabar. No Brasil, a CVM e o Banco Central divulgam alertas sobre empresas sem autorização. Antes de entrar, pergunte: de onde vem o lucro, se não é de novos participantes?\n\nVocê conhece alguém que perdeu dinheiro em pirâmide? Conta nos comentários.\n\nManda pra quem jura que o negócio dele não é pirâmide e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#piramidefinanceira #golpe #educacaofinanceira #economia #pivoeconomico"
+ },
+ {
+  "id": "md04",
+  "tipo": "reel",
+  "quando": "2026-11-01T22:00:00+00:00",
+  "video": "videos/md04.mp4",
+  "capa": "capas/md04.jpg",
+  "legenda": "Plano Collor: Charles Mendlowicz lembra o dia em que o governo bloqueou o dinheiro dos brasileiros para tentar combater a inflação.\n\nContexto do PIVÔ: em março de 1990, o Plano Collor bloqueou por 18 meses os depósitos e aplicações acima de NCr$ 50 mil (cerca de 80% dos ativos financeiros do país). O dinheiro não sumiu: foi devolvido depois, corrigido, em parcelas. Mesmo assim, a inflação não caiu como prometido e só foi controlada com o Plano Real, em 1994.\n\nVocê sabe como seus pais ou avós viveram essa época? Conta nos comentários.\n\nManda pra quem não sabe que o governo já bloqueou a poupança de todo mundo e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#planocollor #poupanca #inflacao #economia #pivoeconomico"
+ },
+ {
+  "id": "md05",
+  "tipo": "reel",
+  "quando": "2026-11-02T16:00:00+00:00",
+  "video": "videos/md05.mp4",
+  "capa": "capas/md05.jpg",
+  "legenda": "Álcool gel e preço livre: Charles Mendlowicz conta que, quando o frasco passou a R$ 25, muita gente entrou no mercado para fabricar, e um mês e meio depois a pilha de álcool em gel estava a R$ 4,99 na farmácia.\n\nContexto do PIVÔ: é o exemplo clássico de oferta reagindo ao preço alto. Mas é a experiência pessoal do convidado, não uma série de dados. Em emergências, defensores do controle de preços argumentam que ele protege quem não consegue pagar. Dá para discutir os dois lados.\n\nVocê é a favor de tabelar preço em emergência? Conta nos comentários.\n\nManda pra quem acha que tabelar preço resolve tudo e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#alcoolgel #oferta #precos #economia #pivoeconomico"
+ },
+ {
+  "id": "md06",
+  "tipo": "reel",
+  "quando": "2026-11-02T18:00:00+00:00",
+  "video": "videos/md06.mp4",
+  "capa": "capas/md06.jpg",
+  "legenda": "Tabelamento de preço: Charles Mendlowicz explica por que, se o governo limita o preço abaixo do custo de produção, o fabricante para de produzir.\n\nContexto do PIVÔ: foi o que se viu no Plano Cruzado (1986), quando os preços foram congelados e produtos como carne e leite sumiram das prateleiras ou passaram a ser vendidos com ágio. O exemplo do convidado usa números hipotéticos (custo de R$ 2 para um preço tabelado de R$ 1,60).\n\nVocê já viu produto sumir da prateleira? Conta nos comentários.\n\nManda pra quem acha que o governo deveria controlar preço e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#tabelamento #oferta #economia #planocruzado #pivoeconomico"
+ },
+ {
+  "id": "md07",
+  "tipo": "reel",
+  "quando": "2026-11-02T20:00:00+00:00",
+  "video": "videos/md07.mp4",
+  "capa": "capas/md07.jpg",
+  "legenda": "Emissão de moeda e inflação: Charles Mendlowicz compara quem diz que imprimir dinheiro não gera inflação a quem diz que leite condensado não engorda.\n\nContexto do PIVÔ: a relação existe, mas não é automática. Depende de quanto se emite, para onde o dinheiro vai e do quanto a economia consegue produzir. EUA e Europa emitiram muito depois de 2008 e a inflação ficou baixa por anos; já depois de 2020 ela subiu em vários países. Economistas divergem sobre o peso de cada causa.\n\nVocê acha que emitir dinheiro sempre gera inflação? Conta nos comentários.\n\nManda pra quem acha que o governo pode imprimir quanto quiser e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#inflacao #moeda #economia #politicamonetaria #pivoeconomico"
+ },
+ {
+  "id": "md08",
+  "tipo": "reel",
+  "quando": "2026-11-02T22:00:00+00:00",
+  "video": "videos/md08.mp4",
+  "capa": "capas/md08.jpg",
+  "legenda": "Inflação e salário: Charles Mendlowicz diz que a inflação alta pune mais os pobres e corrói o salário do funcionalismo público.\n\nContexto do PIVÔ: antes do Plano Real, em 1993, a inflação medida pelo IPCA chegou a cerca de 2.500% no ano. Quem tinha conta em banco protegia o dinheiro em aplicações; quem só tinha salário em espécie via o poder de compra derreter dentro do mês. Por isso a estabilização de 1994 é vista por muitos economistas como uma das maiores conquistas sociais do país.\n\nVocê lembra de remarcar preço no supermercado? Conta nos comentários.\n\nManda pra quem não viveu a hiperinflação e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#inflacao #planoreal #economia #salario #pivoeconomico"
+ },
+ {
+  "id": "md09",
+  "tipo": "reel",
+  "quando": "2026-11-03T16:00:00+00:00",
+  "video": "videos/md09.mp4",
+  "capa": "capas/md09.jpg",
+  "legenda": "Curva de Laffer: Charles Mendlowicz usa um exemplo extremo para explicar por que imposto alto demais desestimula o trabalho: se 100% do salário virasse imposto, ninguém trabalharia.\n\nContexto do PIVÔ: a curva de Laffer descreve esse argumento, em que a arrecadação sobe com a alíquota até um ponto e depois cai, porque as pessoas trabalham menos ou escondem renda. O difícil é saber onde fica o ponto de máximo, e as estimativas variam muito entre estudos.\n\nVocê trabalharia por 50% do que ganha? Conta nos comentários.\n\nManda pra quem reclama de imposto sem saber quanto paga e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#curvadelaffer #impostos #economia #tributacao #pivoeconomico"
+ },
+ {
+  "id": "md10",
+  "tipo": "reel",
+  "quando": "2026-11-03T18:00:00+00:00",
+  "video": "videos/md10.mp4",
+  "capa": "capas/md10.jpg",
+  "legenda": "Carga tributária e Laffer: Charles Mendlowicz afirma que um estudo americano apontaria 33% como a alíquota ótima e que o Brasil já teria passado disso.\n\nContexto do PIVÔ: a carga tributária brasileira ficou perto de 32% do PIB em 2023, segundo o Tesouro Nacional. O número de 33% é a opinião do convidado: outros estudos, como o de Trabandt e Uhlig (2011), estimam picos bem mais altos para os EUA, e o ideal depende do que o governo entrega em serviços. A conta é controversa.\n\nVocê acha que o Brasil paga muito imposto ou recebe pouco em troca? Conta nos comentários.\n\nManda pra quem diz que 33% é o limite e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#impostos #cargatributaria #curvadelaffer #economia #pivoeconomico"
+ },
+ {
+  "id": "md11",
+  "tipo": "reel",
+  "quando": "2026-11-03T20:00:00+00:00",
+  "video": "videos/md11.mp4",
+  "capa": "capas/md11.jpg",
+  "legenda": "Investir com pouco dinheiro: Charles Mendlowicz lembra como era começar a investir 20 anos atrás, com contrato, fax e semanas de espera, e como o gerente tratava quem chegava com R$ 1.000.\n\nContexto do PIVÔ: hoje dá para abrir conta em corretora pelo celular e comprar ações ou títulos do Tesouro Direto a partir de poucas dezenas de reais. O número de pessoas físicas na bolsa (B3) multiplicou várias vezes na última década.\n\nQuanto você tinha quando começou a investir? Conta nos comentários.\n\nManda pra quem acha que investir é coisa de rico e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#investimentos #bolsadevalores #educacaofinanceira #economia #pivoeconomico"
+ },
+ {
+  "id": "md12",
+  "tipo": "reel",
+  "quando": "2026-11-03T22:00:00+00:00",
+  "video": "videos/md12.mp4",
+  "capa": "capas/md12.jpg",
+  "legenda": "Hiperinflação no Brasil: Charles Mendlowicz lembra que, no dia do pagamento, a mãe levava os filhos direto ao supermercado, porque o preço era remarcado todo dia.\n\nContexto do PIVÔ: em março de 1990, a inflação mensal chegou a cerca de 82% (IPCA), o que significa preço dobrando em pouco mais de um mês. Foi por isso que o salário perdia valor a cada dia e quem podia corria para comprar logo. O Plano Real, em 1994, encerrou esse ciclo.\n\nVocê tem alguma lembrança dessa época? Conta nos comentários.\n\nManda pra quem nunca precisou correr pro mercado no dia do salário e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#hiperinflacao #planoreal #inflacao #economia #pivoeconomico"
+ },
+ {
+  "id": "pr01",
+  "tipo": "reel",
+  "quando": "2026-11-04T16:00:00+00:00",
+  "video": "videos/pr01.mp4",
+  "capa": "capas/pr01.jpg",
+  "legenda": "Previdência social: na conversa do Flow, o apresentador afirma que talvez a maior pirâmide financeira do Brasil seja a previdência social, e Thiago Nigro diz que o brasileiro não vai conseguir se aposentar só com ela.\n\nContexto do PIVÔ: o INSS funciona em regime de repartição, em que quem trabalha hoje paga os benefícios de quem já se aposentou. Não é golpe: a contribuição é obrigatória e o governo garante os pagamentos. Mas o envelhecimento da população reduz o número de contribuintes por aposentado, e o INSS tem déficit todos os anos, segundo dados do governo. Por isso houve a reforma de 2019.\n\nVocê pretende complementar a aposentadoria por conta própria? Conta nos comentários.\n\nManda pra quem confia só no INSS e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#previdencia #aposentadoria #inss #economia #pivoeconomico"
+ },
+ {
+  "id": "pr02",
+  "tipo": "reel",
+  "quando": "2026-11-04T18:00:00+00:00",
+  "video": "videos/pr02.mp4",
+  "capa": "capas/pr02.jpg",
+  "legenda": "GameStop: Thiago Nigro conta o que aconteceu no dia em que investidores de varejo abriram a corretora e só encontraram o botão de vender.\n\nContexto do PIVÔ: em janeiro de 2021, a ação da GameStop subiu de cerca de US$ 17 para mais de US$ 480, puxada por investidores que se organizaram no Reddit e pelas posições vendidas de fundos. Em 28 de janeiro, a Robinhood e outras corretoras restringiram a compra do papel, e a cotação desabou nas semanas seguintes. O número de 80% de queda é a conta aproximada do convidado.\n\nVocê entraria numa ação só porque todo mundo está comprando? Conta nos comentários.\n\nManda pra quem acha que bolsa é jogo de sorte e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#gamestop #bolsadevalores #investimentos #economia #pivoeconomico"
+ },
+ {
+  "id": "pr03",
+  "tipo": "reel",
+  "quando": "2026-11-04T20:00:00+00:00",
+  "video": "videos/pr03.mp4",
+  "capa": "capas/pr03.jpg",
+  "legenda": "GameStop e fundos de pensão: Thiago Nigro diz que o dinheiro dos fundos que os investidores de varejo queriam derrubar era, em parte, o de fundos de pensão de professores e trabalhadores.\n\nContexto do PIVÔ: é a leitura dele do caso. Fundos de pensão realmente aplicam parte do patrimônio em gestoras e fundos de investimento, que montam posições vendidas, mas a exposição de cada fundo à GameStop não foi calculada no vídeo. Trate como opinião, não como dado.\n\nVocê acha que investidor pequeno consegue \"ganhar de Wall Street\"? Conta nos comentários.\n\nManda pra quem queria \"quebrar os ricos da bolsa\" e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#gamestop #wallstreet #fundosdepensao #economia #pivoeconomico"
+ },
+ {
+  "id": "pr04",
+  "tipo": "reel",
+  "quando": "2026-11-04T22:00:00+00:00",
+  "video": "videos/pr04.mp4",
+  "capa": "capas/pr04.jpg",
+  "legenda": "Probabilidade no cassino: Thiago Nigro explica por que a maior chance de ganhar no cassino é jogar uma vez só, e por que repetir o jogo piora o resultado.\n\nContexto do PIVÔ: na roleta europeia (um zero), a chance de acertar vermelho ou preto é de cerca de 48,6%; na americana (dois zeros), 47,4%. A vantagem da casa é pequena em cada rodada, mas, quanto mais você aposta, mais a média se aproxima do prejuízo. É o mesmo raciocínio por trás do alerta contra apostas e day trade em excesso.\n\nVocê já perdeu dinheiro tentando \"recuperar\" uma aposta? Conta nos comentários.\n\nManda pra quem acha que é só mais uma rodada e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#cassino #probabilidade #apostas #educacaofinanceira #pivoeconomico"
+ },
+ {
+  "id": "pr05",
+  "tipo": "reel",
+  "quando": "2026-11-05T16:00:00+00:00",
+  "video": "videos/pr05.mp4",
+  "capa": "capas/pr05.jpg",
+  "legenda": "Leitura e erro: Thiago Nigro diz que ler a biografia de um empreendedor é aprender, em poucos dias, o que ele demorou uma vida inteira para descobrir, e reduz a chance de repetir os mesmos erros.\n\nContexto do PIVÔ: é opinião do convidado, sem dado por trás. Vale a ressalva de que biografias de sucesso mostram quem deu certo e deixam de fora quem fez o mesmo e não deu (o chamado viés de sobrevivência).\n\nQual livro mudou sua forma de pensar dinheiro? Conta nos comentários.\n\nManda pra quem não lê há meses e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#livros #empreendedorismo #educacaofinanceira #economia #pivoeconomico"
+ },
+ {
+  "id": "pr06",
+  "tipo": "reel",
+  "quando": "2026-11-05T18:00:00+00:00",
+  "video": "videos/pr06.mp4",
+  "capa": "capas/pr06.jpg",
+  "legenda": "Notícia ruim x notícia boa: Thiago Nigro reclama que a reestruturação do grupo dele virou manchete, mas o crescimento de 134 para 214 pessoas em um ano não saiu em lugar nenhum.\n\nContexto do PIVÔ: os números do grupo são informados por ele, não verificados. Ele cita uma pesquisa sobre o Twitter; o estudo mais conhecido (Vosoughi, Roy e Aral, MIT, na revista Science, 2018) mostrou que notícias falsas chegam a pessoas cerca de 6 vezes mais rápido que as verdadeiras, e não que notícia negativa viraliza mais que a positiva.\n\nVocê acredita mais em notícia ruim do que em notícia boa? Conta nos comentários.\n\nManda pra quem só lê manchete e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#noticias #fakenews #empresas #economia #pivoeconomico"
+ },
+ {
+  "id": "pr07",
+  "tipo": "reel",
+  "quando": "2026-11-05T20:00:00+00:00",
+  "video": "videos/pr07.mp4",
+  "capa": "capas/pr07.jpg",
+  "legenda": "Riqueza e talento: Thiago Nigro afirma que quem fica mais rico não é o mais inteligente, mas quem cria um jeito de os mais inteligentes trabalharem com ele.\n\nContexto do PIVÔ: é opinião do convidado. Em economia, isso se parece com a ideia de que o retorno vem de organizar capital e trabalho de outros (empreender, delegar, ter sócios), e não só do esforço individual. Não dá para provar que \"o mais rico nunca é o mais inteligente\", e sorte e ponto de partida também pesam.\n\nVocê acha que riqueza vem mais de inteligência ou de quem você conhece? Conta nos comentários.\n\nManda pra quem acha que é só estudar mais e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#riqueza #empreendedorismo #negocios #economia #pivoeconomico"
+ },
+ {
+  "id": "pr08",
+  "tipo": "reel",
+  "quando": "2026-11-05T22:00:00+00:00",
+  "video": "videos/pr08.mp4",
+  "capa": "capas/pr08.jpg",
+  "legenda": "Previdência privada: Thiago Nigro diz que o Brasil tem cerca de R$ 1 trilhão em previdência privada e que metade disso rende menos que o CDI.\n\nContexto do PIVÔ: o convidado é sócio do fundo Arca, que ele cita como solução, então é uma fala de quem tem interesse no assunto. O valor total da previdência aberta (PGBL e VGBL) fica na casa de R$ 1 trilhão segundo dados do setor, mas a proporção que fica abaixo do CDI é afirmação dele, sem fonte no vídeo. Antes de aplicar, compare taxas de administração e rentabilidade líquida. Não é recomendação de investimento.\n\nVocê sabe quanto paga de taxa no seu plano de previdência? Conta nos comentários.\n\nManda pra quem tem previdência privada e nunca olhou a rentabilidade e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#previdenciaprivada #cdi #investimentos #educacaofinanceira #pivoeconomico"
+ },
+ {
+  "id": "pr09",
+  "tipo": "reel",
+  "quando": "2026-11-06T16:00:00+00:00",
+  "video": "videos/pr09.mp4",
+  "capa": "capas/pr09.jpg",
+  "legenda": "Erro barato: Thiago Nigro conta que perdeu R$ 5 mil na bolsa quando começou e que isso o fez evitar uma perda de R$ 1 milhão mais tarde.\n\nContexto do PIVÔ: é a experiência pessoal dele, sem dado. A ideia é comum entre investidores: errar com pouco dinheiro, no começo, ensina mais barato do que errar com muito dinheiro depois. Isso não significa que todo prejuízo vire aprendizado.\n\nQual foi o erro mais caro que você já cometeu com dinheiro? Conta nos comentários.\n\nManda pra quem vai começar a investir e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#investimentos #bolsadevalores #educacaofinanceira #economia #pivoeconomico"
+ },
+ {
+  "id": "pr10",
+  "tipo": "reel",
+  "quando": "2026-11-06T18:00:00+00:00",
+  "video": "videos/pr10.mp4",
+  "capa": "capas/pr10.jpg",
+  "legenda": "Networking: Thiago Nigro diz que não dá para pedir algo a uma pessoa de sucesso sem oferecer algo em troca, e que a audiência dele foi o que abriu portas com bilionários.\n\nContexto do PIVÔ: é a lição de negociação dele, baseada em experiência própria. A frase ajuda a entender por que parcerias costumam ser trocas de valor, e não favores.\n\nVocê já pediu ajuda a alguém sem ter nada a oferecer? Conta nos comentários.\n\nManda pra quem quer conhecer gente importante e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#networking #negocios #carreira #economia #pivoeconomico"
+ },
+ {
+  "id": "pr11",
+  "tipo": "reel",
+  "quando": "2026-11-06T20:00:00+00:00",
+  "video": "videos/pr11.mp4",
+  "capa": "capas/pr11.jpg",
+  "legenda": "Dinheiro e propósito: Thiago Nigro diz que, quando você atinge a segurança financeira, deixa de ter uma dívida a provar e passa a se perguntar qual é o próximo passo.\n\nContexto do PIVÔ: ele descreve algo parecido com a pirâmide de necessidades de Maslow: segurança e alimentação vêm antes de outras buscas. A fala é pessoal, não um dado. Estudos sobre renda e bem-estar sugerem que dinheiro ajuda mais a quem tem pouco do que a quem já tem muito, mas os resultados variam.\n\nQuando você sentir que \"tem o suficiente\", o que muda? Conta nos comentários.\n\nManda pra quem acha que ficar rico resolve tudo e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#dinheiro #proposito #liberdadefinanceira #economia #pivoeconomico"
+ },
+ {
+  "id": "pr12",
+  "tipo": "reel",
+  "quando": "2026-11-06T22:00:00+00:00",
+  "video": "videos/pr12.mp4",
+  "capa": "capas/pr12.jpg",
+  "legenda": "Carreira e crença: Thiago Nigro conta que, quando achava que patrão é explorador e funcionário nunca deve trabalhar demais, ele mesmo deixava de crescer na empresa.\n\nContexto do PIVÔ: é uma fala pessoal e opinativa. Em economia do trabalho, desempenho, remuneração e promoção dependem de muitos fatores (setor, empresa, negociação), e os dois lados da relação têm interesses diferentes. Dá para discutir sem tomar partido.\n\nVocê acha que esforço sempre é reconhecido no trabalho? Conta nos comentários.\n\nManda pra quem vive reclamando do chefe e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#carreira #trabalho #empreendedorismo #economia #pivoeconomico"
+ },
+ {
+  "id": "le01",
+  "tipo": "reel",
+  "quando": "2026-11-07T16:00:00+00:00",
+  "video": "videos/le01.mp4",
+  "capa": "capas/le01.jpg",
+  "legenda": "Contratação: Jorge Paulo Lemann diz que gente boa para trabalhar é a que tem vontade enorme de correr atrás e superar dificuldades, e que um currículo cheio de diplomas pode ser bom, mas só isso não resolve.\n\nContexto do PIVÔ: é a filosofia de gestão do grupo de Lemann, ligado ao Garantia, à Ambev e à 3G Capital, que valoriza meritocracia e cultura. Na prática, a maior parte das empresas usa diploma e experiência como filtro, e vontade é difícil de medir numa entrevista.\n\nVocê contrataria um \"fanático\" sem diploma? Conta nos comentários.\n\nManda pra quem acha que só o diploma abre portas e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#lemann #carreira #gestao #economia #pivoeconomico"
+ },
+ {
+  "id": "le02",
+  "tipo": "reel",
+  "quando": "2026-11-07T18:00:00+00:00",
+  "video": "videos/le02.mp4",
+  "capa": "capas/le02.jpg",
+  "legenda": "Sociedade: Guilherme Benchimol, fundador da XP, diz que o executivo tem outras opções, mas o sócio não tem plano B e só tem um caminho, fazer a empresa dar certo.\n\nContexto do PIVÔ: é a lógica de dar participação aos melhores (partnership), comum em bancos de investimento e no grupo de Lemann. Por outro lado, o sócio concentra risco: se a empresa quebra, perde emprego e patrimônio ao mesmo tempo. A fala é de 2019, quando a XP tinha cerca de 2.100 funcionários.\n\nVocê preferiria ser sócio de uma empresa ou ter um salário fixo? Conta nos comentários.\n\nManda pra quem sonha em ser dono do próprio negócio e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#xp #socio #empreendedorismo #economia #pivoeconomico"
+ },
+ {
+  "id": "le03",
+  "tipo": "reel",
+  "quando": "2026-11-07T20:00:00+00:00",
+  "video": "videos/le03.mp4",
+  "capa": "capas/le03.jpg",
+  "legenda": "Dono x executivo: Guilherme Benchimol diz que uma das sortes da XP foi ter montado uma estrutura de donos e estar competindo contra empresas que muitas vezes não têm donos, só executivos.\n\nContexto do PIVÔ: o debate sobre \"skin in the game\" é antigo: quem arrisca o próprio dinheiro tende a decidir com mais cuidado. Mas executivos profissionais também entregam resultados, e nem toda empresa com dono é bem gerida. É a opinião dele, em 2019, quando a XP ainda não tinha aberto capital.\n\nVocê acha que dono cuida melhor do negócio que executivo? Conta nos comentários.\n\nManda pra quem trabalha em empresa grande e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#xp #governanca #empresas #economia #pivoeconomico"
+ },
+ {
+  "id": "le04",
+  "tipo": "reel",
+  "quando": "2026-11-07T22:00:00+00:00",
+  "video": "videos/le04.mp4",
+  "capa": "capas/le04.jpg",
+  "legenda": "Origem da XP: Guilherme Benchimol conta que, quando o dinheiro acabou, pediu R$ 5 mil emprestados a um amigo, e que a ideia de dar curso sobre renda variável, anunciado no jornal Zero Hora, foi o que fez o negócio começar a virar.\n\nContexto do PIVÔ: a XP foi fundada em Porto Alegre em 2001 e, no começo, a ideia era uma escola de investimentos, e não uma corretora. Hoje é uma das maiores plataformas de investimento do país e tem ações negociadas na Nasdaq desde dezembro de 2019. A história é a versão dele.\n\nVocê já ensinou alguém a investir? Conta nos comentários.\n\nManda pra quem quer começar a investir e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#xp #investimentos #bolsadevalores #empreendedorismo #pivoeconomico"
+ },
+ {
+  "id": "le05",
+  "tipo": "reel",
+  "quando": "2026-11-08T16:00:00+00:00",
+  "video": "videos/le05.mp4",
+  "capa": "capas/le05.jpg",
+  "legenda": "Gestão de risco: Guilherme Benchimol diz que começar grande demais é como virar um transatlântico, e que a XP nunca tomou um tombo grande porque sempre começou pequeno e só acelerou quando a confiança aumentou.\n\nContexto do PIVÔ: é a ideia de testar com pouco dinheiro antes de ampliar (como um piloto, um primeiro curso, uma primeira loja), que reduz a perda se o projeto der errado. Nem todo negócio permite começar pequeno, e a fala é de 2019, antes das mudanças que a XP viveu depois.\n\nVocê começaria um negócio pequeno ou grande? Conta nos comentários.\n\nManda pra quem sempre quer fazer tudo de uma vez e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#risco #empreendedorismo #xp #economia #pivoeconomico"
+ },
+ {
+  "id": "le06",
+  "tipo": "reel",
+  "quando": "2026-11-08T18:00:00+00:00",
+  "video": "videos/le06.mp4",
+  "capa": "capas/le06.jpg",
+  "legenda": "Cultura de erro: Guilherme Benchimol diz que é importante se acostumar a errar, e que o lema interno da XP é que quem não erra não está aprendendo, desde que o erro seja pequeno, que se aprenda e que não se repita.\n\nContexto do PIVÔ: errar barato e aprender rápido é um princípio comum em empresas de tecnologia. Em áreas com risco alto para as pessoas (saúde, finanças dos clientes), o limite do erro aceitável é bem menor.\n\nSeu trabalho deixa você errar? Conta nos comentários.\n\nManda pra quem tem medo de errar e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#erro #cultura #aprendizado #economia #pivoeconomico"
+ },
+ {
+  "id": "le07",
+  "tipo": "reel",
+  "quando": "2026-11-08T20:00:00+00:00",
+  "video": "videos/le07.mp4",
+  "capa": "capas/le07.jpg",
+  "legenda": "Erro de estratégia: Guilherme Benchimol conta que a XP chegou a ter 30 agências próprias no Brasil, que ele considera a maior burrada da empresa, e que o erro durou só seis meses.\n\nContexto do PIVÔ: a XP cresceu com o modelo de assessores de investimento autônomos, que atendem os clientes sem agência física. Na época, os bancos dominavam o mercado com agências; a empresa tentou copiá-los e mudou de ideia. A fala é de 2019.\n\nVocê ainda vai a agência de banco? Conta nos comentários.\n\nManda pra quem ainda vai ao banco pagar boleto e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#xp #bancos #investimentos #economia #pivoeconomico"
+ },
+ {
+  "id": "le08",
+  "tipo": "reel",
+  "quando": "2026-11-08T22:00:00+00:00",
+  "video": "videos/le08.mp4",
+  "capa": "capas/le08.jpg",
+  "legenda": "Compra da SABMiller: Jorge Paulo Lemann explica que a compra da SABMiller, segunda maior cervejaria do mundo, foi por causa da África: 1 bilhão de pessoas hoje, 2 bilhões em 20 anos, jovens e com calor.\n\nContexto do PIVÔ: a AB InBev, controlada pelos sócios brasileiros, comprou a SABMiller em 2016 por mais de US$ 100 bilhões, o que a deixou muito endividada (ele mesmo cita dívida de US$ 100 bilhões). A ONU estima que a África tinha cerca de 1,3 bilhão de pessoas em 2019 e chegaria perto de 2,5 bilhões em 2050; a conta dele é aproximada.\n\nVocê acha que a cerveja vai crescer na África? Conta nos comentários.\n\nManda pra quem acha que bilionário só toma risco pequeno e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#lemann #abinbev #africa #cerveja #pivoeconomico"
+ },
+ {
+  "id": "le09",
+  "tipo": "reel",
+  "quando": "2026-11-09T16:00:00+00:00",
+  "video": "videos/le09.mp4",
+  "capa": "capas/le09.jpg",
+  "legenda": "Educação e desigualdade: Jorge Paulo Lemann diz que dedicou muito tempo à educação porque só por meio dela se melhora a desigualdade brasileira, um problema que, para ele, afeta a política e a democracia.\n\nContexto do PIVÔ: Lemann financia bolsas de estudo e projetos de educação por meio da Fundação Lemann. A educação é um dos fatores que mais explicam as diferenças de renda, segundo a literatura econômica, mas não é o único: política tributária, emprego e acesso ao crédito também pesam. É a opinião dele.\n\nO que mais reduziria a desigualdade no Brasil, na sua opinião? Conta nos comentários.\n\nManda pra quem acha que desigualdade tem solução simples e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#educacao #desigualdade #brasil #economia #pivoeconomico"
+ },
+ {
+  "id": "le10",
+  "tipo": "reel",
+  "quando": "2026-11-09T18:00:00+00:00",
+  "video": "videos/le10.mp4",
+  "capa": "capas/le10.jpg",
+  "legenda": "Educação financeira em casa: Jorge Paulo Lemann conta que cobra juros do filho quando empresta dinheiro, para ser justo com os outros filhos e para o filho ver como é a realidade.\n\nContexto do PIVÔ: é uma forma de ensinar o valor do crédito e tratar os irmãos de forma igual. No Brasil, empréstimos entre familiares com juros devem ser formalizados e declarados no imposto de renda. É uma escolha pessoal dele, e não vale como regra para todas as famílias.\n\nVocê emprestaria dinheiro a um filho cobrando juros? Conta nos comentários.\n\nManda pra quem empresta dinheiro pra família e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#educacaofinanceira #juros #familia #economia #pivoeconomico"
+ },
+ {
+  "id": "le11",
+  "tipo": "reel",
+  "quando": "2026-11-09T20:00:00+00:00",
+  "video": "videos/le11.mp4",
+  "capa": "capas/le11.jpg",
+  "legenda": "Mesada x comissão: Guilherme Benchimol conta que as filhas mais velhas recebem R$ 50 de mesada por mês, mas, ao trabalhar uma tarde no café da XP com 20% de comissão sobre as vendas, ganham R$ 72 por ida.\n\nContexto do PIVÔ: R$ 72 de comissão a 20% equivale a R$ 360 vendidos por tarde. A ideia é mostrar na prática a diferença entre renda fixa e renda por resultado. Trabalho infantil é proibido no Brasil; no caso, é uma atividade supervisionada em casa e no escritório da família, e a legislação se aplica de forma diferente a cada situação.\n\nComo você ensinaria seus filhos a ganhar dinheiro? Conta nos comentários.\n\nManda pra quem ganha mesada e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#mesada #educacaofinanceira #criancas #economia #pivoeconomico"
+ },
+ {
+  "id": "le12",
+  "tipo": "reel",
+  "quando": "2026-11-09T22:00:00+00:00",
+  "video": "videos/le12.mp4",
+  "capa": "capas/le12.jpg",
+  "legenda": "Empresa que cresce: Guilherme Benchimol conta que a XP passou de 3 funcionários em 2001 para 300 em 2010 e 2.100 em 2019, e que, ao perceber que ficava lenta, dividiu a empresa em 56 startups internas, cada uma com um \"mini CEO\" e poucas pessoas.\n\nContexto do PIVÔ: é uma estrutura parecida com a de \"squads\" usada por empresas de tecnologia para manter agilidade e responsabilidade. Dividir demais também pode gerar repetição de trabalho e dificuldade de coordenar. Os números são os que ele cita em 2019.\n\nEm empresa grande, quem decide? Conta nos comentários.\n\nManda pra quem trabalha numa empresa lenta e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do painel Cultura e Resultado, Expert XP 2019, com Jorge Paulo Lemann e Guilherme Benchimol.\n#xp #startups #gestao #economia #pivoeconomico"
+ },
+ {
+  "id": "fl01",
+  "tipo": "reel",
+  "quando": "2026-11-10T16:00:00+00:00",
+  "video": "videos/fl01.mp4",
+  "capa": "capas/fl01.jpg",
+  "legenda": "Mobilidade social: Flávio Augusto diz que, no Brasil, uma família leva em média oito gerações para sair da pobreza e chegar à classe média, e que seus pais conseguiram em uma.\n\nContexto do PIVÔ: o número de oito gerações é dele. A OCDE, em estudo de 2018 (\"A Broken Social Elevator?\"), estimou nove gerações para uma família de baixa renda chegar à renda média no Brasil, entre as piores marcas do mundo. As duas contas medem coisas parecidas, mas não idênticas.\n\nVocê acha que a sua família subiu de classe social em quantas gerações? Conta nos comentários.\n\nManda pra quem acha que quem é pobre é porque quer e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#mobilidadesocial #desigualdade #classemedia #economia #pivoeconomico"
+ },
+ {
+  "id": "fl02",
+  "tipo": "reel",
+  "quando": "2026-11-10T18:00:00+00:00",
+  "video": "videos/fl02.mp4",
+  "capa": "capas/fl02.jpg",
+  "legenda": "Salário e empreendedorismo: Flávio Augusto conta que, aos 18 anos, ganhando mais que um salário mínimo com a venda de relógios, passou a questionar por que tanta gente trabalha 44 horas por semana por um salário.\n\nContexto do PIVÔ: 44 horas semanais é o limite da jornada na Constituição (8 horas por dia). É a experiência pessoal dele: vender com margem e sem estrutura é diferente de ter uma empresa, com impostos, estoque, risco e contas fixas.\n\nVocê trocaria a segurança de um salário por um negócio próprio? Conta nos comentários.\n\nManda pra quem vive dizendo que \"vai largar tudo e empreender\" e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#empreendedorismo #salario #trabalho #economia #pivoeconomico"
+ },
+ {
+  "id": "fl03",
+  "tipo": "reel",
+  "quando": "2026-11-10T20:00:00+00:00",
+  "video": "videos/fl03.mp4",
+  "capa": "capas/fl03.jpg",
+  "legenda": "Seguro que não paga: Flávio Augusto conta que, ao voltar da Venezuela, em 1994, tinha juntado só um carro zero que foi roubado, e o seguro não pagou.\n\nContexto do PIVÔ: é o relato dele de um episódio de 1993-94. No Brasil, o seguro de automóvel pode negar a indenização em casos previstos na apólice, e o segurado pode recorrer à Susep e ao Procon. Conferir as cláusulas antes de contratar faz diferença.\n\nVocê já teve um seguro que não pagou? Conta nos comentários.\n\nManda pra quem não lê a apólice do seguro e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#seguro #educacaofinanceira #venezuela #economia #pivoeconomico"
+ },
+ {
+  "id": "fl04",
+  "tipo": "reel",
+  "quando": "2026-11-10T22:00:00+00:00",
+  "video": "videos/fl04.mp4",
+  "capa": "capas/fl04.jpg",
+  "legenda": "Aluguel e inquilino: Flávio Augusto afirma que a quantidade de leis que protegem o inquilino que não paga faz um despejo levar até dois anos, e que isso leva o dono a exigir fiador com dois imóveis, o que bloqueia quem está começando.\n\nContexto do PIVÔ: a Lei do Inquilinato (8.245/1991) protege o locatário, mas reformas como a Lei 12.112/2009 aceleraram o despejo por falta de pagamento. O tempo real varia por estado e por caso. A lei também proíbe exigir mais de uma garantia (fiador, caução ou seguro-fiança) ao mesmo tempo. Trata-se da experiência dele nos anos 90.\n\nVocê teve dificuldade para alugar o primeiro imóvel? Conta nos comentários.\n\nManda pra quem está procurando apartamento pra alugar e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#aluguel #inquilino #imoveis #economia #pivoeconomico"
+ },
+ {
+  "id": "fl05",
+  "tipo": "reel",
+  "quando": "2026-11-11T16:00:00+00:00",
+  "video": "videos/fl05.mp4",
+  "capa": "capas/fl05.jpg",
+  "legenda": "Cheque especial: Flávio Augusto conta que abriu a primeira escola da Wise Up usando R$ 20 mil de limite de cheque especial, dele e da esposa, a juros de 12% ao mês.\n\nContexto do PIVÔ: 12% ao mês, com juros compostos, equivale a cerca de 290% ao ano (1,12 elevado a 12). Desde 2020, o cheque especial no Brasil tem teto de 8% ao mês, definido pelo Conselho Monetário Nacional. Usar esse tipo de crédito para abrir um negócio foi uma aposta arriscada que deu certo para ele; não é recomendação.\n\nVocê já usou o cheque especial? Quanto pagou de juros? Conta nos comentários.\n\nManda pra quem usa o cheque especial como renda extra e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#chequeespecial #juros #credito #educacaofinanceira #pivoeconomico"
+ },
+ {
+  "id": "fl06",
+  "tipo": "reel",
+  "quando": "2026-11-11T18:00:00+00:00",
+  "video": "videos/fl06.mp4",
+  "capa": "capas/fl06.jpg",
+  "legenda": "Capital de giro: Flávio Augusto diz que o dinheiro mais barato que um negócio pode ter é o que o cliente paga pelo produto, e não o do banco nem o do sócio.\n\nContexto do PIVÔ: é a lógica de financiar a operação com pagamento adiantado (matrícula, pré-venda), sem juros nem diluição de participação. Funciona quando o produto vende de verdade; se a venda cai, a empresa fica com contas e sem caixa.\n\nVocê já pagou antecipado por um produto que ainda não existia? Conta nos comentários.\n\nManda pra quem quer abrir um negócio e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#empreendedorismo #fluxodecaixa #negocios #economia #pivoeconomico"
+ },
+ {
+  "id": "fl07",
+  "tipo": "reel",
+  "quando": "2026-11-11T20:00:00+00:00",
+  "video": "videos/fl07.mp4",
+  "capa": "capas/fl07.jpg",
+  "legenda": "Por que empresas quebram: Flávio Augusto diz que dá para abrir um negócio com muito capital e pouco conhecimento, ou com pouco capital e muito conhecimento, mas com pouco dos dois a empresa morre, e afirma que 80% fecham antes de completar 10 anos.\n\nContexto do PIVÔ: o número de 80% é dele. Os dados variam bastante conforme a fonte e a metodologia (Sebrae e IBGE medem coisas diferentes, incluindo ou não o MEI); confira a fonte antes de citar. A ideia central, de que falta de caixa e de conhecimento são causas comuns de fechamento, é bem aceita.\n\nVocê abriria um negócio com pouco dinheiro e muita experiência? Conta nos comentários.\n\nManda pra quem sonha em abrir empresa e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#empreendedorismo #sebrae #negocios #economia #pivoeconomico"
+ },
+ {
+  "id": "fl08",
+  "tipo": "reel",
+  "quando": "2026-11-11T22:00:00+00:00",
+  "video": "videos/fl08.mp4",
+  "capa": "capas/fl08.jpg",
+  "legenda": "Telefone antes da privatização: Flávio Augusto lembra que, antes das privatizações, uma linha de telefone custava cerca de US$ 3.500 (uns R$ 20 mil hoje), era bem de família e entrava na declaração de imposto de renda.\n\nContexto do PIVÔ: o sistema Telebrás foi privatizado em julho de 1998, depois da Lei Geral de Telecomunicações (1997). Antes disso, comprar uma linha era caro e demorava; os valores variavam por cidade. Depois, a linha passou a custar pouco ou nada, e o celular se espalhou. A conversão para reais de hoje é conta dele.\n\nVocê lembra de esperar anos por uma linha de telefone? Conta nos comentários.\n\nManda pra quem nunca viveu sem celular e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#privatizacao #telecomunicacoes #historia #economia #pivoeconomico"
+ },
+ {
+  "id": "fl09",
+  "tipo": "reel",
+  "quando": "2026-11-12T16:00:00+00:00",
+  "video": "videos/fl09.mp4",
+  "capa": "capas/fl09.jpg",
+  "legenda": "Valuation: Flávio Augusto explica que equity é o valor do negócio, e que um negócio com R$ 25 milhões de lucro por ano e uma proposta de R$ 200 milhões já valia mais do que o lucro, porque o dinheiro aplicado em renda fixa dava mais que os R$ 25 milhões.\n\nContexto do PIVÔ: o valor de uma empresa costuma ser calculado pelo fluxo de caixa futuro trazido a valor presente. Em 2008 a Selic estava perto de 13% ao ano, então R$ 200 milhões em renda fixa rendiam mais de R$ 25 milhões por ano. É uma explicação simplificada, não uma avaliação real da empresa.\n\nVocê sabe quanto vale o negócio onde trabalha? Conta nos comentários.\n\nManda pra quem tem um negócio e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#equity #valuation #empresas #economia #pivoeconomico"
+ },
+ {
+  "id": "fl10",
+  "tipo": "reel",
+  "quando": "2026-11-12T18:00:00+00:00",
+  "video": "videos/fl10.mp4",
+  "capa": "capas/fl10.jpg",
+  "legenda": "Destino de uma empresa: Flávio Augusto diz que todo negócio tem apenas três destinos, falir, ser vendido ou ser herdado, e que ser vendido é o melhor para o dono, que aproveita em vida.\n\nContexto do PIVÔ: é uma opinião, e há outros destinos (fusão, abertura de capital, empresa que segue sendo gerida por profissionais). Vender a empresa dá liquidez ao dono, mas também significa abrir mão do controle, e nem toda venda é boa para funcionários e clientes.\n\nVocê preferiria vender a empresa ou deixá-la de herança? Conta nos comentários.\n\nManda pra quem tem um negócio de família e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#empreendedorismo #vendadeempresa #negocios #economia #pivoeconomico"
+ },
+ {
+  "id": "fl11",
+  "tipo": "reel",
+  "quando": "2026-11-12T20:00:00+00:00",
+  "video": "videos/fl11.mp4",
+  "capa": "capas/fl11.jpg",
+  "legenda": "Cultura e venda de empresas: Flávio Augusto diz que, nos Estados Unidos, quem vende um negócio recebe flores da vizinhança, enquanto no Brasil as pessoas associam a venda a algo que deu errado.\n\nContexto do PIVÔ: é uma impressão cultural dele, sem pesquisa por trás. Nos EUA, a venda de empresas (\"exit\") é um objetivo comum de startups financiadas por capital de risco; no Brasil, empresas familiares e a desconfiança com o empreendedor ainda são fortes, mas o cenário de startups vem mudando.\n\nVocê acha que vender uma empresa é sinal de sucesso ou de fracasso? Conta nos comentários.\n\nManda pra quem acha que empresário só ganha dinheiro explorando e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#empreendedorismo #startups #negocios #economia #pivoeconomico"
+ },
+ {
+  "id": "fl12",
+  "tipo": "reel",
+  "quando": "2026-11-12T22:00:00+00:00",
+  "video": "videos/fl12.mp4",
+  "capa": "capas/fl12.jpg",
+  "legenda": "Venda de empresa: Flávio Augusto conta que recusou uma proposta de R$ 200 milhões pela Wise Up aos 33 anos, e que o lucro operacional da empresa foi de R$ 25 milhões em 2008 para R$ 87 milhões em 2012.\n\nContexto do PIVÔ: os números de lucro são informados por ele. A Wise Up foi vendida em 2013 ao grupo Abril Educação por cerca de R$ 877 milhões, segundo a imprensa da época. Recusar uma boa oferta e acertar não prova que a decisão foi certa: teria sido possível errar.\n\nVocê recusaria uma oferta de R$ 200 milhões aos 33 anos? Conta nos comentários.\n\nManda pra quem acha que sempre tem que vender na primeira boa oferta e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #765 com Flávio Augusto.\n#valuation #empresas #empreendedorismo #economia #pivoeconomico"
+ },
+ {
+  "id": "cn01",
+  "tipo": "reel",
+  "quando": "2026-11-13T16:00:00+00:00",
+  "video": "videos/cn01.mp4",
+  "capa": "capas/cn01.jpg",
+  "legenda": "Nota de R$ 200: Roberto Campos Neto, ex-presidente do Banco Central, conta que em 2020 o auxílio emergencial exigiu tanto dinheiro vivo que o BC não tinha papel-moeda suficiente. A solução foi imprimir a nota de R$ 200 na máquina da nota de R$ 20, e por isso as duas têm tamanho parecido.\n\nContexto do PIVÔ: A nota de R$ 200 foi lançada em setembro de 2020, durante a pandemia. A explicação sobre a máquina é dele, não é um comunicado oficial.\n\nVocê sabia essa história da nota de R$ 200? Conta nos comentários.\n\nManda pra quem ainda acha que dinheiro só existe na conta e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#notade200 #bancocentral #auxilioemergencial #economia #pivoeconomico"
+ },
+ {
+  "id": "cn02",
+  "tipo": "reel",
+  "quando": "2026-11-13T18:00:00+00:00",
+  "video": "videos/cn02.mp4",
+  "capa": "capas/cn02.jpg",
+  "legenda": "Pix Saque e Pix Troco: Roberto Campos Neto, ex-presidente do Banco Central, conta que a ideia do Pix Saque e do Pix Troco nasceu quando ele esqueceu a gravata antes de um casamento, não tinha dinheiro vivo e perdeu tempo numa fila de caixa eletrônico.\n\nContexto do PIVÔ: O Pix Saque e o Pix Troco começaram a valer em novembro de 2021: dá para sacar dinheiro no caixa da loja, ou receber troco por Pix.\n\nVocê já usou o Pix Saque ou o Pix Troco? Conta nos comentários.\n\nManda pra quem ainda acha que o Pix só serve para pagar conta e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#pix #bancocentral #camposneto #economia #pivoeconomico"
+ },
+ {
+  "id": "cn03",
+  "tipo": "reel",
+  "quando": "2026-11-13T20:00:00+00:00",
+  "video": "videos/cn03.mp4",
+  "capa": "capas/cn03.jpg",
+  "legenda": "Pix e cartão de crédito: Roberto Campos Neto, ex-presidente do Banco Central, diz que o Pix tende a ganhar a função de cartão de crédito. Hoje a compra no cartão passa por maquininha, bandeira e banco emissor, cada um com seu custo. Na trilha do Pix, a conta seria menor para a loja e para quem compra.\n\nContexto do PIVÔ: É uma projeção dele, não um produto já lançado. O custo do cartão para o lojista varia conforme o contrato.\n\nVocê trocaria o cartão de crédito pelo Pix parcelado? Conta nos comentários.\n\nManda pra quem ainda acha que cartão de crédito é o único jeito de parcelar e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#pix #cartaodecredito #bancocentral #economia #pivoeconomico"
+ },
+ {
+  "id": "cn04",
+  "tipo": "reel",
+  "quando": "2026-11-13T22:00:00+00:00",
+  "video": "videos/cn04.mp4",
+  "capa": "capas/cn04.jpg",
+  "legenda": "Pix e a cidade sem banco: Roberto Campos Neto, ex-presidente do Banco Central, conta que uma vendedora de artesanato disse que o Pix salvou a vida dela, e que uma cidade pequena sem agência nem caixa eletrônico passou a rodar toda no Pix, com novos negócios surgindo.\n\nContexto do PIVÔ: As histórias são relatos dele, sem dado oficial de cada cidade. O Pix foi lançado em novembro de 2020.\n\nO Pix mudou a sua rotina ou a de alguém que você conhece? Conta nos comentários.\n\nManda pra quem ainda acha que o Pix só serve para quem mora em cidade grande e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#pix #inclusaofinanceira #bancocentral #economia #pivoeconomico"
+ },
+ {
+  "id": "cn05",
+  "tipo": "reel",
+  "quando": "2026-11-14T16:00:00+00:00",
+  "video": "videos/cn05.mp4",
+  "capa": "capas/cn05.jpg",
+  "legenda": "Taxar o Pix: Roberto Campos Neto, ex-presidente do Banco Central, diz que nunca acreditou que o governo fosse taxar o Pix: se só um tipo de transferência fosse taxado, as pessoas migrariam para os outros e acabariam com o Pix.\n\nContexto do PIVÔ: Em janeiro de 2025, a Receita Federal revogou uma norma sobre monitoramento de Pix depois da onda de boatos de que haveria imposto. Não existe taxa sobre o Pix para pessoas físicas.\n\nVocê chegou a acreditar nesse boato? Conta nos comentários.\n\nManda pra quem ainda acha que o governo vai cobrar imposto sobre o Pix e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#pix #imposto #bancocentral #economia #pivoeconomico"
+ },
+ {
+  "id": "cn06",
+  "tipo": "reel",
+  "quando": "2026-11-14T18:00:00+00:00",
+  "video": "videos/cn06.mp4",
+  "capa": "capas/cn06.jpg",
+  "legenda": "CPMF: Roberto Campos Neto, ex-presidente do Banco Central, diz que não gosta da CPMF: o imposto passa por toda a cadeia, premia quem tem poucos elos de produção e distorce decisões de poupança. Ele seria contra, independente do governo.\n\nContexto do PIVÔ: A CPMF cobrava 0,38% sobre movimentações financeiras e acabou em 2007. A opinião é dele, e há economistas que defendem o imposto pela facilidade de arrecadar.\n\nVocê é a favor ou contra um imposto como a CPMF? Conta nos comentários.\n\nManda pra quem ainda acha que a CPMF resolve o problema do caixa do governo e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#cpmf #imposto #economia #bancocentral #pivoeconomico"
+ },
+ {
+  "id": "cn07",
+  "tipo": "reel",
+  "quando": "2026-11-14T20:00:00+00:00",
+  "video": "videos/cn07.mp4",
+  "capa": "capas/cn07.jpg",
+  "legenda": "Dívida pública do Brasil: Roberto Campos Neto, ex-presidente do Banco Central, diz que a dívida nominal do Brasil caminha para crescer cerca de 9,5% ao ano, em boa parte por causa dos juros. Sem superávit primário, a dívida só cresce, e o mercado já coloca essa trajetória no preço.\n\nContexto do PIVÔ: Resultado primário é receita menos despesa, sem contar os juros da dívida. O número de 9,5% é a estimativa dele em abril de 2025.\n\nVocê sabia que os juros da dívida pesam tanto? Conta nos comentários.\n\nManda pra quem ainda acha que dívida do governo não afeta o seu bolso e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#dividapublica #juros #bancocentral #economia #pivoeconomico"
+ },
+ {
+  "id": "cn08",
+  "tipo": "reel",
+  "quando": "2026-11-14T22:00:00+00:00",
+  "video": "videos/cn08.mp4",
+  "capa": "capas/cn08.jpg",
+  "legenda": "Inflação e os jovens: Roberto Campos Neto, ex-presidente do Banco Central, diz que os jovens já entendem melhor que a inflação não é culpa do empresário que sobe o preço, e sim de o governo gastar mais do que arrecada. Para ele, isso faz a inflação pesar mais rápido na popularidade de quem governa.\n\nContexto do PIVÔ: É opinião dele. Economistas discutem várias causas da inflação, como câmbio, clima e demanda.\n\nVocê acha que o jovem entende mais de economia hoje? Conta nos comentários.\n\nManda pra quem ainda acha que inflação é culpa do mercado que sobe o preço e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#inflacao #economia #bancocentral #juros #pivoeconomico"
+ },
+ {
+  "id": "cn09",
+  "tipo": "reel",
+  "quando": "2026-11-15T16:00:00+00:00",
+  "video": "videos/cn09.mp4",
+  "capa": "capas/cn09.jpg",
+  "legenda": "Preço saliente: Roberto Campos Neto, ex-presidente do Banco Central, explica por que a gente sente a inflação diferente do índice: o preço saliente é aquele que você lembra, como a picanha, o ovo, o café ou a gasolina na bomba. Se ele sobe, parece que a inflação subiu, mesmo com o resto estável.\n\nContexto do PIVÔ: Preço saliente é um conceito da economia comportamental. A inflação oficial mede uma cesta de centenas de itens, não só os que mais aparecem.\n\nQual preço você mais sente pesar no bolso? Conta nos comentários.\n\nManda pra quem ainda acha que a inflação que eu sinto é igual à do IBGE e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#inflacao #precos #ipca #economia #pivoeconomico"
+ },
+ {
+  "id": "cn10",
+  "tipo": "reel",
+  "quando": "2026-11-15T18:00:00+00:00",
+  "video": "videos/cn10.mp4",
+  "capa": "capas/cn10.jpg",
+  "legenda": "Gasto do governo: Roberto Campos Neto, ex-presidente do Banco Central, diz que há um ponto em que mais gasto do governo significa menos: quando as pessoas percebem que o dinheiro colocado na economia vai custar caro lá na frente, reagem agora, e o efeito pode ser maior que o estímulo.\n\nContexto do PIVÔ: É a lógica de expectativas racionais, defendida por parte dos economistas e contestada por outros. É opinião dele.\n\nGastar mais sempre estimula a economia? Conta nos comentários.\n\nManda pra quem ainda acha que o governo gastar mais sempre faz a economia crescer e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#gastopublico #economia #bancocentral #juros #pivoeconomico"
+ },
+ {
+  "id": "cn11",
+  "tipo": "reel",
+  "quando": "2026-11-15T20:00:00+00:00",
+  "video": "videos/cn11.mp4",
+  "capa": "capas/cn11.jpg",
+  "legenda": "Autoridade do argumento: Roberto Campos Neto, ex-presidente do Banco Central, conta que mandou fazer um quadro na sala do Copom com a frase: a autoridade do argumento vale mais que o argumento da autoridade. A ideia era estimular debate e trabalhar com quem pensa diferente.\n\nContexto do PIVÔ: O Copom é o comitê que decide a taxa Selic. Campos Neto presidiu o BC de 2019 a 2024.\n\nNo seu trabalho, quem decide é o argumento ou o chefe? Conta nos comentários.\n\nManda pra quem ainda acha que o Banco Central decide tudo sozinho e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#bancocentral #copom #selic #economia #pivoeconomico"
+ },
+ {
+  "id": "cn12",
+  "tipo": "reel",
+  "quando": "2026-11-15T22:00:00+00:00",
+  "video": "videos/cn12.mp4",
+  "capa": "capas/cn12.jpg",
+  "legenda": "Stablecoin e criptomoeda: Roberto Campos Neto, ex-presidente do Banco Central, explica a diferença: a stablecoin é uma versão digital de um ativo real guardado como lastro, como um dólar, e a criptomoeda não tem lastro.\n\nContexto do PIVÔ: Nem toda stablecoin é bem lastreada, e é por isso que ele defende regulação para garantir o lastro. A explicação é simplificada.\n\nVocê confiaria numa stablecoin? Conta nos comentários.\n\nManda pra quem ainda acha que stablecoin e criptomoeda são a mesma coisa e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#stablecoin #criptomoedas #bancocentral #economia #pivoeconomico"
+ }
+]
