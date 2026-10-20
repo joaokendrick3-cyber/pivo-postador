@@ -30,7 +30,19 @@ def chamar(url, dados=None):
         raise RuntimeError(f"HTTP {e.code}: {corpo[:400]}") from None
 
 
-def publicar(item, uid):
+def esperar(cid, tentativas=60):
+    """Espera o Instagram terminar de processar um container (até ~10 min)."""
+    for _ in range(tentativas):
+        time.sleep(10)
+        st = chamar(f"{API}/{cid}?fields=status_code,status&access_token={TOKEN}")
+        if st.get("status_code") == "FINISHED":
+            return
+        if st.get("status_code") in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"processamento falhou: {st}")
+    raise RuntimeError("processamento demorou demais")
+
+
+def criar_container(item, uid):
     base = f"{BASE_URL}/"
     if item["tipo"] == "reel":
         dados = {"media_type": "REELS", "video_url": base + item["video"], "caption": item["legenda"],
@@ -38,23 +50,31 @@ def publicar(item, uid):
         if item.get("capa"):
             dados["cover_url"] = base + item["capa"]
         cid = chamar(f"{API}/{uid}/media", dados)["id"]
-        for _ in range(60):  # até ~10 min
-            time.sleep(10)
-            st = chamar(f"{API}/{cid}?fields=status_code,status&access_token={TOKEN}")
-            if st.get("status_code") == "FINISHED":
-                break
-            if st.get("status_code") in ("ERROR", "EXPIRED"):
-                raise RuntimeError(f"processamento falhou: {st}")
-        else:
-            raise RuntimeError("processamento demorou demais")
-        espera = (datetime.fromisoformat(item["quando"]) - datetime.now(timezone.utc)).total_seconds()
-        if espera > 0 and not DRY_RUN:  # container pronto antes da hora: espera e publica no minuto certo
-            print("aguardando", int(espera), "s para", item["id"], flush=True)
-            time.sleep(espera)
-        if DRY_RUN:  # teste a seco: o item foi aceito pelo Instagram, mas NÃO é publicado
-            return "TESTE-" + cid
-        return chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
+        esperar(cid)
+        return cid
+    if item["tipo"] == "carrossel":  # 2 a 10 imagens JPEG; cada imagem vira um container filho
+        filhos = []
+        for img in item["imagens"]:
+            fid = chamar(f"{API}/{uid}/media", {"image_url": base + img, "is_carousel_item": "true",
+                                                "access_token": TOKEN})["id"]
+            esperar(fid, 18)
+            filhos.append(fid)
+        cid = chamar(f"{API}/{uid}/media", {"media_type": "CAROUSEL", "children": ",".join(filhos),
+                                            "caption": item["legenda"], "access_token": TOKEN})["id"]
+        esperar(cid, 18)
+        return cid
     raise RuntimeError("tipo não suportado: " + item["tipo"])
+
+
+def publicar(item, uid):
+    cid = criar_container(item, uid)
+    espera = (datetime.fromisoformat(item["quando"]) - datetime.now(timezone.utc)).total_seconds()
+    if espera > 0 and not DRY_RUN:  # container pronto antes da hora: espera e publica no minuto certo
+        print("aguardando", int(espera), "s para", item["id"], flush=True)
+        time.sleep(espera)
+    if DRY_RUN:  # teste a seco: o item foi aceito pelo Instagram, mas NÃO é publicado
+        return "TESTE-" + cid
+    return chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
 
 
 def main():
