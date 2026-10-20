@@ -1,6 +1,6 @@
-"""Robô do PIVÔ: publica no Instagram (API oficial) os itens de agenda.json cuja hora já passou.
+"""Robô do PIVÔ: publica no Instagram e na Página do Facebook (APIs oficiais) os itens de agenda.json cuja hora já passou.
 Roda no GitHub Actions a cada 15 minutos (sem o PC ligado). Só usa a biblioteca padrão.
-Variáveis: IG_TOKEN (secret), BASE_URL (endereço público da pasta, ex.: https://usuario.github.io/pivo-postador)."""
+Variáveis: IG_TOKEN, FB_PAGE_ID e FB_PAGE_TOKEN (secrets), BASE_URL (endereço público da pasta, ex.: https://usuario.github.io/pivo-postador)."""
 import json
 import os
 import sys
@@ -15,6 +15,9 @@ PASTA = Path(__file__).resolve().parent
 API = "https://graph.instagram.com/v23.0"
 TOKEN = os.environ["IG_TOKEN"].strip()
 BASE_URL = os.environ["BASE_URL"].rstrip("/")
+FB_ID = os.environ.get("FB_PAGE_ID", "").strip()
+FB_TOKEN = os.environ.get("FB_PAGE_TOKEN", "").strip()
+FB_API = "https://graph.facebook.com/v23.0"
 DRY_RUN = os.environ.get("DRY_RUN", "") == "1"
 JANELA_MIN = 6  # o gatilho externo chega ~2 min antes da hora; o robô prepara e espera
 MAX_POR_RODADA = 20 if DRY_RUN else 4
@@ -77,6 +80,72 @@ def publicar(item, uid):
     return chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
 
 
+def esperar_hora(item):
+    espera = (datetime.fromisoformat(item["quando"]) - datetime.now(timezone.utc)).total_seconds()
+    if espera > 0 and not DRY_RUN:
+        print("aguardando", int(espera), "s para", item["id"], flush=True)
+        time.sleep(espera)
+
+
+def multipart(url, campos, arquivo):
+    """POST multipart/form-data com um arquivo (campo 'source')."""
+    lim = "----pivo" + str(int(time.time() * 1000))
+    nl = bytes([13, 10])  # CRLF
+    partes = []
+    for k, v in campos.items():
+        partes.append(("--" + lim).encode() + nl + f'Content-Disposition: form-data; name="{k}"'.encode() + nl + nl + str(v).encode())
+    partes.append(("--" + lim).encode() + nl + f'Content-Disposition: form-data; name="source"; filename="{arquivo.name}"'.encode()
+                  + nl + b"Content-Type: image/jpeg" + nl + nl + arquivo.read_bytes())
+    corpo = nl.join(partes) + nl + ("--" + lim + "--").encode() + nl
+    req = urllib.request.Request(url, data=corpo, headers={"Content-Type": f"multipart/form-data; boundary={lim}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:300]}") from None
+
+
+def publicar_fb(item):
+    """Publica o mesmo item na Página do Facebook (vídeo ou carrossel de fotos)."""
+    base = f"{BASE_URL}/"
+    if DRY_RUN:  # teste a seco: só confirma que o token enxerga a Página
+        nome = chamar(f"{FB_API}/{FB_ID}?fields=name&access_token={FB_TOKEN}")["name"]
+        return "TESTE-FB-" + nome
+    if item["tipo"] == "reel":
+        esperar_hora(item)
+        r = chamar(f"{FB_API}/{FB_ID}/videos", {"file_url": base + item["video"], "description": item["legenda"],
+                                                "published": "true", "access_token": FB_TOKEN})
+        vid = r["id"]
+        if item.get("capa"):  # capa própria (se falhar, o Facebook escolhe um quadro)
+            try:
+                multipart(f"{FB_API}/{vid}/thumbnails", {"is_preferred": "true", "access_token": FB_TOKEN}, PASTA / item["capa"])
+            except Exception as e:  # noqa: BLE001
+                print("capa do Facebook não aplicada:", e, flush=True)
+        return vid
+    if item["tipo"] == "carrossel":
+        ids = []
+        for img in item["imagens"]:
+            ids.append(chamar(f"{FB_API}/{FB_ID}/photos", {"url": base + img, "published": "false",
+                                                           "access_token": FB_TOKEN})["id"])
+        esperar_hora(item)
+        anexos = json.dumps([{"media_fbid": i} for i in ids])
+        return chamar(f"{FB_API}/{FB_ID}/feed", {"message": item["legenda"], "attached_media": anexos,
+                                                 "access_token": FB_TOKEN})["id"]
+    raise RuntimeError("tipo não suportado: " + item["tipo"])
+
+
+def redes_do_item(item):
+    r = item.get("redes") or ["ig", "fb"]
+    return [x for x in r if x == "ig" or (x == "fb" and FB_ID and FB_TOKEN)]
+
+
+def estado_do_item(postados, iid):
+    v = postados.get(iid)
+    if not v:
+        return {}
+    return {"ig": v} if "media_id" in v else v   # formato antigo era só do Instagram
+
+
 def main():
     agenda = json.loads((PASTA / "agenda.json").read_text(encoding="utf-8"))
     pf = PASTA / ("teste_a_seco.json" if DRY_RUN else "postados.json")
@@ -85,19 +154,25 @@ def main():
     uid = chamar(f"{API}/me?fields=user_id&access_token={TOKEN}")["user_id"]
     feitos = 0
     for item in sorted(agenda, key=lambda x: x["quando"]):
-        if item["id"] in postados:
+        est = estado_do_item(postados, item["id"])
+        pend = [r for r in redes_do_item(item) if r not in est]
+        if not pend:
             continue
         if datetime.fromisoformat(item["quando"]) > agora + timedelta(minutes=JANELA_MIN) and not DRY_RUN:
             continue
         if feitos >= MAX_POR_RODADA:
             break
-        try:
-            mid = publicar(item, uid)
-            postados[item["id"]] = {"media_id": mid, "em": agora.isoformat()}
-            print("POSTADO", item["id"], mid, flush=True)
-        except Exception as e:  # noqa: BLE001
-            postados.setdefault("_erros", {})[item["id"]] = str(e)[:300]
-            print("ERRO", item["id"], e, flush=True)
+        for rede in pend:  # Instagram primeiro (ele espera a hora exata); o Facebook sai logo depois
+            try:
+                mid = publicar(item, uid) if rede == "ig" else publicar_fb(item)
+                est[rede] = {"media_id": mid, "em": datetime.now(timezone.utc).isoformat()}
+                postados.get("_erros", {}).pop(f"{item['id']}:{rede}", None)
+                print("POSTADO", rede, item["id"], mid, flush=True)
+            except Exception as e:  # noqa: BLE001
+                postados.setdefault("_erros", {})[f"{item['id']}:{rede}"] = str(e)[:300]
+                print("ERRO", rede, item["id"], e, flush=True)
+        if est:
+            postados[item["id"]] = est
         feitos += 1
         pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
     print("rodada ok:", feitos, "item(ns)")
