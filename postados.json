@@ -1,6 +1,11 @@
 {
  "pp02": {
-  "media_id": "18127259503769534",
-  "em": "2026-10-20T17:59:34.867623+00:00"
+  "ig": {
+   "media_id": "18127259503769534",
+   "em": "2026-10-20T17:59:34.867623+00:00"
+  }
+ },
+ "_erros": {
+  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\""
  }
 }
