@@ -19,6 +19,8 @@ jobs:
       - name: Publicar o que já está na hora
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: python postar.py
       - name: Guardar o que foi postado
