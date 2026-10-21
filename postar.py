@@ -134,9 +134,13 @@ def publicar_fb(item):
     raise RuntimeError("tipo não suportado: " + item["tipo"])
 
 
+PAUSA_FB_HORAS = 24   # depois de um erro 368 (limite de spam) o Facebook fica quieto, para não prolongar o bloqueio
+FB_PAUSADO = False
+
+
 def redes_do_item(item):
     r = item.get("redes") or ["ig", "fb"]
-    return [x for x in r if x == "ig" or (x == "fb" and FB_ID and FB_TOKEN)]
+    return [x for x in r if x == "ig" or (x == "fb" and FB_ID and FB_TOKEN and not FB_PAUSADO)]
 
 
 def estado_do_item(postados, iid):
@@ -151,6 +155,11 @@ def main():
     pf = PASTA / ("teste_a_seco.json" if DRY_RUN else "postados.json")
     postados = json.loads(pf.read_text(encoding="utf-8")) if pf.exists() else {}
     agora = datetime.now(timezone.utc)
+    global FB_PAUSADO
+    ate = postados.get("_fb_pausa_ate")
+    FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
+    if FB_PAUSADO:
+        print("Facebook em pausa até", ate, flush=True)
     uid = chamar(f"{API}/me?fields=user_id&access_token={TOKEN}")["user_id"]
     feitos = 0
     for item in sorted(agenda, key=lambda x: x["quando"]):
@@ -171,6 +180,9 @@ def main():
             except Exception as e:  # noqa: BLE001
                 postados.setdefault("_erros", {})[f"{item['id']}:{rede}"] = str(e)[:300]
                 print("ERRO", rede, item["id"], e, flush=True)
+                if rede == "fb" and '"code":368' in str(e):
+                    postados["_fb_pausa_ate"] = (datetime.now(timezone.utc) + timedelta(hours=PAUSA_FB_HORAS)).isoformat()
+                    FB_PAUSADO = True
         if est:
             postados[item["id"]] = est
         feitos += 1
