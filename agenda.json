@@ -1,5 +1,27 @@
 [
  {
+  "id": "pp02",
+  "tipo": "reel",
+  "quando": "2026-10-20T18:00:00+00:00",
+  "video": "videos/pp02.mp4",
+  "capa": "capas/pp02.jpg",
+  "legenda": "Curso de enriquecimento: segundo Eduardo Feldberg, quem é pobre e paga R$ 2 mil num curso que promete ensinar a ganhar R$ 1 mil está comprando uma fórmula mágica que não existe. Para ele, o melhor aplicativo de ganhar dinheiro é o despertador.\n\nAtenção: os números dele (90% não concluem, 50% nem assistem a uma aula) não têm fonte e não foram confirmados pelo PIVÔ.\n\nJá comprou curso e não terminou? Conta aqui.\n\nManda pra quem está sempre procurando a fórmula mágica e segue o PIVÔ: economia sem enrolação.\n\nCorte do Flow Podcast #336 com Eduardo Feldberg (Primo Pobre), gravado em 2024. \n#cursosonline #rendaextra #dinheiro #educacaofinanceira #pivoeconomico",
+  "redes": [
+   "ig"
+  ]
+ },
+ {
+  "id": "pp02",
+  "tipo": "reel",
+  "quando": "2026-10-20T18:00:00+00:00",
+  "video": "videos/pp02.mp4",
+  "capa": "capas/pp02.jpg",
+  "legenda": "GameStop: Thiago Nigro conta o que aconteceu no dia em que investidores de varejo abriram a corretora e só encontraram o botão de vender.\n\nContexto do PIVÔ: em janeiro de 2021, a ação da GameStop subiu de cerca de US$ 17 para mais de US$ 480, puxada por investidores que se organizaram no Reddit e pelas posições vendidas de fundos. Em 28 de janeiro, a Robinhood e outras corretoras restringiram a compra do papel, e a cotação desabou nas semanas seguintes. O número de 80% de queda é a conta aproximada do convidado.\n\nVocê entraria numa ação só porque todo mundo está comprando? Conta nos comentários.\n\nManda pra quem acha que bolsa é jogo de sorte e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#gamestop #bolsadevalores #investimentos #economia #pivoeconomico",
+  "redes": [
+   "fb"
+  ]
+ },
+ {
   "id": "mr03",
   "tipo": "reel",
   "quando": "2026-10-29T20:00:00+00:00",
@@ -150,14 +172,6 @@
   "video": "videos/pr01.mp4",
   "capa": "capas/pr01.jpg",
   "legenda": "Previdência social: na conversa do Flow, o apresentador afirma que talvez a maior pirâmide financeira do Brasil seja a previdência social, e Thiago Nigro diz que o brasileiro não vai conseguir se aposentar só com ela.\n\nContexto do PIVÔ: o INSS funciona em regime de repartição, em que quem trabalha hoje paga os benefícios de quem já se aposentou. Não é golpe: a contribuição é obrigatória e o governo garante os pagamentos. Mas o envelhecimento da população reduz o número de contribuintes por aposentado, e o INSS tem déficit todos os anos, segundo dados do governo. Por isso houve a reforma de 2019.\n\nVocê pretende complementar a aposentadoria por conta própria? Conta nos comentários.\n\nManda pra quem confia só no INSS e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#previdencia #aposentadoria #inss #economia #pivoeconomico"
- },
- {
-  "id": "pr02",
-  "tipo": "reel",
-  "quando": "2026-11-04T18:00:00+00:00",
-  "video": "videos/pr02.mp4",
-  "capa": "capas/pr02.jpg",
-  "legenda": "GameStop: Thiago Nigro conta o que aconteceu no dia em que investidores de varejo abriram a corretora e só encontraram o botão de vender.\n\nContexto do PIVÔ: em janeiro de 2021, a ação da GameStop subiu de cerca de US$ 17 para mais de US$ 480, puxada por investidores que se organizaram no Reddit e pelas posições vendidas de fundos. Em 28 de janeiro, a Robinhood e outras corretoras restringiram a compra do papel, e a cotação desabou nas semanas seguintes. O número de 80% de queda é a conta aproximada do convidado.\n\nVocê entraria numa ação só porque todo mundo está comprando? Conta nos comentários.\n\nManda pra quem acha que bolsa é jogo de sorte e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #122 com Thiago Nigro.\n#gamestop #bolsadevalores #investimentos #economia #pivoeconomico"
  },
  {
   "id": "pr03",
@@ -606,16 +620,5 @@
   "video": "videos/cn12.mp4",
   "capa": "capas/cn12.jpg",
   "legenda": "Stablecoin e criptomoeda: Roberto Campos Neto, ex-presidente do Banco Central, explica a diferença: a stablecoin é uma versão digital de um ativo real guardado como lastro, como um dólar, e a criptomoeda não tem lastro.\n\nContexto do PIVÔ: Nem toda stablecoin é bem lastreada, e é por isso que ele defende regulação para garantir o lastro. A explicação é simplificada.\n\nVocê confiaria numa stablecoin? Conta nos comentários.\n\nManda pra quem ainda acha que stablecoin e criptomoeda são a mesma coisa e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#stablecoin #criptomoedas #bancocentral #economia #pivoeconomico"
- },
- {
-  "id": "pp02",
-  "tipo": "reel",
-  "quando": "2026-10-20T18:00:00+00:00",
-  "video": "videos/pp02.mp4",
-  "capa": "capas/pp02.jpg",
-  "legenda": "Curso de enriquecimento: segundo Eduardo Feldberg, quem é pobre e paga R$ 2 mil num curso que promete ensinar a ganhar R$ 1 mil está comprando uma fórmula mágica que não existe. Para ele, o melhor aplicativo de ganhar dinheiro é o despertador.\n\nAtenção: os números dele (90% não concluem, 50% nem assistem a uma aula) não têm fonte e não foram confirmados pelo PIVÔ.\n\nJá comprou curso e não terminou? Conta aqui.\n\nManda pra quem está sempre procurando a fórmula mágica e segue o PIVÔ: economia sem enrolação.\n\nCorte do Flow Podcast #336 com Eduardo Feldberg (Primo Pobre), gravado em 2024. \n#cursosonline #rendaextra #dinheiro #educacaofinanceira #pivoeconomico",
-  "redes": [
-   "ig"
-  ]
  }
 ]
