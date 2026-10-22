@@ -2,9 +2,6 @@ name: teste a seco
 # Cria cada item no Instagram só para conferir se o vídeo e a capa são aceitos. NÃO publica nada.
 on:
   workflow_dispatch: {}
-  push:
-    paths:
-      - ".github/workflows/teste_a_seco.yml"
 concurrency:
   group: postar
   cancel-in-progress: false

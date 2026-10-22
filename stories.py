@@ -124,8 +124,8 @@ def publicar_pendentes(chamar, esperar, api, token, uid, base_url, postados, dry
             nome = f"stories/{chave}.jpg"
             (PASTA / "stories").mkdir(exist_ok=True)
             im.save(PASTA / nome, "JPEG", quality=93)
-            _publicar_arquivo(nome, base_url)
-            cid = chamar(f"{api}/{uid}/media", {"media_type": "STORIES", "image_url": f"{base_url}/{nome}",
+            url_img = _publicar_arquivo(nome, base_url)
+            cid = chamar(f"{api}/{uid}/media", {"media_type": "STORIES", "image_url": url_img,
                                                 "access_token": token})["id"]
             esperar(cid, 18)
             falta = (s.astimezone(timezone.utc) - datetime.now(timezone.utc)).total_seconds()
@@ -143,9 +143,11 @@ def publicar_pendentes(chamar, esperar, api, token, uid, base_url, postados, dry
 
 
 def _publicar_arquivo(nome, base_url):
-    """No GitHub Actions: sobe a imagem no repositório e espera o Pages servir. Local: não faz nada."""
+    """No GitHub Actions: sobe a imagem no repositório e devolve o endereço raw.githubusercontent.com (no ar na hora;
+    o Pages não republica sozinho depois de um push do robô). Local: devolve o endereço do Pages."""
     if os.environ.get("GITHUB_ACTIONS") != "true":
-        return
+        return f"{base_url}/{nome}"
+    url = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/{os.environ.get('GITHUB_REF_NAME', 'main')}/{nome}"
     for old in sorted((PASTA / "stories").glob("*.jpg"))[:-14]:  # mantém só as últimas 14 imagens
         old.unlink()
     subprocess.run(["git", "config", "user.name", "robo-pivo"], check=True)
@@ -154,13 +156,13 @@ def _publicar_arquivo(nome, base_url):
     subprocess.run(["git", "commit", "-m", "story " + nome], check=False)
     subprocess.run(["git", "pull", "--rebase", "--autostash", "-q"], check=False)
     subprocess.run(["git", "push", "-q"], check=True)
-    for _ in range(40):  # até ~6 min
+    for _ in range(36):  # até ~3 min
         try:
-            req = urllib.request.Request(f"{base_url}/{nome}", method="HEAD")
+            req = urllib.request.Request(url, method="HEAD")
             with urllib.request.urlopen(req, timeout=20) as r:
                 if r.status == 200:
-                    return
+                    return url
         except Exception:  # noqa: BLE001
             pass
-        time.sleep(10)
-    raise RuntimeError("o Pages não serviu a imagem do story a tempo")
+        time.sleep(5)
+    raise RuntimeError("a imagem do story não ficou no ar a tempo")
