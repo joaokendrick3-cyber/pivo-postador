@@ -3,6 +3,7 @@ Roda no GitHub Actions a cada 15 minutos (sem o PC ligado). Só usa a biblioteca
 Variáveis: IG_TOKEN, FB_PAGE_ID e FB_PAGE_TOKEN (secrets), BASE_URL (endereço público da pasta, ex.: https://usuario.github.io/pivo-postador)."""
 import json
 import os
+import subprocess
 import sys
 import time
 import urllib.error
@@ -150,17 +151,65 @@ def estado_do_item(postados, iid):
     return {"ig": v} if "media_id" in v else v   # formato antigo era só do Instagram
 
 
-def main():
+ESPERA_ERRO = {}   # (item, rede) -> até quando não tentar de novo (evita martelar a API depois de um erro)
+_UID = None
+
+
+def uid_ig():
+    global _UID
+    if _UID is None:
+        _UID = chamar(f"{API}/me?fields=user_id&access_token={TOKEN}")["user_id"]
+    return _UID
+
+
+def anotar_erro(chave, erro):
+    limite = "request limit" in erro or '"code":4,' in erro
+    ESPERA_ERRO[chave] = datetime.now(timezone.utc) + timedelta(minutes=20 if limite else 5)
+
+
+def ja_no_perfil(item, uid):
+    """Trava anti-duplicata: o mesmo texto já está no perfil, publicado perto da hora do item?"""
+    r = chamar(f"{API}/{uid}/media?fields=caption,timestamp&limit=30&access_token={TOKEN}")
+    alvo = datetime.fromisoformat(item["quando"])
+    for m in r.get("data", []):
+        if (m.get("caption") or "")[:80] == item["legenda"][:80]:
+            t = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+            if abs((t - alvo).total_seconds()) < 6 * 3600:
+                return m["id"]
+    return None
+
+
+def git(*args):
+    return subprocess.run(["git", *args], capture_output=True, text=True)
+
+
+def salvar_remoto(msg="postados"):
+    """No GitHub Actions: envia postados.json ao repositório logo depois de cada postagem (se a rodada for
+    interrompida, o estado não se perde e nada é postado duas vezes)."""
+    if DRY_RUN or os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    git("config", "user.name", "robo-pivo")
+    git("config", "user.email", "robo@pivo.local")
+    git("add", "postados.json", "stories")
+    if git("diff", "--cached", "--quiet").returncode == 0:
+        return
+    git("commit", "-m", msg)
+    for _ in range(4):
+        git("pull", "--rebase", "--autostash", "-q")
+        if git("push", "-q").returncode == 0:
+            return
+        time.sleep(5)
+    print("AVISO: não consegui enviar postados.json agora", flush=True)
+
+
+def rodada():
+    global FB_PAUSADO
     agenda = json.loads((PASTA / "agenda.json").read_text(encoding="utf-8"))
     pf = PASTA / ("teste_a_seco.json" if DRY_RUN else "postados.json")
     postados = json.loads(pf.read_text(encoding="utf-8")) if pf.exists() else {}
     agora = datetime.now(timezone.utc)
-    global FB_PAUSADO
     ate = postados.get("_fb_pausa_ate")
     FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
-    if FB_PAUSADO:
-        print("Facebook em pausa até", ate, flush=True)
-    uid = chamar(f"{API}/me?fields=user_id&access_token={TOKEN}")["user_id"]
     feitos = 0
     for item in sorted(agenda, key=lambda x: x["quando"]):
         est = estado_do_item(postados, item["id"])
@@ -171,29 +220,71 @@ def main():
             continue
         if feitos >= MAX_POR_RODADA:
             break
-        for rede in pend:  # Instagram primeiro (ele espera a hora exata); o Facebook sai logo depois
+        uid = uid_ig()
+        for rede in pend:  # Instagram primeiro (ele espera a hora exata); o Facebook só sai se o Instagram saiu
+            if ESPERA_ERRO.get((item["id"], rede), agora) > agora:
+                break
             try:
-                mid = publicar(item, uid) if rede == "ig" else publicar_fb(item)
+                if rede == "ig":
+                    existente = None if DRY_RUN else ja_no_perfil(item, uid)
+                    if existente:
+                        mid = existente
+                        print("já estava no perfil, não repito:", item["id"], flush=True)
+                    else:
+                        mid = publicar(item, uid)
+                else:
+                    mid = publicar_fb(item)
                 est[rede] = {"media_id": mid, "em": datetime.now(timezone.utc).isoformat()}
                 postados.get("_erros", {}).pop(f"{item['id']}:{rede}", None)
                 print("POSTADO", rede, item["id"], mid, flush=True)
             except Exception as e:  # noqa: BLE001
                 postados.setdefault("_erros", {})[f"{item['id']}:{rede}"] = str(e)[:300]
                 print("ERRO", rede, item["id"], e, flush=True)
+                anotar_erro((item["id"], rede), str(e))
                 if rede == "fb" and '"code":368' in str(e):
                     postados["_fb_pausa_ate"] = (datetime.now(timezone.utc) + timedelta(hours=PAUSA_FB_HORAS)).isoformat()
                     FB_PAUSADO = True
+                if rede == "ig":
+                    break
         if est:
             postados[item["id"]] = est
         feitos += 1
         pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+        salvar_remoto("postados")
     try:  # stories do post de 24 h atrás (ver stories.py); falha aqui nunca derruba a rodada dos posts
         import stories
-        if stories.publicar_pendentes(chamar, esperar, API, TOKEN, uid, BASE_URL, postados, DRY_RUN):
-            pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+        reg = postados.get("_stories", {})
+        faltam = [s for s in stories.slots_devidos(agora)
+                  if not ({"media_id", "pulado"} & set(reg.get(s.strftime("%Y-%m-%d_%H"), {})))]
+        if faltam and ESPERA_ERRO.get(("story", ""), agora) <= agora:
+            if stories.publicar_pendentes(chamar, esperar, API, TOKEN, uid_ig(), BASE_URL, postados, DRY_RUN):
+                pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+                salvar_remoto("postados")
+            if any(k.startswith("story:") for k in postados.get("_erros", {})):
+                anotar_erro(("story", ""), " ".join(postados["_erros"].values()))
     except Exception as e:  # noqa: BLE001
         print("ERRO nos stories:", e, flush=True)
-    print("rodada ok:", feitos, "item(ns)")
+    return feitos
+
+
+def main():
+    """LOOP_MINUTOS > 0: fica rodando esse tempo, conferindo a agenda a cada minuto (hora exata, sem depender do
+    gatilho externo). Sem a variável, faz uma rodada só (teste a seco e uso manual)."""
+    fim = time.time() + int(os.environ.get("LOOP_MINUTOS", "0") or 0) * 60
+    n = 0
+    while True:
+        try:
+            feitos = rodada()
+            if feitos or n % 30 == 0:
+                print(datetime.now(timezone.utc).strftime("%H:%M"), "rodada ok:", feitos, "item(ns)", flush=True)
+        except Exception as e:  # noqa: BLE001
+            print("ERRO na rodada:", e, flush=True)
+        n += 1
+        if time.time() + 60 > fim:
+            break
+        time.sleep(60)
+        if os.environ.get("GITHUB_ACTIONS") == "true" and n % 3 == 0:
+            git("pull", "--rebase", "--autostash", "-q")  # pega agenda nova
 
 
 if __name__ == "__main__":

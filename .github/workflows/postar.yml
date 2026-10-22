@@ -8,9 +8,11 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: write
+  actions: write
 jobs:
   postar:
     runs-on: ubuntu-latest
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,10 +25,18 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          LOOP_MINUTOS: "330"
         run: python postar.py
       - name: Guardar o que foi postado
         run: |
           git config user.name "robo-pivo"
           git config user.email "robo@pivo.local"
-          git add postados.json || true
-          git diff --cached --quiet || (git commit -m "postados" && git pull --rebase && git push)
+          git add postados.json stories || true
+          git diff --cached --quiet || (git commit -m "postados" && git pull --rebase --autostash && git push)
+      - name: Reiniciar o ciclo (o próximo fica na fila e começa quando este terminar)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -s -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/postar.yml/dispatches" -d '{"ref":"main"}'
