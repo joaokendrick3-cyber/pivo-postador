@@ -49,19 +49,22 @@ def montar(capa, frase, sub):
     f2 = _fonte("Poppins-SemiBold.ttf", 40)
     centro(frase, 225, f1, AMARELO)
     centro(sub, 395, f2, (255, 255, 255))
-    cw = 840
-    ch = int(cw * 1350 / 1080)
-    # recorte 4:5 no centro (a capa dos reels é 9:16; o miolo 4:5 já é a área segura)
     w, h = capa.size
+    alto = w / h < 0.7   # capa 9:16 (reels e cortes): aparece inteira, sem cortar logo nem título
+    cw = 680 if alto else 840
+    ch = int(cw * h / w) if alto else int(cw * 1350 / 1080)
+    # recorte 4:5 no centro (a capa dos reels é 9:16; o miolo 4:5 já é a área segura)
     alvo = 4 / 5
-    if w / h > alvo:
+    if alto:
+        pass
+    elif w / h > alvo:
         nw = int(h * alvo)
         capa = capa.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
     else:
         nh = int(w / alvo)
         capa = capa.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
     capa = capa.resize((cw, ch), Image.LANCZOS)
-    x, y = (W - cw) // 2, 480
+    x, y = (W - cw) // 2, 455 if alto else 480
     mask = Image.new("L", (cw, ch), 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, cw, ch), 40, fill=255)
     sombra = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -69,7 +72,8 @@ def montar(capa, frase, sub):
     im = Image.alpha_composite(im.convert("RGBA"), sombra.filter(ImageFilter.GaussianBlur(25))).convert("RGB")
     im.paste(capa, (x, y), mask)
     d = ImageDraw.Draw(im)
-    centro("@pivoeconomico", y + ch + 45, f2, LILAS)
+    if not alto:
+        centro("@pivoeconomico", y + ch + 45, f2, LILAS)
     return im
 
 
