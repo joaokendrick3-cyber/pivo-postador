@@ -598,5 +598,20 @@
   "video": "videos/cn12.mp4",
   "capa": "capas/cn12.jpg",
   "legenda": "Stablecoin e criptomoeda: Roberto Campos Neto, ex-presidente do Banco Central, explica a diferença: a stablecoin é uma versão digital de um ativo real guardado como lastro, como um dólar, e a criptomoeda não tem lastro.\n\nContexto do PIVÔ: Nem toda stablecoin é bem lastreada, e é por isso que ele defende regulação para garantir o lastro. A explicação é simplificada.\n\nVocê confiaria numa stablecoin? Conta nos comentários.\n\nManda pra quem ainda acha que stablecoin e criptomoeda são a mesma coisa e segue o PIVÔ: economia do dia a dia, com dado oficial.\n\n#stablecoin #criptomoedas #bancocentral #economia #pivoeconomico"
+ },
+ {
+  "id": "cr48",
+  "tipo": "carrossel",
+  "quando": "2026-10-22T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr48/01.jpg",
+   "imagens/cr48/02.jpg",
+   "imagens/cr48/03.jpg",
+   "imagens/cr48/04.jpg",
+   "imagens/cr48/05.jpg",
+   "imagens/cr48/06.jpg",
+   "imagens/cr48/07.jpg"
+  ],
+  "legenda": "Maiores empresas da bolsa brasileira: as 10 mais valiosas da B3 somam mais de R$ 2,9 trilhões, o equivalente a 22% do PIB do Brasil em 12 meses.\n\nO ranking pelo valor de mercado (fechamento de 09/10/2026, em R$ bilhões): 1. Petrobras (756), 2. Itaú (566), 3. BTG Pactual (301), 4. Vale (270), 5. Ambev (250), 6. Bradesco (226), 7. WEG (217), 8. Axia, a antiga Eletrobras (142), 9. Banco do Brasil (139), 10. Sabesp (118).\n\nAlguns números que chamam atenção: a Petrobras sozinha vale 5,7% do PIB e 2,8 vezes a Vale; os quatro bancos da lista (Itaú, BTG, Bradesco e Banco do Brasil) somam R$ 1,2 trilhão, 41% do valor das 10 maiores.\n\nValor de mercado é preço da ação vezes o número de ações. Muda todo dia, não é lucro e não é patrimônio. Não entram na lista a Itaúsa (holding que controla o Itaú, contaria em dobro) nem o Nubank (as ações são negociadas nos EUA; na B3 só existe o BDR). Comparar com o PIB é só uma forma de dar escala: PIB é o que o país produz em um ano, valor de mercado é o que a empresa vale hoje.\n\nQual dessas você achou que valia mais? Conta aqui.\nManda pra quem acha que sabe qual é a maior empresa do Brasil e segue o PIVÔ: toda semana, um número oficial explicado.\n\nIsto não é recomendação de compra ou venda de ações.\n\nFontes: BRAPI (valor de mercado das empresas, fechamento de 09/10/2026); Banco Central (PIB de 12 meses até agosto/2026: R$ 13,34 trilhões). Cálculos do PIVO. Fotos: Wikimedia Commons (Edifício da Petrobras: Rodrigo Soldon, CC BY 2.0; agência do Itaú: Junius, domínio público).\n\n#bolsadevalores #b3 #petrobras #investimentos #pivoeconomico"
  }
 ]
