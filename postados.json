@@ -7,7 +7,15 @@
  },
  "_erros": {
   "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
-  "story:2026-10-22_09": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai"
+  "story:2026-10-22_09": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai",
+  "cr48:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai",
+  "story:2026-10-22_11": "o Pages não serviu a imagem do story a tempo"
  },
- "_stories": {}
+ "_stories": {},
+ "cr48": {
+  "fb": {
+   "media_id": "544010198792998_122184684812711105",
+   "em": "2026-10-22T14:11:41.835244+00:00"
+  }
+ }
 }
