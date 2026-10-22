@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install pillow
       - name: Publicar o que já está na hora
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}

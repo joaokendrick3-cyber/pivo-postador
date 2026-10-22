@@ -187,6 +187,12 @@ def main():
             postados[item["id"]] = est
         feitos += 1
         pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+    try:  # stories do post de 24 h atrás (ver stories.py); falha aqui nunca derruba a rodada dos posts
+        import stories
+        if stories.publicar_pendentes(chamar, esperar, API, TOKEN, uid, BASE_URL, postados, DRY_RUN):
+            pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception as e:  # noqa: BLE001
+        print("ERRO nos stories:", e, flush=True)
     print("rodada ok:", feitos, "item(ns)")
 
 
