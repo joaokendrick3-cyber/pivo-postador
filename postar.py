@@ -49,8 +49,11 @@ def esperar(cid, tentativas=60):
 def criar_container(item, uid):
     base = f"{BASE_URL}/"
     if item["tipo"] == "reel":
+        # share_to_feed=false: o reel fica só na aba Reels (a grade principal é só de carrosséis)
         dados = {"media_type": "REELS", "video_url": base + item["video"], "caption": item["legenda"],
-                 "share_to_feed": "true", "access_token": TOKEN}
+                 "share_to_feed": "false", "access_token": TOKEN}
+        if item.get("trial"):  # reel de teste: só não seguidores veem; MANUAL = nunca vira reel normal sozinho
+            dados["trial_params"] = json.dumps({"graduation_strategy": "MANUAL"})
         if item.get("capa"):
             dados["cover_url"] = base + item["capa"]
         cid = chamar(f"{API}/{uid}/media", dados)["id"]
@@ -202,6 +205,20 @@ def salvar_remoto(msg="postados"):
     print("AVISO: não consegui enviar postados.json agora", flush=True)
 
 
+def trials_do_dia_anterior(agenda, postados, agora):
+    """Todo reel da agenda ganha um reel de teste (trial, só Instagram) 24 h antes da hora dele.
+    Reel já postado ou com o teste já vencido (hora do teste passou) não ganha teste."""
+    extra = []
+    for it in agenda:
+        if it["tipo"] != "reel" or it.get("trial") or "sem_trial" in it or it["id"] in postados:
+            continue
+        t = datetime.fromisoformat(it["quando"]) - timedelta(days=1)
+        if t < agora - timedelta(minutes=JANELA_MIN):
+            continue
+        extra.append({**it, "id": it["id"] + "-trial", "quando": t.isoformat(), "trial": True, "redes": ["ig"]})
+    return extra
+
+
 def rodada():
     global FB_PAUSADO
     agenda = json.loads((PASTA / "agenda.json").read_text(encoding="utf-8"))
@@ -210,6 +227,7 @@ def rodada():
     agora = datetime.now(timezone.utc)
     ate = postados.get("_fb_pausa_ate")
     FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
+    agenda = agenda + trials_do_dia_anterior(agenda, postados, agora)
     feitos = 0
     for item in sorted(agenda, key=lambda x: x["quando"]):
         est = estado_do_item(postados, item["id"])
