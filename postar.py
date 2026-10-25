@@ -282,6 +282,14 @@ def rodada():
                 anotar_erro(("story", ""), " ".join(postados["_erros"].values()))
     except Exception as e:  # noqa: BLE001
         print("ERRO nos stories:", e, flush=True)
+    if not DRY_RUN:  # respostas a elogios nos comentários (ver comentarios.py); falha aqui nunca derruba a rodada
+        try:
+            import comentarios
+            if comentarios.responder_pendentes(chamar, API, TOKEN, uid_ig(), postados):
+                pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+                salvar_remoto("postados")
+        except Exception as e:  # noqa: BLE001
+            print("ERRO nos comentários:", str(e)[:200], flush=True)
     return feitos
 
 
