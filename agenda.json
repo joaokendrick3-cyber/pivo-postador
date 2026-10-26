@@ -80,6 +80,19 @@
   "legenda": "Eleição 2026: pela primeira vez na história, um candidato que terminou atrás no primeiro turno ganhou o segundo, segundo o vídeo do Primo Rico. Com a vitória, Lula é o primeiro presidente eleito quatro vezes.\n\nVocê achava que a virada era possível? Conta nos comentários.\n\nManda pra quem dizia que já estava decidido e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#eleicoes2026 #economia #lula #politica #pivoeconomico"
  },
  {
+  "id": "pe02-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T15:05:00+00:00",
+  "video": "videos/pe02.mp4",
+  "capa": "capas/pe02.jpg",
+  "legenda": "Polymarket: depois do primeiro turno, Flávio Bolsonaro chegou a aparecer com 88,9% de probabilidade de vitória. Antes, Lula tinha aberto 61% contra 21,9%. O resultado desmontou as apostas.\n\nVocê apostaria no Polymarket numa eleição? Conta nos comentários.\n\nManda pra quem confia em mercado de apostas para prever eleição e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#polymarket #eleicoes2026 #economia #apostas #pivoeconomico"
+ },
+ {
   "id": "pe03-trial",
   "tipo": "reel",
   "trial": true,
@@ -260,6 +273,19 @@
   "video": "videos/pe38.mp4",
   "capa": "capas/pe38.jpg",
   "legenda": "Juros e ações: na primeira semana depois do primeiro turno, Magazine Luiza subiu mais de 60%, Vamos quase 45% e Smart Fit 44%. O que essas empresas têm em comum: dependem de crédito e crescem quando o juro cai, segundo o vídeo.\n\nVocê investe em quem cresce com juro baixo? Conta nos comentários.\n\nManda pra quem investe em ações que dependem do juro e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#magazineluiza #acoes #juros #bolsa #pivoeconomico"
+ },
+ {
+  "id": "pe41-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T18:50:00+00:00",
+  "video": "videos/pe41.mp4",
+  "capa": "capas/pe41.jpg",
+  "legenda": "Decisão financeira: muita gente toma a pior decisão do ano com o próprio dinheiro tentando adivinhar o que vai acontecer, quem será o ministro, a taxa de juros, o preço do petróleo. O que ajuda é saber o que fazer em qualquer cenário, diz o vídeo.\n\nVocê investe tentando adivinhar o futuro? Conta nos comentários.\n\nManda pra quem investe tentando adivinhar o próximo movimento e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#investimentos #educacaofinanceira #bolsa #economia #pivoeconomico"
  },
  {
   "id": "rt06-trial",
