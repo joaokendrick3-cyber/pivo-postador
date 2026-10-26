@@ -219,6 +219,69 @@ def trials_do_dia_anterior(agenda, postados, agora):
     return extra
 
 
+# ---- graduação automática dos reels de teste (regra do João, 26/10): <1k views não posta; 1k a 3k espera; 3k+ posta de verdade
+GRAD_MIN_VIEWS, GRAD_POSTAR = 1000, 3000
+GRAD_VERIFICAR_APOS_H = 3      # só começa a olhar 3 h depois do teste ir ao ar
+GRAD_DESISTE_BAIXO_H = 24      # com menos de 1k depois de 24 h: descarta
+GRAD_DESISTE_MEIO_H = 72       # entre 1k e 3k depois de 72 h: descarta
+_ULTIMA_GRAD = [None]
+
+
+def views_do_reel(mid):
+    for metrica in ("views", "plays"):
+        try:
+            r = chamar(f"{API}/{mid}/insights?metric={metrica}&access_token={TOKEN}")
+            return int(r["data"][0]["values"][0]["value"])
+        except Exception as e:  # noqa: BLE001
+            ultimo = str(e)
+    raise RuntimeError(ultimo[:200])
+
+
+def graduar_pendentes(agenda, postados, agora):
+    """Para cada teste marcado com graduar=true e já no ar: lê as views; >= 3 mil posta o reel de verdade (fora da grade,
+    só na aba Reels); entre 1 e 3 mil continua esperando; < 1 mil não posta. Roda no máximo a cada 30 min."""
+    if DRY_RUN or (_ULTIMA_GRAD[0] and (agora - _ULTIMA_GRAD[0]).total_seconds() < 1800):
+        return False
+    _ULTIMA_GRAD[0] = agora
+    grad = postados.setdefault("_graduacao", {})
+    mudou = False
+    for it in agenda:
+        if not (it.get("trial") and it.get("graduar")):
+            continue
+        base = it["id"][:-len("-trial")] if it["id"].endswith("-trial") else it["id"]
+        est = postados.get(it["id"], {}).get("ig")
+        g = grad.get(base, {})
+        if not est or g.get("fim"):
+            continue
+        horas = (agora - datetime.fromisoformat(est["em"])).total_seconds() / 3600
+        if horas < GRAD_VERIFICAR_APOS_H:
+            continue
+        try:
+            v = views_do_reel(est["media_id"])
+        except Exception as e:  # noqa: BLE001
+            grad[base] = {**g, "erro": str(e)[:150]}
+            mudou = True
+            continue
+        g = {**g, "views": v, "visto_em": agora.isoformat()}
+        g.pop("erro", None)
+        if v >= GRAD_POSTAR:
+            try:
+                real = {**it, "id": base + "-real", "trial": False, "redes": ["ig"], "quando": agora.isoformat()}
+                real.pop("graduar", None)
+                mid = publicar(real, uid_ig())
+                g.update(fim="postado", real=mid)
+                print("GRADUADO (postado de verdade):", base, v, "views", flush=True)
+            except Exception as e:  # noqa: BLE001
+                g["erro"] = str(e)[:150]
+        elif v < GRAD_MIN_VIEWS and horas >= GRAD_DESISTE_BAIXO_H:
+            g.update(fim="descartado (menos de 1k)")
+        elif horas >= GRAD_DESISTE_MEIO_H:
+            g.update(fim="descartado (nao passou de 3k em 72h)")
+        grad[base] = g
+        mudou = True
+    return mudou
+
+
 def rodada():
     global FB_PAUSADO
     agenda = json.loads((PASTA / "agenda.json").read_text(encoding="utf-8"))
@@ -269,6 +332,12 @@ def rodada():
         feitos += 1
         pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
         salvar_remoto("postados")
+    try:  # graduação dos testes: quem passou de 3 mil views vira reel de verdade
+        if graduar_pendentes(agenda, postados, agora):
+            pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+            salvar_remoto("postados")
+    except Exception as e:  # noqa: BLE001
+        print("ERRO na graduação:", str(e)[:200], flush=True)
     try:  # stories do post de 24 h atrás (ver stories.py); falha aqui nunca derruba a rodada dos posts
         import stories
         reg = postados.get("_stories", {})
