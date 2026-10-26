@@ -431,6 +431,19 @@
   "graduar": true
  },
  {
+  "id": "pe18-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T21:35:00+00:00",
+  "video": "videos/pe18.mp4",
+  "capa": "capas/pe18.jpg",
+  "legenda": "2015: a conta de luz subiu mais de 50% de uma vez, a inflação fechou em 10,6% (a maior em 13 anos), a Selic foi a 14% e o PIB ficou negativo em 2015 e 2016, segundo o vídeo.\n\nVocê sentiu essa recessão no bolso? Conta nos comentários.\n\nManda pra quem não lembra como foi 2015 e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#inflacao #recessao #selic #pib #pivoeconomico"
+ },
+ {
   "id": "pe19-trial",
   "tipo": "reel",
   "trial": true,
@@ -455,6 +468,19 @@
   "video": "videos/pe20.mp4",
   "capa": "capas/pe20.jpg",
   "legenda": "Reforma da Previdência: em 2018 Bolsonaro venceu com 55% dos votos e, no primeiro ano de mandato, a reforma foi aprovada. A Selic terminou 2019 em 4,5% e o Ibovespa rompeu os 100 mil pontos, segundo o vídeo.\n\nReforma muda a Bolsa? Conta nos comentários.\n\nManda pra quem acha que reforma não muda nada e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#reformadaprevidencia #ibovespa #selic #economia #pivoeconomico"
+ },
+ {
+  "id": "pe22-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T22:35:00+00:00",
+  "video": "videos/pe22.mp4",
+  "capa": "capas/pe22.jpg",
+  "legenda": "Inflação e juros: depois da pandemia, o IPCA de 2021 fechou em 10% e o Banco Central subiu a Selic de 2% para 13,75% em 2022, segundo o vídeo.\n\nQuanto a inflação de 2021 pesou no seu bolso? Conta nos comentários.\n\nManda pra quem acha que inflação é culpa de um governo só e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#inflacao #ipca #selic #economia #pivoeconomico"
  },
  {
   "id": "rt07-trial",
