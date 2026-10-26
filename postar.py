@@ -219,12 +219,25 @@ def trials_do_dia_anterior(agenda, postados, agora):
     return extra
 
 
-# ---- graduação automática dos reels de teste (regra do João, 26/10, atualizada: só sucesso absurdo, 10k+): <1k não posta; 1k a 10k espera; 10k+ posta de verdade
+# ---- graduação automática dos reels de teste (regra do João, 26/10, atualizada: só sucesso absurdo, 10k+): <1k não posta; 1k a 10k espera; 10k+ ganha uma vaga às 20h (Brasília) e posta de verdade nesse horário
 GRAD_MIN_VIEWS, GRAD_POSTAR = 1000, 10000
 GRAD_VERIFICAR_APOS_H = 3      # só começa a olhar 3 h depois do teste ir ao ar
 GRAD_DESISTE_BAIXO_H = 24      # com menos de 1k depois de 24 h: descarta
 GRAD_DESISTE_MEIO_H = 72       # entre 1k e 10k depois de 72 h: descarta
 _ULTIMA_GRAD = [None]
+GRAD_HORA_POSTAR_UTC = 23      # 20h de Brasília: DEPOIS do último corte real do dia (19h). Regra do João, 26/10
+GRAD_ESPACO_MIN = 40           # se mais de um teste bater 10k no mesmo dia, um por vaga, 40 min entre eles
+
+
+def proxima_vaga_noite(grad, agora):
+    """Próxima vaga das 20h (Brasília) depois de agora; se já ocupada por outro graduado, 40 min depois."""
+    t = agora.replace(hour=GRAD_HORA_POSTAR_UTC, minute=0, second=0, microsecond=0)
+    if t <= agora:
+        t += timedelta(days=1)
+    ocupadas = [datetime.fromisoformat(g["agendado_para"]) for g in grad.values() if g.get("agendado_para") and not g.get("fim")]
+    while any(abs((t - o).total_seconds()) < GRAD_ESPACO_MIN * 60 for o in ocupadas):
+        t += timedelta(minutes=GRAD_ESPACO_MIN)
+    return t
 
 
 def views_do_reel(mid):
@@ -251,7 +264,7 @@ def graduar_pendentes(agenda, postados, agora):
         base = it["id"][:-len("-trial")] if it["id"].endswith("-trial") else it["id"]
         est = postados.get(it["id"], {}).get("ig")
         g = grad.get(base, {})
-        if not est or g.get("fim"):
+        if not est or g.get("fim") or g.get("agendado_para"):
             continue
         horas = (agora - datetime.fromisoformat(est["em"])).total_seconds() / 3600
         if horas < GRAD_VERIFICAR_APOS_H:
@@ -265,14 +278,9 @@ def graduar_pendentes(agenda, postados, agora):
         g = {**g, "views": v, "visto_em": agora.isoformat()}
         g.pop("erro", None)
         if v >= GRAD_POSTAR:
-            try:
-                real = {**it, "id": base + "-real", "trial": False, "redes": ["ig"], "quando": agora.isoformat()}
-                real.pop("graduar", None)
-                mid = publicar(real, uid_ig())
-                g.update(fim="postado", real=mid)
-                print("GRADUADO (postado de verdade):", base, v, "views", flush=True)
-            except Exception as e:  # noqa: BLE001
-                g["erro"] = str(e)[:150]
+            vaga = proxima_vaga_noite(grad, agora)
+            g["agendado_para"] = vaga.isoformat()
+            print("GRADUADO (vai ao ar de verdade às", vaga.isoformat(), "):", base, v, "views", flush=True)
         elif v < GRAD_MIN_VIEWS and horas >= GRAD_DESISTE_BAIXO_H:
             g.update(fim="descartado (menos de 1k)")
         elif horas >= GRAD_DESISTE_MEIO_H:
@@ -280,6 +288,35 @@ def graduar_pendentes(agenda, postados, agora):
         grad[base] = g
         mudou = True
     return mudou
+
+
+def postar_graduados(agenda, postados, agora):
+    """Posta de verdade (só aba Reels) os testes que bateram 10 mil e já têm vaga marcada (20h de Brasília). Roda a cada rodada."""
+    grad = postados.get("_graduacao", {})
+    por_id = {i["id"]: i for i in agenda}
+    for base, g in sorted(grad.items(), key=lambda kv: kv[1].get("agendado_para", "")):
+        if g.get("fim") or not g.get("agendado_para"):
+            continue
+        if datetime.fromisoformat(g["agendado_para"]) > agora + timedelta(minutes=JANELA_MIN):
+            continue
+        if ESPERA_ERRO.get((base + "-real", "ig"), agora) > agora:
+            continue
+        it = por_id.get(base + "-trial") or por_id.get(base)
+        if not it:
+            continue
+        try:
+            real = {**it, "id": base + "-real", "trial": False, "redes": ["ig"], "quando": g["agendado_para"]}
+            real.pop("graduar", None)
+            mid = publicar(real, uid_ig())  # espera até a hora exata da vaga
+            g.update(fim="postado", real=mid, postado_em=datetime.now(timezone.utc).isoformat())
+            g.pop("erro", None)
+            print("POSTADO DE VERDADE (graduado):", base, mid, flush=True)
+        except Exception as e:  # noqa: BLE001
+            g["erro"] = str(e)[:150]
+            anotar_erro((base + "-real", "ig"), str(e))
+            print("ERRO ao postar graduado", base, e, flush=True)
+        return True   # um por rodada
+    return False
 
 
 def rodada():
@@ -332,7 +369,13 @@ def rodada():
         feitos += 1
         pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
         salvar_remoto("postados")
-    try:  # graduação dos testes: quem passou de 3 mil views vira reel de verdade
+    try:  # testes que bateram 10k e já têm vaga das 20h marcada: posta no horário
+        if not DRY_RUN and postar_graduados(agenda, postados, agora):
+            pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+            salvar_remoto("postados")
+    except Exception as e:  # noqa: BLE001
+        print("ERRO ao postar graduados:", str(e)[:200], flush=True)
+    try:  # graduação dos testes: quem bate 10 mil views ganha uma vaga à noite (20h) para ir ao ar de verdade
         if graduar_pendentes(agenda, postados, agora):
             pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
             salvar_remoto("postados")
