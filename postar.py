@@ -193,7 +193,7 @@ def salvar_remoto(msg="postados"):
         return
     git("config", "user.name", "robo-pivo")
     git("config", "user.email", "robo@pivo.local")
-    git("add", "postados.json", "stories")
+    git("add", "postados.json", "stories", "videos", "capas")
     if git("diff", "--cached", "--quiet").returncode == 0:
         return
     git("commit", "-m", msg)
@@ -219,104 +219,143 @@ def trials_do_dia_anterior(agenda, postados, agora):
     return extra
 
 
-# ---- graduação automática dos reels de teste (regra do João, 26/10, atualizada: só sucesso absurdo, 10k+): <1k não posta; 1k a 10k espera; 10k+ ganha uma vaga às 20h (Brasília) e posta de verdade nesse horário
-GRAD_MIN_VIEWS, GRAD_POSTAR = 1000, 10000
-GRAD_VERIFICAR_APOS_H = 3      # só começa a olhar 3 h depois do teste ir ao ar
-GRAD_DESISTE_BAIXO_H = 24      # com menos de 1k depois de 24 h: descarta
-GRAD_DESISTE_MEIO_H = 72       # entre 1k e 10k depois de 72 h: descarta
-_ULTIMA_GRAD = [None]
-GRAD_HORA_POSTAR_UTC = 23      # 20h de Brasília: DEPOIS do último corte real do dia (19h). Regra do João, 26/10
-GRAD_ESPACO_MIN = 40           # se mais de um teste bater 10k no mesmo dia, um por vaga, 40 min entre eles
+# ---- campeonatos de testes (regra do João, 26/10): cada série de cortes (ex.: pe = Primo Rico pós-eleição, rs = Raul Sena)
+# entra como TESTE (trial). 24 h depois de ir ao ar, o robô mede views e curtidas de cada um; na data de avaliação do
+# campeonato (campeonatos.json) ele escolhe os N melhores e os posta DE VERDADE (só aba Reels) nas vagas marcadas.
+# Não existe mais graduação automática por 10 mil views.
+MEDIR_APOS_H = 24              # idade do teste na hora de medir (todos são comparados com a mesma idade)
+_ULTIMA_MEDIDA = [None]
 
 
-def proxima_vaga_noite(grad, agora):
-    """Próxima vaga das 20h (Brasília) depois de agora; se já ocupada por outro graduado, 40 min depois."""
-    t = agora.replace(hour=GRAD_HORA_POSTAR_UTC, minute=0, second=0, microsecond=0)
-    if t <= agora:
-        t += timedelta(days=1)
-    ocupadas = [datetime.fromisoformat(g["agendado_para"]) for g in grad.values() if g.get("agendado_para") and not g.get("fim")]
-    while any(abs((t - o).total_seconds()) < GRAD_ESPACO_MIN * 60 for o in ocupadas):
-        t += timedelta(minutes=GRAD_ESPACO_MIN)
-    return t
-
-
-def views_do_reel(mid):
+def metricas_do_reel(mid):
+    """(views, curtidas) lifetime do reel; curtidas 0 se a API não devolver."""
+    views = None
     for metrica in ("views", "plays"):
         try:
             r = chamar(f"{API}/{mid}/insights?metric={metrica}&access_token={TOKEN}")
-            return int(r["data"][0]["values"][0]["value"])
+            views = int(r["data"][0]["values"][0]["value"])
+            break
         except Exception as e:  # noqa: BLE001
             ultimo = str(e)
-    raise RuntimeError(ultimo[:200])
+    if views is None:
+        raise RuntimeError(ultimo[:200])
+    try:
+        r = chamar(f"{API}/{mid}/insights?metric=likes&access_token={TOKEN}")
+        curtidas = int(r["data"][0]["values"][0]["value"])
+    except Exception:  # noqa: BLE001
+        curtidas = 0
+    return views, curtidas
 
 
-def graduar_pendentes(agenda, postados, agora):
-    """Para cada teste marcado com graduar=true e já no ar: lê as views; >= 10 mil posta o reel de verdade (fora da grade,
-    só na aba Reels); entre 1 e 10 mil continua esperando; < 1 mil não posta. Roda no máximo a cada 30 min."""
-    if DRY_RUN or (_ULTIMA_GRAD[0] and (agora - _ULTIMA_GRAD[0]).total_seconds() < 1800):
+def campeonatos(pasta=None):
+    f = (pasta or PASTA) / "campeonatos.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+
+
+def testes_do_campeonato(camp, agenda):
+    return [i for i in agenda if i.get("trial") and i["id"].startswith(camp["prefixo"]) and i["id"].endswith("-trial")]
+
+
+def medir_testes(agenda, postados, agora):
+    """Lê views/curtidas de cada teste das séries em campeonato quando ele completa 24 h no ar (uma vez só). Roda a cada 30 min."""
+    if DRY_RUN or (_ULTIMA_MEDIDA[0] and (agora - _ULTIMA_MEDIDA[0]).total_seconds() < 1800):
         return False
-    _ULTIMA_GRAD[0] = agora
-    grad = postados.setdefault("_graduacao", {})
+    _ULTIMA_MEDIDA[0] = agora
+    med = postados.setdefault("_medidas", {})
     mudou = False
-    for it in agenda:
-        if not (it.get("trial") and it.get("graduar")):
+    for camp in campeonatos():
+        if camp["nome"] in postados.get("_finais", {}):
             continue
-        base = it["id"][:-len("-trial")] if it["id"].endswith("-trial") else it["id"]
-        est = postados.get(it["id"], {}).get("ig")
-        g = grad.get(base, {})
-        if not est or g.get("fim") or g.get("agendado_para"):
-            continue
-        horas = (agora - datetime.fromisoformat(est["em"])).total_seconds() / 3600
-        if horas < GRAD_VERIFICAR_APOS_H:
-            continue
-        try:
-            v = views_do_reel(est["media_id"])
-        except Exception as e:  # noqa: BLE001
-            grad[base] = {**g, "erro": str(e)[:150]}
+        for it in testes_do_campeonato(camp, agenda):
+            est = postados.get(it["id"], {}).get("ig")
+            base = it["id"][:-len("-trial")]
+            if not est or "views" in med.get(base, {}):
+                continue
+            horas = (agora - datetime.fromisoformat(est["em"])).total_seconds() / 3600
+            if horas < MEDIR_APOS_H:
+                continue
+            try:
+                v, c = metricas_do_reel(est["media_id"])
+                med[base] = {"views": v, "curtidas": c, "medido_em": agora.isoformat(), "idade_h": round(horas, 1)}
+            except Exception as e:  # noqa: BLE001
+                med[base] = {"erro": str(e)[:150]}
             mudou = True
+    return mudou
+
+
+def escolher_finais(agenda, postados, agora):
+    """Na data de avaliação de cada campeonato, ordena os testes por views e curtidas (soma das duas posições) e guarda os N melhores
+    com as vagas de postagem em postados['_finais']. Quem ainda não tem medida de 24 h é medido agora (idade menor, melhor que nada)."""
+    mudou = False
+    for camp in campeonatos():
+        nome = camp["nome"]
+        if nome in postados.get("_finais", {}) or agora < datetime.fromisoformat(camp["avaliar_apos"]):
             continue
-        g = {**g, "views": v, "visto_em": agora.isoformat()}
-        g.pop("erro", None)
-        if v >= GRAD_POSTAR:
-            vaga = proxima_vaga_noite(grad, agora)
-            g["agendado_para"] = vaga.isoformat()
-            print("GRADUADO (vai ao ar de verdade às", vaga.isoformat(), "):", base, v, "views", flush=True)
-        elif v < GRAD_MIN_VIEWS and horas >= GRAD_DESISTE_BAIXO_H:
-            g.update(fim="descartado (menos de 1k)")
-        elif horas >= GRAD_DESISTE_MEIO_H:
-            g.update(fim="descartado (nao passou de 10k em 72h)")
-        grad[base] = g
+        med = postados.setdefault("_medidas", {})
+        cand = {}
+        for it in testes_do_campeonato(camp, agenda):
+            est = postados.get(it["id"], {}).get("ig")
+            base = it["id"][:-len("-trial")]
+            if not est:
+                continue
+            m = med.get(base, {})
+            if "views" not in m:
+                try:
+                    v, c = metricas_do_reel(est["media_id"])
+                    m = med[base] = {"views": v, "curtidas": c, "medido_em": agora.isoformat(), "idade_h": None}
+                except Exception as e:  # noqa: BLE001
+                    med[base] = {"erro": str(e)[:150]}
+                    continue
+            cand[base] = m
+        if not cand:
+            continue
+        por_v = sorted(cand, key=lambda b: -cand[b]["views"])
+        por_c = sorted(cand, key=lambda b: -cand[b]["curtidas"])
+        pos = {b: por_v.index(b) + por_c.index(b) for b in cand}
+        ranking = sorted(cand, key=lambda b: (pos[b], -cand[b]["views"]))
+        escolhidos = ranking[:len(camp["vagas"])]
+        postados.setdefault("_finais", {})[nome] = {
+            "escolhido_em": agora.isoformat(), "candidatos": len(cand),
+            "itens": [{"base": b, "quando": q, "views": cand[b]["views"], "curtidas": cand[b]["curtidas"]}
+                      for b, q in zip(escolhidos, camp["vagas"])],
+            "perdedores": [b for b in ranking if b not in escolhidos]}
+        print("CAMPEONATO", nome, "decidido:", escolhidos, flush=True)
         mudou = True
     return mudou
 
 
-def postar_graduados(agenda, postados, agora):
-    """Posta de verdade (só aba Reels) os testes que bateram 10 mil e já têm vaga marcada (20h de Brasília). Roda a cada rodada."""
-    grad = postados.get("_graduacao", {})
+def itens_finais(agenda, postados):
+    """Os vencedores viram itens normais da agenda (reel de verdade, só Instagram, sem teste extra)."""
     por_id = {i["id"]: i for i in agenda}
-    for base, g in sorted(grad.items(), key=lambda kv: kv[1].get("agendado_para", "")):
-        if g.get("fim") or not g.get("agendado_para"):
-            continue
-        if datetime.fromisoformat(g["agendado_para"]) > agora + timedelta(minutes=JANELA_MIN):
-            continue
-        if ESPERA_ERRO.get((base + "-real", "ig"), agora) > agora:
-            continue
-        it = por_id.get(base + "-trial") or por_id.get(base)
-        if not it:
-            continue
-        try:
-            real = {**it, "id": base + "-real", "trial": False, "redes": ["ig"], "quando": g["agendado_para"]}
+    extra = []
+    for nome, f in postados.get("_finais", {}).items():
+        for e in f["itens"]:
+            it = por_id.get(e["base"] + "-trial")
+            if not it:
+                continue
+            real = {**it, "id": e["base"] + "-final", "quando": e["quando"], "redes": ["ig"], "sem_trial": True}
+            real.pop("trial", None)
             real.pop("graduar", None)
-            mid = publicar(real, uid_ig())  # espera até a hora exata da vaga
-            g.update(fim="postado", real=mid, postado_em=datetime.now(timezone.utc).isoformat())
-            g.pop("erro", None)
-            print("POSTADO DE VERDADE (graduado):", base, mid, flush=True)
-        except Exception as e:  # noqa: BLE001
-            g["erro"] = str(e)[:150]
-            anotar_erro((base + "-real", "ig"), str(e))
-            print("ERRO ao postar graduado", base, e, flush=True)
-        return True   # um por rodada
-    return False
+            extra.append(real)
+    return extra
+
+
+def limpar_perdedores(postados):
+    """Apaga do repositório o vídeo e a capa dos testes que perderam (o site do robô tem limite de 1 GB). Só roda no GitHub Actions."""
+    if DRY_RUN or os.environ.get("GITHUB_ACTIONS") != "true":
+        return False
+    apagou = False
+    for nome, f in postados.get("_finais", {}).items():
+        if f.get("limpo"):
+            continue
+        for b in f.get("perdedores", []):
+            for sub, ext in (("videos", "mp4"), ("capas", "jpg")):
+                arq = PASTA / sub / f"{b}.{ext}"
+                if arq.exists():
+                    arq.unlink()
+                    apagou = True
+        f["limpo"] = True
+    return apagou
 
 
 def rodada():
@@ -327,7 +366,7 @@ def rodada():
     agora = datetime.now(timezone.utc)
     ate = postados.get("_fb_pausa_ate")
     FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
-    agenda = agenda + trials_do_dia_anterior(agenda, postados, agora)
+    agenda = agenda + trials_do_dia_anterior(agenda, postados, agora) + itens_finais(agenda, postados)
     feitos = 0
     for item in sorted(agenda, key=lambda x: x["quando"]):
         est = estado_do_item(postados, item["id"])
@@ -369,18 +408,16 @@ def rodada():
         feitos += 1
         pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
         salvar_remoto("postados")
-    try:  # testes que bateram 10k e já têm vaga das 20h marcada: posta no horário
-        if not DRY_RUN and postar_graduados(agenda, postados, agora):
+    try:  # campeonatos: mede os testes com 24 h no ar e, na data de avaliação, escolhe os melhores para postar de verdade
+        mudou = medir_testes(agenda, postados, agora)
+        mudou = escolher_finais(agenda, postados, agora) or mudou
+        if limpar_perdedores(postados):
+            mudou = True
+        if mudou:
             pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
-            salvar_remoto("postados")
+            salvar_remoto("campeonatos")
     except Exception as e:  # noqa: BLE001
-        print("ERRO ao postar graduados:", str(e)[:200], flush=True)
-    try:  # graduação dos testes: quem bate 10 mil views ganha uma vaga à noite (20h) para ir ao ar de verdade
-        if graduar_pendentes(agenda, postados, agora):
-            pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
-            salvar_remoto("postados")
-    except Exception as e:  # noqa: BLE001
-        print("ERRO na graduação:", str(e)[:200], flush=True)
+        print("ERRO nos campeonatos:", str(e)[:200], flush=True)
     try:  # stories do post de 24 h atrás (ver stories.py); falha aqui nunca derruba a rodada dos posts
         import stories
         reg = postados.get("_stories", {})
