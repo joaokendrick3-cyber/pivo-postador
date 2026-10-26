@@ -340,21 +340,34 @@ def itens_finais(agenda, postados):
     return extra
 
 
-def limpar_perdedores(postados):
-    """Apaga do repositório o vídeo e a capa dos testes que perderam (o site do robô tem limite de 1 GB). Só roda no GitHub Actions."""
+def arquivos_em_uso(agenda, postados):
+    """Vídeos e capas ainda necessários: de itens que faltam postar e dos testes de campeonatos ainda sem decisão."""
+    em_campeonato = [c for c in campeonatos() if c["nome"] not in postados.get("_finais", {})]
+    usados = set()
+    for it in agenda:
+        est = estado_do_item(postados, it["id"])
+        falta = any(r not in est for r in redes_do_item(it)) or not redes_do_item(it)
+        candidato = it.get("trial") and any(it["id"].startswith(c["prefixo"]) for c in em_campeonato)
+        if falta or candidato:
+            for k in ("video", "capa"):
+                if it.get(k):
+                    usados.add(it[k].replace("\\", "/"))
+    return usados
+
+
+def limpar_arquivos_sem_uso(agenda, postados):
+    """Apaga de videos/ e capas/ o que não é mais preciso (já postado e sem repostagem prevista): o site do robô tem limite de 1 GB.
+    Só roda no GitHub Actions e só depois que há campeonato decidido ou item postado."""
     if DRY_RUN or os.environ.get("GITHUB_ACTIONS") != "true":
         return False
+    usados = arquivos_em_uso(agenda, postados)
     apagou = False
-    for nome, f in postados.get("_finais", {}).items():
-        if f.get("limpo"):
-            continue
-        for b in f.get("perdedores", []):
-            for sub, ext in (("videos", "mp4"), ("capas", "jpg")):
-                arq = PASTA / sub / f"{b}.{ext}"
-                if arq.exists():
-                    arq.unlink()
-                    apagou = True
-        f["limpo"] = True
+    for sub in ("videos", "capas"):
+        for arq in (PASTA / sub).glob("*"):
+            rel = f"{sub}/{arq.name}"
+            if arq.is_file() and rel not in usados:
+                arq.unlink()
+                apagou = True
     return apagou
 
 
@@ -411,7 +424,7 @@ def rodada():
     try:  # campeonatos: mede os testes com 24 h no ar e, na data de avaliação, escolhe os melhores para postar de verdade
         mudou = medir_testes(agenda, postados, agora)
         mudou = escolher_finais(agenda, postados, agora) or mudou
-        if limpar_perdedores(postados):
+        if limpar_arquivos_sem_uso(agenda, postados):
             mudou = True
         if mudou:
             pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
