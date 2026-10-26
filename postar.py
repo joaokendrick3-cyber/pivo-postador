@@ -219,11 +219,11 @@ def trials_do_dia_anterior(agenda, postados, agora):
     return extra
 
 
-# ---- graduação automática dos reels de teste (regra do João, 26/10): <1k views não posta; 1k a 3k espera; 3k+ posta de verdade
-GRAD_MIN_VIEWS, GRAD_POSTAR = 1000, 3000
+# ---- graduação automática dos reels de teste (regra do João, 26/10, atualizada: só sucesso absurdo, 10k+): <1k não posta; 1k a 10k espera; 10k+ posta de verdade
+GRAD_MIN_VIEWS, GRAD_POSTAR = 1000, 10000
 GRAD_VERIFICAR_APOS_H = 3      # só começa a olhar 3 h depois do teste ir ao ar
 GRAD_DESISTE_BAIXO_H = 24      # com menos de 1k depois de 24 h: descarta
-GRAD_DESISTE_MEIO_H = 72       # entre 1k e 3k depois de 72 h: descarta
+GRAD_DESISTE_MEIO_H = 72       # entre 1k e 10k depois de 72 h: descarta
 _ULTIMA_GRAD = [None]
 
 
@@ -238,8 +238,8 @@ def views_do_reel(mid):
 
 
 def graduar_pendentes(agenda, postados, agora):
-    """Para cada teste marcado com graduar=true e já no ar: lê as views; >= 3 mil posta o reel de verdade (fora da grade,
-    só na aba Reels); entre 1 e 3 mil continua esperando; < 1 mil não posta. Roda no máximo a cada 30 min."""
+    """Para cada teste marcado com graduar=true e já no ar: lê as views; >= 10 mil posta o reel de verdade (fora da grade,
+    só na aba Reels); entre 1 e 10 mil continua esperando; < 1 mil não posta. Roda no máximo a cada 30 min."""
     if DRY_RUN or (_ULTIMA_GRAD[0] and (agora - _ULTIMA_GRAD[0]).total_seconds() < 1800):
         return False
     _ULTIMA_GRAD[0] = agora
@@ -276,7 +276,7 @@ def graduar_pendentes(agenda, postados, agora):
         elif v < GRAD_MIN_VIEWS and horas >= GRAD_DESISTE_BAIXO_H:
             g.update(fim="descartado (menos de 1k)")
         elif horas >= GRAD_DESISTE_MEIO_H:
-            g.update(fim="descartado (nao passou de 3k em 72h)")
+            g.update(fim="descartado (nao passou de 10k em 72h)")
         grad[base] = g
         mudou = True
     return mudou

@@ -15,58 +15,6 @@
   "legenda": "Maiores empresas da bolsa brasileira: as 10 mais valiosas da B3 somam mais de R$ 2,9 trilhões, o equivalente a 22% do PIB do Brasil em 12 meses.\n\nO ranking pelo valor de mercado (fechamento de 09/10/2026, em R$ bilhões): 1. Petrobras (756), 2. Itaú (566), 3. BTG Pactual (301), 4. Vale (270), 5. Ambev (250), 6. Bradesco (226), 7. WEG (217), 8. Axia, a antiga Eletrobras (142), 9. Banco do Brasil (139), 10. Sabesp (118).\n\nAlguns números que chamam atenção: a Petrobras sozinha vale 5,7% do PIB e 2,8 vezes a Vale; os quatro bancos da lista (Itaú, BTG, Bradesco e Banco do Brasil) somam R$ 1,2 trilhão, 41% do valor das 10 maiores.\n\nValor de mercado é preço da ação vezes o número de ações. Muda todo dia, não é lucro e não é patrimônio. Não entram na lista a Itaúsa (holding que controla o Itaú, contaria em dobro) nem o Nubank (as ações são negociadas nos EUA; na B3 só existe o BDR). Comparar com o PIB é só uma forma de dar escala: PIB é o que o país produz em um ano, valor de mercado é o que a empresa vale hoje.\n\nQual dessas você achou que valia mais? Conta aqui.\nManda pra quem acha que sabe qual é a maior empresa do Brasil e segue o PIVÔ: toda semana, um número oficial explicado.\n\nIsto não é recomendação de compra ou venda de ações.\n\nFontes: BRAPI (valor de mercado das empresas, fechamento de 09/10/2026); Banco Central (PIB de 12 meses até agosto/2026: R$ 13,34 trilhões). Cálculos do PIVO. Fotos: Wikimedia Commons (Edifício da Petrobras: Rodrigo Soldon, CC BY 2.0; agência do Itaú: Junius, domínio público).\n\n#bolsadevalores #b3 #petrobras #investimentos #pivoeconomico"
  },
  {
-  "id": "rt01-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-25T13:30:00+00:00",
-  "video": "videos/rt01.mp4",
-  "capa": "capas/rt01.jpg",
-  "legenda": "Juros baixos e preço de imóvel: segundo Paulo Guedes, quando a taxa de juros tende a zero, o preço de quem tem propriedade (imóveis, bolsa, aluguéis) tende a subir muito. Ele conta que explicou isso ao economista Thomas Piketty, que reclamava que não conseguia alugar um imóvel em Paris.\n\nA lógica é de matemática financeira: quanto menor o juro usado para descontar a renda futura de um ativo, maior o valor dele hoje.\n\nContexto: a Selic ficou em 2% ao ano, a mínima histórica, entre agosto de 2020 e março de 2021. Hoje está em 13,75%. Os imóveis do seu bairro subiram na época dos juros baixos?\n\nManda pra quem ainda acha que juro baixo é sempre bom pra todo mundo e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte da Selic: Banco Central (Copom).\n#juros #selic #imoveis #investimentos #pivoeconomico",
-  "graduar": true
- },
- {
-  "id": "rt02-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-25T17:30:00+00:00",
-  "video": "videos/rt02.mp4",
-  "capa": "capas/rt02.jpg",
-  "legenda": "Ao longo do caso Master, a Polícia Federal fez operações em endereços ligados a Daniel Vorcaro e o STF chegou a determinar o bloqueio de bilhões em ativos relacionados ao esquema investigado. Ao mesmo tempo, a própria condução da investigação virou tema de disputa dentro da Corte: já houve episódios de pressão sobre a atuação da PF e questionamentos sobre até onde ela poderia avançar dependendo de quem estivesse sob investigação.\n\nEssa tensão entre quem investiga e quem tem poder pra travar a investigação é, no fim, uma das partes mais reveladoras do caso Master. Não é só sobre um banco que quebrou, é sobre até onde as instituições de controle conseguem ir quando o alvo eventual pode ser alguém de dentro do próprio sistema de Justiça.\n\nFonte: cobertura do caso Master, 2025-2026.\n#economia #politica #policiafederal #stf #casomaster #bancomaster #justica #institucional #brasil #dinheiro #investigacao",
-  "graduar": true
- },
- {
-  "id": "rt03-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-25T21:30:00+00:00",
-  "video": "videos/rt03.mp4",
-  "capa": "capas/rt03.jpg",
-  "legenda": "História de bastidor do mercado: Paulo Guedes conta que, depois de ser convidado para um seminário de investidores em Los Angeles, saiu de um hotel simples para o melhor hotel da cidade, o da Rodeo Drive, e acabou na mesa principal de um show da Madonna, ao lado do dono do evento.\n\nA cena é de 1986, ano do Plano Cruzado no Brasil, e o show foi o encerramento do seminário onde ele foi falar de economia. Uma história curiosa de como a vida de um economista pode mudar numa viagem de trabalho.\n\nQual foi a coisa mais inesperada que já aconteceu com você em uma viagem de trabalho? Conta aqui.\n\nManda pra quem gosta de história de bastidor e segue o PIVÔ: toda semana, economia sem complicação.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia.\n#madonna #economia #bastidores #mercadofinanceiro #pivoeconomico",
-  "graduar": true
- },
- {
-  "id": "rt04-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-26T13:30:00+00:00",
-  "video": "videos/rt04.mp4",
-  "capa": "capas/rt04.jpg",
-  "legenda": "Energia limpa no Brasil: segundo Paulo Guedes, o Brasil tem água, sol e vento, e isso o coloca como protagonista da economia verde. Ele cita países com sol e sem vento, outros com vento e sem sol, e diz que o Brasil tem os três.\n\nContexto do PIVÔ: pelo Balanço Energético Nacional (EPE, ano-base 2023), cerca de 89% da eletricidade brasileira vem de fontes renováveis; considerando toda a energia consumida, com combustíveis e transporte, são cerca de 49%. O entrevistado cita 85% de \"matriz limpa\", que se aproxima do número da eletricidade.\n\nVocê sabia que a energia elétrica do Brasil é uma das mais limpas do mundo? Conta aqui.\n\nManda pra quem acha que o Brasil não tem vantagem nenhuma e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte do contexto: EPE, Balanço Energético Nacional 2024.\n#energialimpa #transicaoenergetica #brasil #economiaverde #pivoeconomico",
-  "graduar": true
- },
- {
   "id": "pe01-trial",
   "tipo": "reel",
   "trial": true,
@@ -208,19 +156,6 @@
   "video": "videos/pe35.mp4",
   "capa": "capas/pe35.jpg",
   "legenda": "Plano de governo: segundo o vídeo, o plano entregue ao TSE promete cuidar das contas, mas não traz um número: não diz quanto o governo pretende gastar menos ou arrecadar mais nos próximos anos. As emendas parlamentares somam R$ 50 bilhões no orçamento de 2026.\n\nPlano sem número é plano? Conta nos comentários.\n\nManda pra quem lê plano de governo e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#planodegoverno #contaspublicas #economia #eleicoes2026 #pivoeconomico"
- },
- {
-  "id": "rt05-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-26T17:30:00+00:00",
-  "video": "videos/rt05.mp4",
-  "capa": "capas/rt05.jpg",
-  "legenda": "Juros baixos e preço de imóvel: segundo Paulo Guedes, quando a taxa de juros tende a zero, o preço de quem tem propriedade (imóveis, bolsa, aluguéis) tende a subir muito. Ele conta que explicou isso ao economista Thomas Piketty, que reclamava que não conseguia alugar um imóvel em Paris.\n\nA lógica é de matemática financeira: quanto menor o juro usado para descontar a renda futura de um ativo, maior o valor dele hoje.\n\nContexto: a Selic ficou em 2% ao ano, a mínima histórica, entre agosto de 2020 e março de 2021. Hoje está em 13,75%. Os imóveis do seu bairro subiram na época dos juros baixos?\n\nManda pra quem ainda acha que juro baixo é sempre bom pra todo mundo e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte da Selic: Banco Central (Copom).\n#juros #selic #imoveis #investimentos #pivoeconomico",
-  "graduar": true
  },
  {
   "id": "pe34-trial",
@@ -431,19 +366,6 @@
   "legenda": "Governo Dilma: a Petrobras foi obrigada a vender gasolina e diesel abaixo do que pagava lá fora, o Ibovespa caiu para 48 mil pontos, o dólar foi de R$ 1,68 para R$ 2,70 e a Bolsa em dólares caiu quase 60%, segundo o vídeo.\n\nSegurar o preço da gasolina valeu a pena? Conta nos comentários.\n\nManda pra quem acha que a Petrobras deve segurar o preço do combustível e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#petrobras #gasolina #ibovespa #dolar #pivoeconomico"
  },
  {
-  "id": "rt06-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-26T21:30:00+00:00",
-  "video": "videos/rt06.mp4",
-  "capa": "capas/rt06.jpg",
-  "legenda": "Insônia e trabalho: Paulo Guedes diz que, quando você acorda às duas da manhã pensando no problema do dia, a pior coisa é tentar resolvê-lo. Para ele, é melhor ler algo diferente que tire a cabeça dali, como as Meditações, de Marco Aurélio, o imperador romano.\n\nO motivo é prático: sem dormir, o dia seguinte vira improdutivo. Uma dica de produtividade que vem de quem passou anos lidando com decisões pesadas.\n\nVocê já acordou de madrugada pensando em trabalho? O que você faz? Conta aqui.\n\nManda pra quem vive no modo trabalho 24 horas e segue o PIVÔ: toda semana, economia e vida real.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia.\n#produtividade #insonia #marcoaurelio #saudemental #pivoeconomico",
-  "graduar": true
- },
- {
   "id": "pe18-trial",
   "tipo": "reel",
   "trial": true,
@@ -626,142 +548,12 @@
   "legenda": "O que ficou pelo caminho: segundo o vídeo, a inflação ficou acima do centro da meta em 2023, 2024 e 2025, o dólar chegou a mais de R$ 6,20 e foram 36 medidas de aumento ou criação de tributos desde janeiro de 2023.\n\nVocê sentiu a inflação e os impostos no bolso? Conta nos comentários.\n\nManda pra quem acha que imposto só sobe para o rico e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#inflacao #impostos #dolar #economia #pivoeconomico"
  },
  {
-  "id": "rt07-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-27T13:30:00+00:00",
-  "video": "videos/rt07.mp4",
-  "capa": "capas/rt07.jpg",
-  "legenda": "Alexandre de Moraes entregou ao STF uma defesa de 44 páginas na qual nega ter cometido crime e classifica a denúncia de Mendonça contra ele como uma forma de \"vingança\", segundo a Metrópoles. No mesmo documento, de acordo com a Revista Oeste, Moraes cita o nome de Mendonça 52 vezes, num tom claramente de contra-ataque, não só de defesa.\n\nÉ importante frisar: até aqui, é a palavra de um contra a do outro dentro de um processo em andamento. Nenhum dos dois foi condenado por nada relacionado ao caso Master. Mas o tom da defesa mostra que não tem mais meio-termo possível entre os dois dentro dessa história.\n\nFonte: Revista Oeste e Metrópoles, setembro de 2026.\n#economia #politica #stf #casomaster #alexandredemoraes #andremendonca #justica #institucional #brasil #direito",
-  "graduar": true
- },
- {
-  "id": "rt08-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-27T17:30:00+00:00",
-  "video": "videos/rt08.mp4",
-  "capa": "capas/rt08.jpg",
-  "legenda": "Inflação nos anos 80: Paulo Guedes conta como era o Brasil quando fundou o banco Pactual: a inflação saiu de 30% para mais de 200% depois de tentativas de congelar câmbio e correção, e o Plano Cruzado, de 1986, congelou preços com um diagnóstico errado.\n\nO custo, segundo ele, foi uma tragédia que levou de cinco a dez anos para consertar. Para ele, esse foi o momento em que a teoria que aprendeu virou aplicação no mercado financeiro.\n\nContexto (IPCA anual, Banco Central/IBGE): 1985, 242%; 1987, 363%; 1989, 1.973%; 1993, 2.477%. Em 12 meses até setembro de 2026, 4,58%.\n\nVocê viveu a inflação dos anos 80 e 90, ou ouviu falar em casa? Conta aqui.\n\nManda pra quem nunca viu preço mudar de um dia pro outro e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte: Banco Central (IPCA, série 433).\n#inflacao #planocruzado #historiaeconomica #economia #pivoeconomico",
-  "graduar": true
- },
- {
-  "id": "rt09-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-27T21:30:00+00:00",
-  "video": "videos/rt09.mp4",
-  "capa": "capas/rt09.jpg",
-  "legenda": "Redução da pobreza no mundo: segundo Paulo Guedes, nunca a humanidade reduziu tanto a miséria e a desigualdade entre povos, e ele fala em 4 bilhões de pessoas que saíram da miséria.\n\nContexto do PIVÔ: pelo critério de pobreza extrema do Banco Mundial, o número de pessoas nessa condição caiu de cerca de 2 bilhões em 1990 para menos de 700 milhões em 2019. A queda é enorme, mas o número de 4 bilhões inclui faixas de renda além da pobreza extrema. Dentro de países, a desigualdade nem sempre caiu, mesmo com a queda entre países.\n\nQual desses fatores você acha que mais tirou gente da pobreza: crescimento da China, comércio global ou programas de renda? Conta aqui.\n\nManda pra quem acha que o mundo só piorou e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte do contexto: Banco Mundial (pobreza extrema, US$ 2,15 por dia).\n#pobreza #desigualdade #economia #globalizacao #pivoeconomico",
-  "graduar": true
- },
- {
-  "id": "rt10-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-28T13:30:00+00:00",
-  "video": "videos/rt10.mp4",
-  "capa": "capas/rt10.jpg",
-  "legenda": "Soja é energia: segundo Paulo Guedes, quando a China importa soja, ela está consumindo a energia do vento, do sol e da água brasileira, e economizando a água dela para uso industrial e de saúde. O problema, na visão dele, é que o Brasil vende soja e minério de ferro e deixa a indústria que transforma isso em óleo e aço fora do país.\n\nContexto: a China é o principal destino das exportações brasileiras desde 2009 (MDIC). O entrevistado diz que o aço feito na China com minério brasileiro volta 40% mais barato do que o produzido aqui; é uma estimativa dele.\n\nVocê acha que o Brasil deveria industrializar mais o que exporta? Conta aqui.\n\nManda pra quem trabalha no agro ou na indústria e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte do contexto: Ministério do Desenvolvimento, Indústria, Comércio e Serviços (MDIC).\n#soja #china #agronegocio #industria #pivoeconomico",
-  "graduar": true
- },
- {
-  "id": "rt11-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-28T17:30:00+00:00",
-  "video": "videos/rt11.mp4",
-  "capa": "capas/rt11.jpg",
-  "legenda": "Quantos milhões de brasileiros têm dinheiro pra comprar um relógio bom e não compram, só porque têm medo de ser assaltados.\nA pergunta foi feita pelo CEO da Watch Time no podcast. Ele lembra que o problema é mais forte em São Paulo e não é exclusivo de peça muito cara. Um relógio de R$ 5 mil já é motivo suficiente pra alguém preferir deixar guardado em casa em vez de usar.\nInsegurança urbana funciona como um imposto invisível sobre o consumo. Ele não aparece em nenhuma nota fiscal, mas encolhe o mercado formal do mesmo jeito, porque empurra a compra pro cofre em vez do pulso, ou simplesmente cancela a compra.\nVocê já deixou de comprar ou de usar algo por medo de chamar atenção na rua?\nFonte: podcast Inteligência Ltda #1940, com José Mauro Racoski (Watch Time).\n#economia #seguranca #financaspessoais #educacaofinanceira #mercadoinformal #consumo #saopaulo #violenciaurbana #relogiosdeluxo #pivoeconomico #custobrasil",
-  "graduar": true
- },
- {
-  "id": "rt12-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-28T21:30:00+00:00",
-  "video": "videos/rt12.mp4",
-  "capa": "capas/rt12.jpg",
-  "legenda": "Crescimento do Brasil: segundo Paulo Guedes, nos últimos 100 anos o Brasil é um dos dois ou três países que mais cresceram, porque controlou a dinâmica populacional e criou uma classe média, sem virar um país de miséria em massa.\n\nEle diz que o Brasil já esteve em primeiro lugar durante 20 ou 30 anos, depois o Japão passou à frente e, mais recentemente, a China passou todo mundo.\n\nVale ler com cuidado: crescimento total do PIB é diferente de renda por habitante, e o PIVÔ não checou as séries históricas citadas. É a opinião do entrevistado.\n\nVocê acha que o Brasil cresceu o que poderia? Conta aqui.\n\nManda pra quem acha que o Brasil nunca foi pra frente e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Afirmação do entrevistado, sem checagem independente.\n#brasil #crescimentoeconomico #pib #economia #pivoeconomico",
-  "graduar": true
- },
- {
-  "id": "rt13-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-29T13:30:00+00:00",
-  "video": "videos/rt13.mp4",
-  "capa": "capas/rt13.jpg",
-  "legenda": "O STF convocou uma sessão extraordinária, fora do calendário normal de julgamentos, pra tratar de pontos do caso Master. Esse tipo de convocação não é rotina: normalmente indica que a Corte considera o assunto urgente demais pra esperar a pauta regular.\n\nO simples fato de existir uma sessão extraordinária pra isso já diz bastante sobre o tamanho que esse caso tomou dentro do próprio Judiciário. Não é mais só um processo entre outros, é um dos temas mais sensíveis da pauta do STF neste momento.\n\nFonte: cobertura do caso Master no STF, 2026.\n#economia #politica #stf #casomaster #bancomaster #justica #institucional #brasil #direito #transparencia",
-  "graduar": true
- },
- {
-  "id": "rt14-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-29T17:30:00+00:00",
-  "video": "videos/rt14.mp4",
-  "capa": "capas/rt14.jpg",
-  "legenda": "Depois da saída de Toffoli da relatoria, o caso Master passou para as mãos do ministro André Mendonça, segundo reportagem da apublica. No início, Mendonça manteve um sigilo bem forte sobre partes da investigação, incluindo documentos sensíveis envolvendo Vorcaro e Moraes.\n\nO detalhe mais interessante veio depois: foi o próprio Mendonça quem, mais adiante, retirou o sigilo das 52 mensagens trocadas entre Vorcaro e o contato atribuído a Moraes, tornando público um dos materiais mais delicados de todo o processo. Ou seja, o ministro que primeiro fechou a porta foi o mesmo que depois abriu justamente a parte que mais gerou repercussão.\n\nFonte: apublica e Jornal Nacional, 2026.\n#economia #politica #stf #casomaster #bancomaster #andremendonca #alexandredemoraes #justica #institucional #brasil",
-  "graduar": true
- },
- {
   "id": "mr03",
   "tipo": "reel",
   "quando": "2026-10-29T20:00:00+00:00",
   "video": "videos/mr03.mp4",
   "capa": "capas/mr03.jpg",
   "legenda": "Imposto de renda: o economista André Roncaglia conta o caso de um contribuinte que ganhou R$ 1,3 bilhão em um ano e pagou imposto sobre só R$ 100 milhões, enquanto o trabalhador paga 27,5% na fonte. Segundo ele, o exemplo foi usado por um pesquisador do Ipea.\n\nContexto do PIVÔ: o caso específico não foi localizado pelo PIVÔ (é a fala do convidado). O que os dados oficiais mostram: a Fazenda (SPE) apontou que quase 70% da renda do 0,01% mais rico é isenta (lucros e dividendos, por exemplo). 27,5% é a alíquota máxima da tabela progressiva do IR.\n\nVocê acha justo o trabalhador pagar na fonte e o topo pagar menos? Conta nos comentários.\n\nManda pra quem acha que quem ganha mais sempre paga mais imposto e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: SPE/Ministério da Fazenda, Relatório da Distribuição Pessoal da Renda (IRPF 2023).\n#impostoderenda #imposto #desigualdade #economia #pivoeconomico"
- },
- {
-  "id": "rt15-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-29T21:30:00+00:00",
-  "video": "videos/rt15.mp4",
-  "capa": "capas/rt15.jpg",
-  "legenda": "Um relatório da Polícia Federal identificou 52 mensagens trocadas entre Daniel Vorcaro e um contato atribuído a Alexandre de Moraes, com termos como \"gratidão\" e \"juntos desde sempre\", segundo reportagem do InfoMoney. O sigilo sobre esse material foi retirado por André Mendonça, o ministro que herdou a relatoria do caso, o que tornou esse conteúdo público.\n\nO ponto central aqui não é o número 52 em si, é o que essas mensagens sugerem sobre proximidade entre o dono de um banco sob investigação e um ministro da mais alta Corte do país, justamente o tipo de relação que gera conflito de interesse se for confirmada judicialmente.\n\nMoraes contesta a interpretação dada a essas mensagens e nega ter agido de forma imprópria.\n\nFonte: InfoMoney e Jornal Nacional, 2026.\n#economia #politica #stf #casomaster #bancomaster #danielvorcaro #alexandredemoraes #andremendonca #justica #brasil #institucional #dinheiroextra",
-  "graduar": true
- },
- {
-  "id": "rt16-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-30T13:30:00+00:00",
-  "video": "videos/rt16.mp4",
-  "capa": "capas/rt16.jpg",
-  "legenda": "Em 1960, o brasileiro era mais rico que o coreano. Hoje, o coreano ganha 3,4 vezes mais. O que aconteceu no meio do caminho?\n\nEm 1960, a renda por pessoa no Brasil era de US$ 235. Na Coreia do Sul, que tinha saído da guerra havia sete anos, US$ 159. Em 1983, no meio da crise da dívida brasileira, a Coreia passou o Brasil e não parou mais. Hoje são US$ 36.227 por coreano contra US$ 10.713 por brasileiro.\n\nTrês números ajudam a explicar:\n\nEscola. Em 1960, o adulto coreano já tinha estudado 4,5 anos, contra 2,5 do brasileiro. Em 1980, eram 8,6 contra 3,1.\n\nInvestimento. Desde 1980, a Coreia põe em média 31% do PIB em fábricas, máquinas e infraestrutura. O Brasil, 19%.\n\nIndústria. 88% das exportações de bens da Coreia são produtos industriais. No Brasil, 24%.\n\nNão foi receita mágica: a Coreia teve ditadura até o fim dos anos 1980 e jornadas de trabalho muito longas. E o Brasil de hoje até gasta uma fatia parecida do PIB em educação, mas começou décadas depois.\n\nQual desses três você acha que pesa mais? Conta aqui nos comentários.\n\nFontes: Banco Mundial (PIB per capita em dólares correntes; formação bruta de capital fixo; manufaturados nas exportações), consulta em 08/10/2026. Anos de estudo: Barro-Lee e Lee-Lee, via Our World in Data. Em dólares correntes o câmbio pesa: a desvalorização de 1983 ajudou a derrubar o número do Brasil naquele ano. Fotos: Wikimedia Commons (Arquivo Nacional e NARA, domínio público; Seul e Ulsan, CC0; São Paulo, Marcosleal, CC BY-SA 3.0; Seul 1961, KTV, KOGL tipo 1).\n\n#economia #dinheiro #pib #pibpercapita #coreiadosul #brasil #desenvolvimento #educacao #historiaeconomica #crescimentoeconomico #produtividade #industria #educacaofinanceira #pivoeconomico",
-  "graduar": true
  },
  {
   "id": "mr05",
@@ -772,38 +564,12 @@
   "legenda": "Bets: segundo o economista Eduardo Moreira, aposta esportiva gera zero de riqueza nova, é só transferência de renda: um pedacinho vai para quem ganha e um pedação para a banca.\n\nContexto do PIVÔ: é uma opinião do convidado (ele se diz muito crítico do tamanho que as apostas tomaram). Em economia, o jogo de soma zero redistribui dinheiro entre jogadores e a casa fica com a margem. A Lei 14.790/2023 regulamentou as apostas de quota fixa no Brasil.\n\nVocê já apostou ou conhece alguém que vive disso? Conta aqui, sem julgamento.\n\nManda pra quem acha que bet é investimento e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: Lei 14.790/2023.\n#bets #apostas #economia #educacaofinanceira #pivoeconomico"
  },
  {
-  "id": "rt17-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-30T17:30:00+00:00",
-  "video": "videos/rt17.mp4",
-  "capa": "capas/rt17.jpg",
-  "legenda": "Tratar a riqueza apenas como consumo de luxo é ignorar a verdadeira função do dinheiro: liberdade, segurança e proteção da sua família. 🛡️🏠👇\n\nAcumular patrimônio não se resume a restaurantes caros, carros do ano ou voos de primeira classe. O verdadeiro valor do dinheiro aparece nos momentos em que ele se torna a única ferramenta capaz de resolver problemas reais.\n\nComo destacado no vídeo, a construção de riqueza ganha sentido quando serve para:\n1️⃣ Apoio e segurança familiar: Quitar dívidas dos pais, garantir moradia digna para a família e proporcionar estabilidade aos seus.\n\n2️⃣ Geração de oportunidades: Ajudar familiares e pessoas próximas a empreender, crescer profissionalmente e alcançar a própria independência financeira.\n\n3️⃣ Tranquilidade na saúde: Ter recursos para garantir atendimento médico de ponta em momentos críticos de emergência, sem que o fator financeiro seja um obstáculo para salvar uma vida.\n\nO dinheiro em si é um meio, não o fim. Quando usado com propósito, ele se torna um escudo de proteção para quem você ama.\n\n💬 O que mais te motiva a buscar a sua independência e construção de patrimônio? Deixe sua visão nos comentários!\n\n💾 Salve este Reels para lembrar do verdadeiro propósito da sua jornada financeira.\n\n➡️ Compartilhe com quem precisa entender o real valor do dinheiro!\n\n@bruno_perini \n\n#pivoeconomico #propósito #liberdadefinanceira #segurançafamiliar #investimentos #desenvolvimentopessoal #educacaofinanceira #patrimonio #mentalidadedesucesso #sucessofinanceiro",
-  "graduar": true
- },
- {
   "id": "mr06",
   "tipo": "reel",
   "quando": "2026-10-30T18:00:00+00:00",
   "video": "videos/mr06.mp4",
   "capa": "capas/mr06.jpg",
   "legenda": "Juros da dívida: segundo o economista Eduardo Moreira, o multiplicador dos juros da dívida é 0,7, ou seja, cada real pago em juros da dívida pública vira menos de um real de crescimento econômico.\n\nContexto do PIVÔ: multiplicador fiscal é quanto o PIB muda para cada real de gasto do governo. O valor 0,7 é a estimativa citada por ele e não é consenso entre economistas; vale ler a fonte antes de repetir o número. No Brasil, o governo pagou 8,86% do PIB em juros nos 12 meses até agosto de 2026 (Banco Central).\n\nPara você, o que pesa mais: os juros da dívida ou o tamanho da dívida? Conta aqui.\n\nManda pra quem acha que juro da dívida não afeta o seu bolso e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: Banco Central (juros nominais do setor público, ago/2026).\n#juros #dividapublica #selic #economia #pivoeconomico"
- },
- {
-  "id": "rt18-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-30T21:30:00+00:00",
-  "video": "videos/rt18.mp4",
-  "capa": "capas/rt18.jpg",
-  "legenda": "A fabricante de relógios mais antiga do mundo, fundada em 1735, fechou as portas em plena crise do quartzo. (No podcast, o entrevistado citou 1752 de memória. O registro oficial da marca aponta 1735, e usamos a data correta aqui.)\nA Blancpain fazia parte do grupo suíço SSIH, que quebrou junto com boa parte do setor entre os anos 1970 e 1980. Foi comprada, junto com outras marcas do grupo, por Nicolas Hayek, um executivo que tinha vindo do mercado financeiro, e que decidiu comprar tudo por um preço muito abaixo do valor histórico daquelas marcas.\nComprar um ativo em colapso, quando ninguém mais quer, é basicamente o manual do investimento contrário. Só que aplicado a uma marca de luxo centenária em vez de uma ação na bolsa.\nVocê já comprou alguma coisa (ação, imóvel, o que for) exatamente no momento em que todo mundo estava vendendo?\nFonte: podcast Inteligência Ltda #1940; histórico oficial da Blancpain.\n#economia #historiaeconomica #investimentos #financaspessoais #educacaofinanceira #investimentocontrario #fusoeseaquisicoes #suica #blancpain #relogiosdeluxo #pivoeconomico #bolsadevalores",
-  "graduar": true
  },
  {
   "id": "mr08",
@@ -814,38 +580,12 @@
   "legenda": "Investimento: o economista André Roncaglia diz que, num estudo dele, a Coreia do Sul investe 102% da renda dos 10% mais ricos, e a elite brasileira, algo em torno de 30%.\n\nContexto do PIVÔ: a conta é de um estudo citado pelo convidado e não foi conferida pelo PIVÔ; o que ele quer mostrar é que os ricos coreanos reinvestiram bem mais do que os brasileiros no desenvolvimento do país. Investir mais que a própria renda significa usar também crédito e lucro acumulado.\n\nPor que você acha que o investimento no Brasil é tão baixo? Conta aqui.\n\nManda pra quem acha que o Brasil investe o suficiente e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia.\n#investimento #coreiadosul #desenvolvimento #economia #pivoeconomico"
  },
  {
-  "id": "rt19-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-31T13:30:00+00:00",
-  "video": "videos/rt19.mp4",
-  "capa": "capas/rt19.jpg",
-  "legenda": "\"Vamos fazer um relógio de plástico.\" Foi essa a ideia, meio desesperada, que salvou a indústria suíça de relógios.\nCom o grupo formado depois da compra da Blancpain (post anterior desta série) precisando de uma saída rápida, a equipe lançou um relógio de plástico sem nem logo aplicado, vendido em bancas de jornal e quiosques por 50 francos suíços. Até hoje a marca nunca revelou oficialmente o que o \"S\" de Swatch significa. Pode ser \"Swiss\", pode ser \"second watch\". Ninguém fora da empresa sabe ao certo.\nUma indústria de luxo centenária decidiu se salvar lançando o produto mais barato e mais descartável do próprio portifólio. É quase contraintuitivo, e funcionou.\nVocê arriscaria simplificar seu produto ao extremo pra sobreviver a uma crise, mesmo que isso significasse abrir mão do posicionamento premium?\nFonte: podcast Inteligência Ltda #1940, com Leandro Amorim (GMT-3).\n#economia #historiaeconomica #inovacao #financaspessoais #educacaofinanceira #estrategiadenegocio #suica #swatch #reposicionamento #relogiosdeluxo #pivoeconomico #casesdesucesso",
-  "graduar": true
- },
- {
   "id": "mr09",
   "tipo": "reel",
   "quando": "2026-10-31T16:00:00+00:00",
   "video": "videos/mr09.mp4",
   "capa": "capas/mr09.jpg",
   "legenda": "Pré-sal: segundo o economista André Roncaglia, a Petrobras assumiu o risco de perfurar a cerca de 7 mil metros, num cenário em que ninguém tinha certeza do que havia embaixo, e achou bilhões de barris de petróleo.\n\nContexto do PIVÔ: o pré-sal fica sob uma camada de sal a milhares de metros abaixo do fundo do mar, e a Petrobras anunciou as primeiras grandes descobertas em 2006 e 2007 (campo de Tupi). O argumento do convidado é que algumas atividades de muito risco e retorno incerto foram bancadas pelo Estado.\n\nPara você, quem deve correr esse tipo de risco: Estado ou empresas privadas? Conta aqui.\n\nManda pra quem acha que o Estado nunca fez nada de útil e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia. Fonte do contexto: Petrobras (descoberta de Tupi, 2006/2007).\n#petrobras #presal #petroleo #economia #pivoeconomico"
- },
- {
-  "id": "rt20-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-31T17:30:00+00:00",
-  "video": "videos/rt20.mp4",
-  "capa": "capas/rt20.jpg",
-  "legenda": "O mercado de superesportivos e hipercarros no Brasil movimenta cifras astronômicas. 🏎️💨👇\n\nConfira a lista dos modelos mais caros e exclusivos rodando no país:\n\n1️⃣ Bugatti Chiron Sport: R$ 55 Milhões\n\n2️⃣ Ferrari LaFerrari: R$ 45 Milhões\n\n3️⃣ McLaren P1: R$ 28 Milhões\n\n4️⃣ McLaren Senna GTR: R$ 25 Milhões\n\n5️⃣ Aston Martin Valour: R$ 20 Milhões\n\n6️⃣ Porsche 918 Spyder: R$ 18 Milhões\n\n7️⃣ Ford GT Carbon: R$ 16 Milhões\n\n8️⃣ Porsche Carrera GT: R$ 13 Milhões\n\n9️⃣ Rolls-Royce Cullinan Mansory: R$ 9 Milhões\n\nAlém do valor de aquisição e importação, a manutenção e o IPVA dessas máquinas no Brasil podem ultrapassar a casa do milhão por ano.\n\n💬 Se você pudesse escolher apenas um dessa lista para a sua garagem, qual seria? Deixe nos comentários!\n\n💾 Salve este Reels para consultar o ranking dos supercarros.\n\n➡️ Compartilhe com aquele amigo apaixonado por automobilismo!\n\n#pivoeconomico #supercarros #carrosdeluxo #hipercarros #bugattichiron #ferrarilaferrari #mclarenp1 #porsche918 #mercadodeautomoveis #luxonobrasil",
-  "graduar": true
  },
  {
   "id": "mr10",
@@ -856,51 +596,12 @@
   "legenda": "Meritocracia: o economista André Roncaglia diz que nunca viu milionário caracterizado por imensa inteligência: segundo ele, eles estão apenas bem posicionados, muitas vezes por herança ou contatos, e associar dinheiro a inteligência revela a máxima da desigualdade.\n\nContexto do PIVÔ: é uma opinião, não uma pesquisa. Estudos sobre mobilidade social mostram que a origem familiar pesa muito na renda futura, mas também há quem enriqueça por esforço e risco próprio.\n\nVocê acredita em meritocracia? Conta nos comentários.\n\nManda pra quem acredita que todo rico enriqueceu só por mérito e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Flow Podcast #259 com Eduardo Moreira e André Roncaglia.\n#meritocracia #desigualdade #riqueza #economia #pivoeconomico"
  },
  {
-  "id": "rt21-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-10-31T21:30:00+00:00",
-  "video": "videos/rt21.mp4",
-  "capa": "capas/rt21.jpg",
-  "legenda": "O STF chegou dividido a esse julgamento, com posições já bem consolidadas entre os ministros antes mesmo da sessão começar, segundo reportagem da Gazeta do Povo. Em determinado momento, Moraes e Mendonça bateram boca publicamente durante o julgamento, num nível de confronto direto entre dois ministros que raramente se vê em público.\n\nDois integrantes da mesma Corte se acusando formalmente é um tipo de crise que vai muito além do caso Master em si. Mexe com a credibilidade da própria instituição, porque o STF é, entre outras coisas, o órgão que julga esse tipo de conflito de interesse, e agora ele mesmo virou palco de um.\n\nFonte: CNN Brasil e Gazeta do Povo, 2026.\n#economia #politica #stf #casomaster #alexandredemoraes #andremendonca #justica #institucional #crisepolitica #brasil",
-  "graduar": true
- },
- {
-  "id": "rt22-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-11-01T13:30:00+00:00",
-  "video": "videos/rt22.mp4",
-  "capa": "capas/rt22.jpg",
-  "legenda": "Planos de congelamento de preços: em 1986, Paulo Guedes diz que foi a um evento em Los Angeles com ministros de três países e avisou que aquele povo todo estaria desempregado em seis meses, porque os planos não iam funcionar.\n\nOs três países tinham congelado preços: Brasil (Plano Cruzado), Argentina (Plano Austral) e Peru (Plano Inti). Na história que ele conta, o aviso fez o dono da festa decidir não investir US$ 260 bilhões nos programas.\n\nContexto: o congelamento do Cruzado começou em 28 de fevereiro de 1986 e a inflação voltou a disparar no ano seguinte (IPCA de 1987: 363%, segundo o Banco Central).\n\nVocê acha que dá para segurar preço por decreto? Conta aqui.\n\nManda pra quem acha que congelar preço resolve e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Relato do próprio entrevistado, não verificado de forma independente.\n#planocruzado #inflacao #congelamentodepreco #economia #pivoeconomico",
-  "graduar": true
- },
- {
   "id": "md01",
   "tipo": "reel",
   "quando": "2026-11-01T16:00:00+00:00",
   "video": "videos/md01.mp4",
   "capa": "capas/md01.jpg",
   "legenda": "Golpe do \"10% ao mês\": segundo Charles Mendlowicz, quem tem um negócio que rende isso não precisa procurar você para investir.\n\nContexto do PIVÔ: 10% ao mês, com juros compostos, dá cerca de 214% ao ano (1,10 elevado a 12). Nenhum ativo regulado entrega isso de forma segura e contínua. Antes de aplicar, consulte o CNPJ e a autorização da empresa no site da CVM e do Banco Central.\n\nVocê já recebeu uma proposta de investimento que parecia boa demais? Conta nos comentários.\n\nManda pra quem já foi chamado pra \"investir 10% ao mês\" e segue o PIVÔ: toda semana, um número explicado.\n\nCorte do Inteligência Ltda #669 com Charles Mendlowicz.\n#golpe #investimentos #educacaofinanceira #economia #pivoeconomico"
- },
- {
-  "id": "rt23-trial",
-  "tipo": "reel",
-  "trial": true,
-  "redes": [
-   "ig"
-  ],
-  "quando": "2026-11-01T17:30:00+00:00",
-  "video": "videos/rt23.mp4",
-  "capa": "capas/rt23.jpg",
-  "legenda": "Durante uma sessão sobre o caso, Moraes afirmou ter testemunhas sobre uma suposta exigência feita dentro de um acordo de delação, e Mendonça reagiu na hora chamando a afirmação de \"mentira\", em plenário aberto, segundo reportagem da CLM Brasil.\n\nIsso não é o tom que se costuma ver em sessões do STF. E é justamente por isso que viralizou: dois ministros da mais alta Corte do país discutindo abertamente sobre quem está mentindo, num processo que envolve os dois diretamente.\n\nVocê lembra de outro momento em que dois ministros do STF discutiram assim, em público?\n\nFonte: CLM Brasil, 2026.\n#economia #politica #stf #casomaster #alexandredemoraes #andremendonca #justica #institucional #brasil #direito",
-  "graduar": true
  },
  {
   "id": "md02",
