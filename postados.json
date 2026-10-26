@@ -10,7 +10,7 @@
   "pe12-trial:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai",
   "pe13-trial:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai",
   "pe14-trial:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai",
-  "pe15-trial:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai"
+  "pe15-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"ARlRl-DrWbdsaTq-XNHnHBS\"}}"
  },
  "_stories": {
   "2026-10-22_09": {
