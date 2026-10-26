@@ -184,6 +184,19 @@
   "legenda": "Dinheiro público: quando você lê que o governo vai perdoar dívida, subsidiar ou comprar alguma coisa, quem está pagando é você, diz o Primo Rico.\n\nVocê já parou para pensar de onde vem o dinheiro do governo? Conta nos comentários.\n\nManda pra quem acha que o governo paga tudo sozinho e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#dinheiropublico #impostos #economia #educacaofinanceira #pivoeconomico"
  },
  {
+  "id": "pe35-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T17:20:00+00:00",
+  "video": "videos/pe35.mp4",
+  "capa": "capas/pe35.jpg",
+  "legenda": "Plano de governo: segundo o vídeo, o plano entregue ao TSE promete cuidar das contas, mas não traz um número: não diz quanto o governo pretende gastar menos ou arrecadar mais nos próximos anos. As emendas parlamentares somam R$ 50 bilhões no orçamento de 2026.\n\nPlano sem número é plano? Conta nos comentários.\n\nManda pra quem lê plano de governo e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#planodegoverno #contaspublicas #economia #eleicoes2026 #pivoeconomico"
+ },
+ {
   "id": "rt05-trial",
   "tipo": "reel",
   "trial": true,
@@ -195,6 +208,19 @@
   "capa": "capas/rt05.jpg",
   "legenda": "Juros baixos e preço de imóvel: segundo Paulo Guedes, quando a taxa de juros tende a zero, o preço de quem tem propriedade (imóveis, bolsa, aluguéis) tende a subir muito. Ele conta que explicou isso ao economista Thomas Piketty, que reclamava que não conseguia alugar um imóvel em Paris.\n\nA lógica é de matemática financeira: quanto menor o juro usado para descontar a renda futura de um ativo, maior o valor dele hoje.\n\nContexto: a Selic ficou em 2% ao ano, a mínima histórica, entre agosto de 2020 e março de 2021. Hoje está em 13,75%. Os imóveis do seu bairro subiram na época dos juros baixos?\n\nManda pra quem ainda acha que juro baixo é sempre bom pra todo mundo e segue o PIVÔ: toda semana, um número oficial explicado.\n\nCorte do Flow Podcast com Paulo Guedes, ex-ministro da Economia. Fonte da Selic: Banco Central (Copom).\n#juros #selic #imoveis #investimentos #pivoeconomico",
   "graduar": true
+ },
+ {
+  "id": "pe34-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T17:35:00+00:00",
+  "video": "videos/pe34.mp4",
+  "capa": "capas/pe34.jpg",
+  "legenda": "Pacote de bondades: segundo o vídeo, nas últimas semanas de campanha vieram a proibição das bets, o Bolsa Família reajustado de R$ 600 para R$ 691 com pagamento antecipado, perdão de dívida de 3,6 milhões de MEIs, Desenrola 3.0 e Pé-de-Meia universitário.\n\nMedida legítima ou eleitoreira? Conta nos comentários.\n\nManda pra quem acha que toda medida social cabe no orçamento e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#bolsafamilia #desenrola #mei #eleicoes2026 #pivoeconomico"
  },
  {
   "id": "pe36-trial",
