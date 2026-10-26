@@ -9,7 +9,7 @@
   "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
   "pe12-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AQ-_A-9HnRNnIGbBVaZhn8G\"}}",
   "pe13-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AaMEgCMTZAzMXhrbzAs1Dn9\"}}",
-  "pe14-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AVkO4rv83tFfU8shBxp4Bw6\"}}",
+  "pe14-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"ADOqDSHSMBcSc7ooRgsEyNy\"}}",
   "pe15-trial:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai"
  },
  "_stories": {
