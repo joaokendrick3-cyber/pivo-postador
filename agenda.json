@@ -431,6 +431,32 @@
   "graduar": true
  },
  {
+  "id": "pe19-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T21:50:00+00:00",
+  "video": "videos/pe19.mp4",
+  "capa": "capas/pe19.jpg",
+  "legenda": "Teto de gastos: no governo Temer, o teto limitou o gasto do governo à inflação do ano anterior. Segundo o vídeo, a Selic caiu de 14% para 6,5%, a inflação de 2017 foi de 2,9% e o Ibovespa foi de 40 mil para 76 mil pontos.\n\nO teto de gastos funcionou? Conta nos comentários.\n\nManda pra quem acha que controle de gasto não adianta nada e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#tetodegastos #selic #ibovespa #economia #pivoeconomico"
+ },
+ {
+  "id": "pe20-trial",
+  "tipo": "reel",
+  "trial": true,
+  "graduar": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-10-26T22:05:00+00:00",
+  "video": "videos/pe20.mp4",
+  "capa": "capas/pe20.jpg",
+  "legenda": "Reforma da Previdência: em 2018 Bolsonaro venceu com 55% dos votos e, no primeiro ano de mandato, a reforma foi aprovada. A Selic terminou 2019 em 4,5% e o Ibovespa rompeu os 100 mil pontos, segundo o vídeo.\n\nReforma muda a Bolsa? Conta nos comentários.\n\nManda pra quem acha que reforma não muda nada e segue o PIVÔ: economia do dia a dia, com dado e fonte.\n\nCorte do vídeo do Primo Rico (YouTube, 25/10/2026). Os números são citados pelo apresentador.\n#reformadaprevidencia #ibovespa #selic #economia #pivoeconomico"
+ },
+ {
   "id": "rt07-trial",
   "tipo": "reel",
   "trial": true,
