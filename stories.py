@@ -9,7 +9,6 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import notificar
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 PASTA = Path(__file__).resolve().parent
@@ -140,8 +139,6 @@ def publicar_pendentes(chamar, esperar, api, token, uid, base_url, postados, dry
             reg[chave] = {"media_id": mid, "do_post": post["id"], "em": datetime.now(timezone.utc).isoformat()}
             postados.get("_erros", {}).pop(f"story:{chave}", None)
             print("STORY POSTADO", chave, "do post", post.get("permalink"), flush=True)
-            if not dry:
-                notificar.avisar(f"story {chave}", mid, api, token)
         except Exception as e:  # noqa: BLE001
             postados.setdefault("_erros", {})[f"story:{chave}"] = str(e)[:300]
             print("ERRO story", chave, e, flush=True)
