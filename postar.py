@@ -188,6 +188,7 @@ def uid_ig():
     return _UID
 
 
+FALHAS_GERAIS = [0]   # falhas seguidas de itens diferentes (zera quando algo posta)
 FALHAS_SEGUIDAS = {}   # (item, rede) -> quantas falhas seguidas (zera quando posta)
 
 
@@ -241,7 +242,7 @@ def trials_do_dia_anterior(agenda, postados, agora):
         if it["tipo"] != "reel" or it.get("trial") or "sem_trial" in it or it["id"] in postados:
             continue
         t = datetime.fromisoformat(it["quando"]) - timedelta(days=1)
-        if t < agora - timedelta(minutes=JANELA_MIN):
+        if t < agora - timedelta(hours=3):   # teste atrasado até 3 h ainda vale (se a API ficou fora do ar)
             continue
         extra.append({**it, "id": it["id"] + "-trial", "quando": t.isoformat(), "trial": True, "redes": ["ig"]})
     return extra
@@ -442,6 +443,7 @@ def rodada():
                 else:
                     mid = publicar_fb(item)
                 FALHAS_SEGUIDAS.pop((item["id"], rede), None)
+                FALHAS_GERAIS[0] = 0
                 est[rede] = {"media_id": mid, "em": datetime.now(timezone.utc).isoformat()}
                 postados.get("_erros", {}).pop(f"{item['id']}:{rede}", None)
                 print("POSTADO", rede, item["id"], mid, flush=True)
@@ -453,6 +455,11 @@ def rodada():
                     _CONTAINERS.pop(item["id"], None)
                 if "request limit" in str(e) or '"code":4,' in str(e):   # limite de requisições do app: pausa geral de 10 min
                     ESPERA_GLOBAL[0] = datetime.now(timezone.utc) + timedelta(minutes=10)
+                FALHAS_GERAIS[0] += 1
+                if FALHAS_GERAIS[0] >= 3:   # 3 itens seguidos falhando: o Instagram está recusando tudo; espera 30 min em vez de martelar a API
+                    ESPERA_GLOBAL[0] = max(ESPERA_GLOBAL[0], datetime.now(timezone.utc) + timedelta(minutes=30))
+                    FALHAS_GERAIS[0] = 0
+                    print("Instagram recusando publicações em série: pausa de 30 min", flush=True)
                 if rede == "fb" and '"code":368' in str(e):
                     postados["_fb_pausa_ate"] = (datetime.now(timezone.utc) + timedelta(hours=PAUSA_FB_HORAS)).isoformat()
                     FB_PAUSADO = True
