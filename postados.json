@@ -6,8 +6,7 @@
   }
  },
  "_erros": {
-  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
-  "pe21-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"ArzL2rxxDeD1Q5bDHvhAOvy\"}}"
+  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\""
  },
  "_stories": {
   "2026-10-22_09": {
@@ -568,6 +567,12 @@
   "ig": {
    "media_id": "17952687285331160",
    "em": "2026-10-27T17:40:09.292400+00:00"
+  }
+ },
+ "pe21-trial": {
+  "ig": {
+   "media_id": "18082933529413073",
+   "em": "2026-10-27T18:30:06.948235+00:00"
   }
  }
 }
