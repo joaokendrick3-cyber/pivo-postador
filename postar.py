@@ -12,6 +12,8 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import notificar
+
 PASTA = Path(__file__).resolve().parent
 API = "https://graph.instagram.com/v23.0"
 TOKEN = os.environ["IG_TOKEN"].strip()
@@ -488,6 +490,8 @@ def rodada():
                 est[rede] = {"media_id": mid, "em": datetime.now(timezone.utc).isoformat()}
                 postados.get("_erros", {}).pop(f"{item['id']}:{rede}", None)
                 print("POSTADO", rede, item["id"], mid, flush=True)
+                if rede == "ig" and not DRY_RUN:
+                    notificar.avisar(f'{item["id"]} ({item["tipo"]})', mid, API, TOKEN)
             except Exception as e:  # noqa: BLE001
                 postados.setdefault("_erros", {})[f"{item['id']}:{rede}"] = str(e)[:300]
                 print("ERRO", rede, item["id"], e, flush=True)
