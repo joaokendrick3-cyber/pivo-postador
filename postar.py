@@ -84,18 +84,24 @@ _CONTAINERS = {}   # id do item -> container já criado (reaproveitado nas novas
 
 def publicar(item, uid):
     cid = _CONTAINERS.get(item["id"])
-    if not cid:
-        cid = criar_container(item, uid)
-        _CONTAINERS[item["id"]] = cid
-    else:
-        esperar(cid, 30)
+    try:
+        if not cid:
+            cid = criar_container(item, uid)
+            _CONTAINERS[item["id"]] = cid
+        else:
+            esperar(cid, 30)
+    except RuntimeError as e:
+        raise RuntimeError(f"[criar/processar] {e}") from None
     espera = (datetime.fromisoformat(item["quando"]) - datetime.now(timezone.utc)).total_seconds()
     if espera > 0 and not DRY_RUN:  # container pronto antes da hora: espera e publica no minuto certo
         print("aguardando", int(espera), "s para", item["id"], flush=True)
         time.sleep(espera)
     if DRY_RUN:  # teste a seco: o item foi aceito pelo Instagram, mas NÃO é publicado
         return "TESTE-" + cid
-    mid = chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
+    try:
+        mid = chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
+    except RuntimeError as e:
+        raise RuntimeError(f"[media_publish] {e}") from None
     _CONTAINERS.pop(item["id"], None)
     return mid
 
@@ -182,9 +188,14 @@ def uid_ig():
     return _UID
 
 
+FALHAS_SEGUIDAS = {}   # (item, rede) -> quantas falhas seguidas (zera quando posta)
+
+
 def anotar_erro(chave, erro):
     limite = "request limit" in erro or '"code":4,' in erro
-    ESPERA_ERRO[chave] = datetime.now(timezone.utc) + timedelta(minutes=20 if limite else 5)
+    n = FALHAS_SEGUIDAS[chave] = FALHAS_SEGUIDAS.get(chave, 0) + 1
+    minutos = 20 if limite else min(60, 5 * 2 ** (n - 1))
+    ESPERA_ERRO[chave] = datetime.now(timezone.utc) + timedelta(minutes=minutos)
 
 
 def ja_no_perfil(item, uid):
@@ -398,6 +409,7 @@ def rodada():
     FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
     agenda = agenda + trials_do_dia_anterior(agenda, postados, agora) + itens_finais(agenda, postados)
     feitos = 0
+    retentou = False
     for item in sorted(agenda, key=lambda x: x["quando"]):
         est = estado_do_item(postados, item["id"])
         pend = [r for r in redes_do_item(item) if r not in est]
@@ -409,6 +421,10 @@ def rodada():
             break
         if all(ESPERA_ERRO.get((item["id"], r), agora) > agora for r in pend):
             continue   # ainda esperando depois de um erro: passa para o próximo sem gastar a cota da rodada
+        if any(FALHAS_SEGUIDAS.get((item["id"], r)) for r in pend):   # item que já falhou: no máximo 1 nova tentativa por rodada, para não tirar a vez dos outros
+            if retentou:
+                continue
+            retentou = True
         if ESPERA_GLOBAL[0] > agora:
             break      # a API está limitando as chamadas: não insiste agora
         uid = uid_ig()
@@ -425,6 +441,7 @@ def rodada():
                         mid = publicar(item, uid)
                 else:
                     mid = publicar_fb(item)
+                FALHAS_SEGUIDAS.pop((item["id"], rede), None)
                 est[rede] = {"media_id": mid, "em": datetime.now(timezone.utc).isoformat()}
                 postados.get("_erros", {}).pop(f"{item['id']}:{rede}", None)
                 print("POSTADO", rede, item["id"], mid, flush=True)
@@ -434,7 +451,7 @@ def rodada():
                 anotar_erro((item["id"], rede), str(e))
                 if "processamento falhou" in str(e):
                     _CONTAINERS.pop(item["id"], None)
-                if '"is_transient":true' in str(e) or "request limit" in str(e):   # limite da API ou erro passageiro: pausa geral de 10 min
+                if "request limit" in str(e) or '"code":4,' in str(e):   # limite de requisições do app: pausa geral de 10 min
                     ESPERA_GLOBAL[0] = datetime.now(timezone.utc) + timedelta(minutes=10)
                 if rede == "fb" and '"code":368' in str(e):
                     postados["_fb_pausa_ate"] = (datetime.now(timezone.utc) + timedelta(hours=PAUSA_FB_HORAS)).isoformat()
@@ -480,11 +497,21 @@ def rodada():
     return feitos
 
 
+def versao_do_codigo():
+    import hashlib
+    h = hashlib.sha1()
+    for nome in ("postar.py", "stories.py", "comentarios.py"):
+        f = PASTA / nome
+        h.update(f.read_bytes() if f.exists() else b"")
+    return h.hexdigest()
+
+
 def main():
     """LOOP_MINUTOS > 0: fica rodando esse tempo, conferindo a agenda a cada minuto (hora exata, sem depender do
     gatilho externo). Sem a variável, faz uma rodada só (teste a seco e uso manual)."""
     fim = time.time() + int(os.environ.get("LOOP_MINUTOS", "0") or 0) * 60
     n = 0
+    versao = versao_do_codigo()
     while True:
         try:
             feitos = rodada()
@@ -498,6 +525,9 @@ def main():
         time.sleep(60)
         if os.environ.get("GITHUB_ACTIONS") == "true" and n % 3 == 0:
             git("pull", "--rebase", "--autostash", "-q")  # pega agenda nova
+            if versao_do_codigo() != versao:
+                print("código novo no repositório: encerrando o ciclo para recarregar (o próximo começa sozinho)", flush=True)
+                break
 
 
 if __name__ == "__main__":
