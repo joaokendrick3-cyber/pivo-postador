@@ -189,8 +189,8 @@ def uid_ig():
 
 
 # ---- limite (não oficial) de reels de TESTE do Instagram: relatos de ~20 por dia; aqui o robô falhou no 25º teste em 24 h (26/10, 20h10 UTC:
-# 24 testes entre 25/10 21h30 e 26/10 20h10, depois só erro 500 no media_publish). Por segurança: no máximo 20 testes em 24 h e 40 min entre dois testes.
-TRIAL_MAX_24H = 20
+# 24 testes entre 25/10 21h30 e 26/10 20h10, depois só erro 500 no media_publish). Por segurança: no máximo 24 testes em 24 h (o que já funcionou) e 40 min entre dois testes.
+TRIAL_MAX_24H = 24
 TRIAL_ESPACO_MIN = 40
 
 
