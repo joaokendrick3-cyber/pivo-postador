@@ -10,7 +10,7 @@
   "pe12-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AewzhmmNX4s_gQ4UGM40Ih0\"}}",
   "pe13-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AtCfLz7BkktdLjPFAp_PNHF\"}}",
   "pe14-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AHmcjq_XPfFCwS0JVw0pRs-\"}}",
-  "pe15-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AHY3iock7pDXLljyRtwJ_mV\"}}"
+  "pe15-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"A0siu9hLj79QAbtKK6Quztr\"}}"
  },
  "_stories": {
   "2026-10-22_09": {
