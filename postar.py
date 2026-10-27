@@ -212,7 +212,9 @@ def sem_vaga_de_teste(postados, agora):
     if agora < TRIAL_NAO_ANTES:
         return True
     ts = trials_recentes(postados, agora)
-    return len(ts) >= TRIAL_MAX_24H or (ts and (agora - ts[-1]).total_seconds() < TRIAL_ESPACO_MIN * 60)
+    inicio_dia = (agora - timedelta(hours=3)).replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(hours=3)   # meia-noite de Brasília
+    do_dia = [t for t in ts if t >= inicio_dia]   # pedido do João (27/10): o limite de 24 conta por dia (BRT), não em 24 h corridas
+    return len(do_dia) >= TRIAL_MAX_24H or (ts and (agora - ts[-1]).total_seconds() < TRIAL_ESPACO_MIN * 60)
 
 
 FALHAS_GERAIS = [0]   # falhas seguidas de itens diferentes (zera quando algo posta)
