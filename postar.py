@@ -205,7 +205,12 @@ def trials_recentes(postados, agora):
     return sorted(ts)
 
 
+TRIAL_NAO_ANTES = datetime(2026, 10, 27, 11, 0, tzinfo=timezone.utc)   # 08h de Brasília: o Instagram descansa a noite toda antes da próxima tentativa (pedido do João)
+
+
 def sem_vaga_de_teste(postados, agora):
+    if agora < TRIAL_NAO_ANTES:
+        return True
     ts = trials_recentes(postados, agora)
     return len(ts) >= TRIAL_MAX_24H or (ts and (agora - ts[-1]).total_seconds() < TRIAL_ESPACO_MIN * 60)
 
