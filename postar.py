@@ -441,7 +441,9 @@ def rodada():
     agora = datetime.now(timezone.utc)
     ate = postados.get("_fb_pausa_ate")
     FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
-    agenda = agenda + trials_do_dia_anterior(agenda, postados, agora) + itens_finais(agenda, postados)
+    # pedido do João (27/10): só os cortes NOVOS (campeonatos pe/rs) saem como teste; sem teste automático 24 h antes e sem os rt antigos
+    agenda = [i for i in agenda if not (i.get("trial") and i["id"].startswith("rt"))]
+    agenda = agenda + itens_finais(agenda, postados)
     cancel = {c for f in postados.get("_finais", {}).values() for c in f.get("cancelados", [])}
     agenda = [i for i in agenda if i["id"] not in cancel]
     feitos = 0
