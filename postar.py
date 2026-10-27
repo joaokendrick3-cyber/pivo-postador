@@ -38,7 +38,13 @@ def esperar(cid, tentativas=60):
     """Espera o Instagram terminar de processar um container (até ~10 min)."""
     for _ in range(tentativas):
         time.sleep(10)
-        st = chamar(f"{API}/{cid}?fields=status_code,status&access_token={TOKEN}")
+        try:
+            st = chamar(f"{API}/{cid}?fields=status_code,status&access_token={TOKEN}")
+        except RuntimeError as e:
+            if '"is_transient":true' in str(e):   # limite de requisições ou erro passageiro: espera mais e continua, sem perder o container
+                time.sleep(20)
+                continue
+            raise
         if st.get("status_code") == "FINISHED":
             return
         if st.get("status_code") in ("ERROR", "EXPIRED"):
@@ -73,15 +79,25 @@ def criar_container(item, uid):
     raise RuntimeError("tipo não suportado: " + item["tipo"])
 
 
+_CONTAINERS = {}   # id do item -> container já criado (reaproveitado nas novas tentativas; expira em 24 h no Instagram)
+
+
 def publicar(item, uid):
-    cid = criar_container(item, uid)
+    cid = _CONTAINERS.get(item["id"])
+    if not cid:
+        cid = criar_container(item, uid)
+        _CONTAINERS[item["id"]] = cid
+    else:
+        esperar(cid, 30)
     espera = (datetime.fromisoformat(item["quando"]) - datetime.now(timezone.utc)).total_seconds()
     if espera > 0 and not DRY_RUN:  # container pronto antes da hora: espera e publica no minuto certo
         print("aguardando", int(espera), "s para", item["id"], flush=True)
         time.sleep(espera)
     if DRY_RUN:  # teste a seco: o item foi aceito pelo Instagram, mas NÃO é publicado
         return "TESTE-" + cid
-    return chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
+    mid = chamar(f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": TOKEN})["id"]
+    _CONTAINERS.pop(item["id"], None)
+    return mid
 
 
 def esperar_hora(item):
@@ -154,6 +170,7 @@ def estado_do_item(postados, iid):
     return {"ig": v} if "media_id" in v else v   # formato antigo era só do Instagram
 
 
+ESPERA_GLOBAL = [datetime.min.replace(tzinfo=timezone.utc)]   # até quando não tentar postar nada (limite de requisições da API)
 ESPERA_ERRO = {}   # (item, rede) -> até quando não tentar de novo (evita martelar a API depois de um erro)
 _UID = None
 
@@ -390,6 +407,10 @@ def rodada():
             continue
         if feitos >= MAX_POR_RODADA:
             break
+        if all(ESPERA_ERRO.get((item["id"], r), agora) > agora for r in pend):
+            continue   # ainda esperando depois de um erro: passa para o próximo sem gastar a cota da rodada
+        if ESPERA_GLOBAL[0] > agora:
+            break      # a API está limitando as chamadas: não insiste agora
         uid = uid_ig()
         for rede in pend:  # Instagram primeiro (ele espera a hora exata); o Facebook só sai se o Instagram saiu
             if ESPERA_ERRO.get((item["id"], rede), agora) > agora:
@@ -411,6 +432,10 @@ def rodada():
                 postados.setdefault("_erros", {})[f"{item['id']}:{rede}"] = str(e)[:300]
                 print("ERRO", rede, item["id"], e, flush=True)
                 anotar_erro((item["id"], rede), str(e))
+                if "processamento falhou" in str(e):
+                    _CONTAINERS.pop(item["id"], None)
+                if '"is_transient":true' in str(e) or "request limit" in str(e):   # limite da API ou erro passageiro: pausa geral de 10 min
+                    ESPERA_GLOBAL[0] = datetime.now(timezone.utc) + timedelta(minutes=10)
                 if rede == "fb" and '"code":368' in str(e):
                     postados["_fb_pausa_ate"] = (datetime.now(timezone.utc) + timedelta(hours=PAUSA_FB_HORAS)).isoformat()
                     FB_PAUSADO = True
