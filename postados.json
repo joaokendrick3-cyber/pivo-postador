@@ -10,7 +10,7 @@
   "pe12-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"Ah7L6bXusmlJnJOMj8ctEcU\"}}",
   "pe13-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"Alw5tGbNrNl_LpeHCsSCJDA\"}}",
   "pe14-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"Ae1HqQQQ7Ip_l5O6MZWE0gv\"}}",
-  "pe15-trial:ig": "HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AHB4W_ivgH2VkdT6Bm-L_AE\"}}"
+  "pe15-trial:ig": "HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":4,\"error_subcode\":1349210,\"error_user_title\":\"Rate Limit Exceeded\",\"error_user_msg\":\"You are hitting rate-limits on the node that you are attempting to fetch. Please wait and try agai"
  },
  "_stories": {
   "2026-10-22_09": {
