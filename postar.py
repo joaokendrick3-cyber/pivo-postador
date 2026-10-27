@@ -188,6 +188,28 @@ def uid_ig():
     return _UID
 
 
+# ---- limite (não oficial) de reels de TESTE do Instagram: relatos de ~20 por dia; aqui o robô falhou no 25º teste em 24 h (26/10, 20h10 UTC:
+# 24 testes entre 25/10 21h30 e 26/10 20h10, depois só erro 500 no media_publish). Por segurança: no máximo 20 testes em 24 h e 40 min entre dois testes.
+TRIAL_MAX_24H = 20
+TRIAL_ESPACO_MIN = 40
+
+
+def trials_recentes(postados, agora):
+    """Horários (UTC) em que testes foram ao ar nas últimas 24 h."""
+    ts = []
+    for k, v in postados.items():
+        if k.endswith("-trial") and isinstance(v, dict) and "ig" in v:
+            t = datetime.fromisoformat(v["ig"]["em"])
+            if t > agora - timedelta(hours=24):
+                ts.append(t)
+    return sorted(ts)
+
+
+def sem_vaga_de_teste(postados, agora):
+    ts = trials_recentes(postados, agora)
+    return len(ts) >= TRIAL_MAX_24H or (ts and (agora - ts[-1]).total_seconds() < TRIAL_ESPACO_MIN * 60)
+
+
 FALHAS_GERAIS = [0]   # falhas seguidas de itens diferentes (zera quando algo posta)
 FALHAS_SEGUIDAS = {}   # (item, rede) -> quantas falhas seguidas (zera quando posta)
 
@@ -420,6 +442,8 @@ def rodada():
             continue
         if feitos >= MAX_POR_RODADA:
             break
+        if item.get("trial") and sem_vaga_de_teste(postados, agora):
+            continue   # limite de testes do Instagram: espera abrir vaga (24 h depois do mais antigo) sem tentar publicar
         if all(ESPERA_ERRO.get((item["id"], r), agora) > agora for r in pend):
             continue   # ainda esperando depois de um erro: passa para o próximo sem gastar a cota da rodada
         if any(FALHAS_SEGUIDAS.get((item["id"], r)) for r in pend):   # item que já falhou: no máximo 1 nova tentativa por rodada, para não tirar a vez dos outros
