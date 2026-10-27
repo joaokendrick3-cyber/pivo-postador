@@ -363,18 +363,24 @@ def escolher_finais(agenda, postados, agora):
                     med[base] = {"erro": str(e)[:150]}
                     continue
             cand[base] = m
-        if not cand:
-            continue
         por_v = sorted(cand, key=lambda b: -cand[b]["views"])
         por_c = sorted(cand, key=lambda b: -cand[b]["curtidas"])
         pos = {b: por_v.index(b) + por_c.index(b) for b in cand}
         ranking = sorted(cand, key=lambda b: (pos[b], -cand[b]["views"]))
         escolhidos = ranking[:len(camp["vagas"])]
+        # plano B: se o Instagram não aceitou testes suficientes, completa as vagas com a ordem de preferência (corte vai direto, sem teste)
+        todos = [i["id"][:-len("-trial")] for i in testes_do_campeonato(camp, agenda)]
+        pref = [b for b in camp.get("preferencia", []) if b in todos] + [b for b in todos if b not in camp.get("preferencia", [])]
+        sem_teste = [b for b in pref if b not in cand][:max(0, len(camp["vagas"]) - len(escolhidos))]
+        itens = [{"base": b, "quando": q, "views": cand[b]["views"], "curtidas": cand[b]["curtidas"]}
+                 for b, q in zip(escolhidos, camp["vagas"])]
+        for b, q in zip(sem_teste, camp["vagas"][len(escolhidos):]):
+            itens.append({"base": b, "quando": q, "views": None, "curtidas": None, "sem_teste": True})
+        usados = {e["base"] for e in itens}
         postados.setdefault("_finais", {})[nome] = {
-            "escolhido_em": agora.isoformat(), "candidatos": len(cand),
-            "itens": [{"base": b, "quando": q, "views": cand[b]["views"], "curtidas": cand[b]["curtidas"]}
-                      for b, q in zip(escolhidos, camp["vagas"])],
-            "perdedores": [b for b in ranking if b not in escolhidos]}
+            "escolhido_em": agora.isoformat(), "candidatos": len(cand), "completados_sem_teste": len(sem_teste),
+            "itens": itens, "perdedores": [b for b in ranking if b not in usados],
+            "cancelados": [b + "-trial" for b in todos if b not in cand and b not in usados]}
         print("CAMPEONATO", nome, "decidido:", escolhidos, flush=True)
         mudou = True
     return mudou
@@ -436,6 +442,8 @@ def rodada():
     ate = postados.get("_fb_pausa_ate")
     FB_PAUSADO = bool(ate) and datetime.fromisoformat(ate) > agora
     agenda = agenda + trials_do_dia_anterior(agenda, postados, agora) + itens_finais(agenda, postados)
+    cancel = {c for f in postados.get("_finais", {}).values() for c in f.get("cancelados", [])}
+    agenda = [i for i in agenda if i["id"] not in cancel]
     feitos = 0
     retentou = False
     for item in sorted(agenda, key=lambda x: x["quando"]):
