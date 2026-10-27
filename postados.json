@@ -7,7 +7,6 @@
  },
  "_erros": {
   "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
-  "pe12-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"Asp9uieT3i7CtfPL9eoBkCe\"}}",
   "pe13-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AHUCZhrMRpQG-c03su90DxW\"}}",
   "pe14-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"AE6wp7dIwAEEIo26xq6B6co\"}}",
   "pe15-trial:ig": "[media_publish] HTTP 500: {\"error\":{\"message\":\"An unexpected error has occurred. Please retry your request later.\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"fbtrace_id\":\"A0siu9hLj79QAbtKK6Quztr\"}}",
@@ -436,6 +435,12 @@
   "ig": {
    "media_id": "18340798129257473",
    "em": "2026-10-27T10:25:43.293382+00:00"
+  }
+ },
+ "pe12-trial": {
+  "ig": {
+   "media_id": "17926600497436044",
+   "em": "2026-10-27T11:06:49.329543+00:00"
   }
  }
 }
