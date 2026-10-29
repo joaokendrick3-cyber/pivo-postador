@@ -9,7 +9,7 @@
   "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
   "nb01:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119108792101516'}",
   "pe39-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119109143101516'}",
-  "pe19-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119104106101516'}",
+  "pe19-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119109224101516'}",
   "pe02-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119101466101516'}"
  },
  "_stories": {
