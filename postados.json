@@ -1357,6 +1357,106 @@
     "pe30"
    ],
    "cancelados": []
+  },
+  "rs": {
+   "escolhido_em": "2026-11-01T10:00:46.300555+00:00",
+   "candidatos": 30,
+   "completados_sem_teste": 0,
+   "itens": [
+    {
+     "base": "rs17",
+     "quando": "2026-11-01T16:00:00+00:00",
+     "views": 2267,
+     "curtidas": 30
+    },
+    {
+     "base": "rs13",
+     "quando": "2026-11-01T18:00:00+00:00",
+     "views": 1501,
+     "curtidas": 9
+    },
+    {
+     "base": "rs15",
+     "quando": "2026-11-01T20:00:00+00:00",
+     "views": 939,
+     "curtidas": 12
+    },
+    {
+     "base": "rs20",
+     "quando": "2026-11-01T22:00:00+00:00",
+     "views": 671,
+     "curtidas": 4
+    },
+    {
+     "base": "rs26",
+     "quando": "2026-11-02T16:00:00+00:00",
+     "views": 448,
+     "curtidas": 5
+    },
+    {
+     "base": "rs09",
+     "quando": "2026-11-02T18:00:00+00:00",
+     "views": 511,
+     "curtidas": 3
+    },
+    {
+     "base": "rs24",
+     "quando": "2026-11-02T20:00:00+00:00",
+     "views": 607,
+     "curtidas": 3
+    },
+    {
+     "base": "rs30",
+     "quando": "2026-11-02T22:00:00+00:00",
+     "views": 348,
+     "curtidas": 4
+    },
+    {
+     "base": "rs02",
+     "quando": "2026-11-03T16:00:00+00:00",
+     "views": 440,
+     "curtidas": 3
+    },
+    {
+     "base": "rs10",
+     "quando": "2026-11-03T18:00:00+00:00",
+     "views": 341,
+     "curtidas": 3
+    },
+    {
+     "base": "rs07",
+     "quando": "2026-11-03T20:00:00+00:00",
+     "views": 320,
+     "curtidas": 4
+    },
+    {
+     "base": "rs21",
+     "quando": "2026-11-03T22:00:00+00:00",
+     "views": 351,
+     "curtidas": 1
+    }
+   ],
+   "perdedores": [
+    "rs04",
+    "rs22",
+    "rs03",
+    "rs01",
+    "rs31",
+    "rs18",
+    "rs05",
+    "rs19",
+    "rs11",
+    "rs25",
+    "rs12",
+    "rs28",
+    "rs29",
+    "rs06",
+    "rs08",
+    "rs23",
+    "rs14",
+    "rs16"
+   ],
+   "cancelados": []
   }
  },
  "rs23-trial": {
