@@ -27,7 +27,8 @@
   "rs26-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119894981101516'}",
   "rs09-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119895002101516'}",
   "rs24-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119897492101516'}",
-  "rs30-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119897495101516'}"
+  "rs30-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119897495101516'}",
+  "rs02-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18119899355101516'}"
  },
  "_stories": {
   "2026-10-22_09": {
