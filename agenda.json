@@ -1930,5 +1930,20 @@
    "imagens/cr80/08.jpg"
   ],
   "legenda": "O Brasil cresceu, mas as famílias compraram menos. O PIB, que é tudo o que o país produz e vende, subiu 0,5% de abril a junho de 2026 em relação aos 3 meses anteriores, e 2,0% em relação ao mesmo período de 2025, segundo o IBGE. Só que o crescimento veio quase todo do campo (+2,8%): a indústria e os serviços ficaram praticamente parados.\n\nDe cada R$ 100 que o país produz, R$ 62 vêm das compras das famílias, e essa parte encolheu 0,4%. O governo gastou um pouco mais (+0,4%) e as empresas investiram mais em máquinas e obras (+1,2%). Com a Selic em 13,75%, o crédito está caro, o que pode segurar o consumo. O próximo PIB, de julho a setembro, sai no início de dezembro.\n\nVocê sentiu o consumo desacelerar na sua rotina?\n\nFonte: IBGE (Contas Nacionais Trimestrais, 2º tri/2026) e Banco Central (Selic).\n\n#pib #economia #consumo #ibge #pivoeconomico"
+ },
+ {
+  "id": "cr81",
+  "tipo": "carrossel",
+  "quando": "2026-11-24T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr81/01.jpg",
+   "imagens/cr81/02.jpg",
+   "imagens/cr81/03.jpg",
+   "imagens/cr81/04.jpg",
+   "imagens/cr81/05.jpg",
+   "imagens/cr81/06.jpg",
+   "imagens/cr81/07.jpg"
+  ],
+  "legenda": "O Brasil tem o maior juro real do mundo, segundo um ranking de 40 países. Juro real é o que sobra do juro depois de descontar a inflação. A Selic está em 13,75% ao ano e o IPCA de 12 meses em 4,63% (IBGE), o que dá cerca de 8,7% de juro real na conta simples do PIVÔ. No ranking da MoneYou e da Lev Intelligence, de 4 de novembro, que usa a inflação esperada, o Brasil aparece em primeiro, com 9,49%, seguido de Turquia (7,77%), Argentina (6,80%), Rússia (6,57%) e Colômbia (4,05%). A média dos 40 países é 1,28%.\n\nPara quem aplica, o dinheiro rende bem acima dos preços. Para quem pega empréstimo, a parcela pesa mais e o crédito fica caro. A Selic saiu de 15% para 13,75% em 5 cortes de 0,25 ponto e o Copom manteve a taxa em novembro.\n\nVocê já comparou o juro do seu financiamento com a inflação?\n\nFonte: Banco Central, IBGE, MoneYou e Lev Intelligence (2026).\n\n#jurosreais #selic #economia #inflacao #pivoeconomico"
  }
 ]
