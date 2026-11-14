@@ -1794,5 +1794,80 @@
    "ig"
   ],
   "sem_trial": true
+ },
+ {
+  "id": "cr72",
+  "tipo": "carrossel",
+  "quando": "2026-11-16T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr72/01.jpg",
+   "imagens/cr72/02.jpg",
+   "imagens/cr72/03.jpg",
+   "imagens/cr72/04.jpg",
+   "imagens/cr72/05.jpg",
+   "imagens/cr72/06.jpg",
+   "imagens/cr72/07.jpg"
+  ],
+  "legenda": "Inflação em 12 meses: o IPCA acumulado chegou a 4,63% em outubro e passou do teto de 4,5% da meta, segundo o IBGE.\n\nO mês em si foi fraco, +0,14%. O problema é o acumulado: em setembro estava em 4,58%. O tomate subiu 19,6% em outubro, o arroz 4,8% e as carnes 2,3%, enquanto passagem aérea (-9,2%) e energia elétrica (-1,9%) seguraram o índice. O Banco Central olha esse acumulado para decidir a Selic, hoje em 13,75%, na reunião de 8 e 9 de dezembro.\n\nQual item do mercado mais pesou no seu bolso nos últimos meses?\n\nFonte: IBGE (IPCA outubro/2026, divulgado em 12/11/2026) e Banco Central (Copom).\n\n#ipca #inflacao #selic #custodevida #pivoeconomico"
+ },
+ {
+  "id": "cr73",
+  "tipo": "carrossel",
+  "quando": "2026-11-17T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr73/01.jpg",
+   "imagens/cr73/02.jpg",
+   "imagens/cr73/03.jpg",
+   "imagens/cr73/04.jpg",
+   "imagens/cr73/05.jpg",
+   "imagens/cr73/06.jpg",
+   "imagens/cr73/07.jpg"
+  ],
+  "legenda": "Exportações do Brasil para os EUA: a fatia americana nas vendas externas brasileiras caiu de 12,1% para 9,4% no primeiro semestre de 2026, o menor nível desde 1997, segundo a Amcham Brasil.\n\nDe janeiro a setembro, o Brasil vendeu US$ 27,46 bilhões aos EUA, queda de 6,5% (MDIC). Desde 22 de julho vale a tarifa de 25% da Seção 301, que, junto com outra medida, alcança 23,1% das exportações. Quem ficou de fora das novas sobretaxas: 52,7% do que o Brasil vendeu em 2024. As exportações totais do Brasil cresceram, e a China subiu de 28,9% para 31,5% da pauta. A negociação segue em curso.\n\nQuem mais sente essa conta, o exportador ou o consumidor?\n\nFonte: MDIC e Amcham Brasil (2026).\n\n#tarifas #exportacoes #comercioexterior #brasilxeua #pivoeconomico"
+ },
+ {
+  "id": "cr74",
+  "tipo": "carrossel",
+  "quando": "2026-11-18T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr74/01.jpg",
+   "imagens/cr74/02.jpg",
+   "imagens/cr74/03.jpg",
+   "imagens/cr74/04.jpg",
+   "imagens/cr74/05.jpg",
+   "imagens/cr74/06.jpg",
+   "imagens/cr74/07.jpg"
+  ],
+  "legenda": "Premiação da Libertadores 2026: o campeão leva US$ 25 milhões, valor recorde, cerca de R$ 141 milhões pelo dólar de 13 de novembro (R$ 5,6518, PTAX do Banco Central). O vice recebe US$ 7 milhões, dentro de um total de US$ 220 milhões distribuídos pela Conmebol.\n\nO campeão do Brasileirão deve receber em torno de R$ 48 milhões, estimativa da CBF, já que não existe tabela oficial por posição e parte do valor vem da cota de TV. Na conta, a Libertadores paga quase 3 vezes mais. No sábado, 21 de novembro, às 16h30, Palmeiras e Flamengo se enfrentam pela 36ª rodada, com o Flamengo na frente por 3 pontos.\n\nPara um clube, qual título pesa mais, o do caixa ou o da torcida?\n\nFonte: Conmebol, CBF e Banco Central (2026). O valor do Brasileirão é estimativa.\n\n#libertadores #brasileirao #flamengo #palmeiras #pivoeconomico"
+ },
+ {
+  "id": "cr75",
+  "tipo": "carrossel",
+  "quando": "2026-11-19T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr75/01.jpg",
+   "imagens/cr75/02.jpg",
+   "imagens/cr75/03.jpg",
+   "imagens/cr75/04.jpg",
+   "imagens/cr75/05.jpg",
+   "imagens/cr75/06.jpg",
+   "imagens/cr75/07.jpg"
+  ],
+  "legenda": "Poupança ou Tesouro Selic? Em uma simulação com R$ 10 mil por 12 meses, a poupança rende R$ 834, cerca de 26% menos que os R$ 1.135 do Tesouro Selic, já descontado o imposto de renda.\n\nA conta usa dados do Banco Central de 12 e 13 de novembro: Selic em 13,75%, CDI em 13,65% e poupança a 0,5% ao mês mais a TR, o que dá 8,34% ao ano e fica isenta de IR. O CDB a 100% do CDI soma R$ 1.126 líquidos (IR de 17,5%) e uma LCI ou LCA a 90% do CDI, que não paga IR, chega a R$ 1.228. As taxas de CDB e LCI/LCA são exemplos, e se a Selic cair no Copom de 9 de dezembro, o resultado muda. Cada produto tem liquidez e risco próprios, e o FGC garante até R$ 250 mil por CPF em cada instituição (CDB, LCI, LCA e poupança). Isto é informação, não recomendação.\n\nOnde está a sua reserva hoje?\n\nFonte: Banco Central, Tesouro Direto, FGC e Receita Federal (2026).\n\n#poupanca #tesouroselic #cdb #selic #pivoeconomico"
+ },
+ {
+  "id": "cr77",
+  "tipo": "carrossel",
+  "quando": "2026-11-20T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr77/01.jpg",
+   "imagens/cr77/02.jpg",
+   "imagens/cr77/03.jpg",
+   "imagens/cr77/04.jpg",
+   "imagens/cr77/05.jpg",
+   "imagens/cr77/06.jpg",
+   "imagens/cr77/07.jpg"
+  ],
+  "legenda": "Renda por cor ou raça: em 2025, o rendimento médio mensal dos brancos foi de R$ 4.577, contra R$ 2.735 de pretos e pardos, uma diferença de 67%, segundo a PNAD Contínua do IBGE.\n\nA distância caiu de 75% em 2012 para 66% em 2024, mas voltou a subir em 2025, para 67%. A fatia de pretos e pardos entre os ocupados com rendimento passou de 50,5% para 55%. Entre diretores e gerentes, negros ganham 34% menos que brancos, segundo a Síntese de Indicadores Sociais 2025. São médias, que não separam escolaridade, cargo nem região, e os números de pretos e pardos juntos são cálculo do PIVÔ (média ponderada).\n\nNo Dia da Consciência Negra, os números ajudam a medir onde estamos. Você vê essa diferença no seu ambiente de trabalho?\n\nFonte: IBGE, PNAD Contínua (SIDRA 7441) e Síntese de Indicadores Sociais (2025).\n\n#consciencianegra #desigualdade #renda #ibge #pivoeconomico"
  }
 ]
