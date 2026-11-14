@@ -37,3 +37,21 @@ def avisar(rotulo, media_id, api, token):
             s.send_message(msg)
     except Exception as e:  # noqa: BLE001
         print("aviso por e-mail falhou:", e, flush=True)
+
+
+def alertar(assunto, texto):
+    """E-mail de ALERTA (robô com problema). Mesmas regras: sem segredo ou com erro, não faz nada."""
+    senha = os.environ.get("GMAIL_APP_SENHA", "").replace(" ", "")
+    if not senha:
+        return
+    try:
+        msg = EmailMessage()
+        msg["Subject"] = assunto
+        msg["From"] = REMETENTE
+        msg["To"] = DESTINO
+        msg.set_content(texto)
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as s:
+            s.login(REMETENTE, senha)
+            s.send_message(msg)
+    except Exception as e:  # noqa: BLE001
+        print("alerta por e-mail falhou:", e, flush=True)

@@ -6,30 +6,7 @@
   }
  },
  "_erros": {
-  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
-  "nb01:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121523849101516'}",
-  "pe39-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121523912101516'}",
-  "pe19-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121523924101516'}",
-  "pe02-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121516721101516'}",
-  "pe14-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121516724101516'}",
-  "pe40-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121519430101516'}",
-  "pe23-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121519472101516'}",
-  "pe34-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121484960101516'}",
-  "pe08-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121485254101516'}",
-  "pe32-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121491185101516'}",
-  "pe24-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121491188101516'}",
-  "pe20-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121494686101516'}",
-  "pe18-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121494731101516'}",
-  "rs17-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121497716101516'}",
-  "rs13-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121497737101516'}",
-  "rs15-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121502156101516'}",
-  "rs20-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121502186101516'}",
-  "rs26-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121504817101516'}",
-  "rs09-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121504820101516'}",
-  "rs24-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121508360101516'}",
-  "rs30-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121508366101516'}",
-  "rs02-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121511147101516'}",
-  "rs10-final:ig": "[criar/processar] processamento falhou: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '18121511177101516'}"
+  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\""
  },
  "_stories": {
   "2026-10-22_09": {
@@ -1538,73 +1515,73 @@
    "itens": [
     {
      "base": "pe39",
-     "quando": "2026-10-29T16:00:00+00:00",
+     "quando": "2026-11-14T16:00:00+00:00",
      "views": 3373,
      "curtidas": 37
     },
     {
      "base": "pe19",
-     "quando": "2026-10-29T18:00:00+00:00",
+     "quando": "2026-11-14T18:00:00+00:00",
      "views": 2135,
      "curtidas": 57
     },
     {
      "base": "pe02",
-     "quando": "2026-10-29T20:00:00+00:00",
+     "quando": "2026-11-14T20:00:00+00:00",
      "views": 2237,
      "curtidas": 30
     },
     {
      "base": "pe14",
-     "quando": "2026-10-29T22:00:00+00:00",
+     "quando": "2026-11-14T22:00:00+00:00",
      "views": 2173,
      "curtidas": 26
     },
     {
      "base": "pe40",
-     "quando": "2026-10-30T16:00:00+00:00",
+     "quando": "2026-11-15T16:00:00+00:00",
      "views": 1467,
      "curtidas": 37
     },
     {
      "base": "pe23",
-     "quando": "2026-10-30T18:00:00+00:00",
+     "quando": "2026-11-15T18:00:00+00:00",
      "views": 1890,
      "curtidas": 16
     },
     {
      "base": "pe34",
-     "quando": "2026-10-30T20:00:00+00:00",
+     "quando": "2026-11-15T20:00:00+00:00",
      "views": 1667,
      "curtidas": 20
     },
     {
      "base": "pe08",
-     "quando": "2026-10-30T22:00:00+00:00",
+     "quando": "2026-11-15T22:00:00+00:00",
      "views": 1436,
      "curtidas": 21
     },
     {
      "base": "pe32",
-     "quando": "2026-10-31T16:00:00+00:00",
+     "quando": "2026-11-16T16:00:00+00:00",
      "views": 1692,
      "curtidas": 12
     },
     {
      "base": "pe24",
-     "quando": "2026-10-31T18:00:00+00:00",
+     "quando": "2026-11-16T18:00:00+00:00",
      "views": 1364,
      "curtidas": 18
     },
     {
      "base": "pe20",
-     "quando": "2026-10-31T20:00:00+00:00",
+     "quando": "2026-11-16T20:00:00+00:00",
      "views": 1534,
      "curtidas": 11
     },
     {
      "base": "pe18",
-     "quando": "2026-10-31T22:00:00+00:00",
+     "quando": "2026-11-16T22:00:00+00:00",
      "views": 1284,
      "curtidas": 16
     }
@@ -1649,73 +1626,73 @@
    "itens": [
     {
      "base": "rs17",
-     "quando": "2026-11-01T16:00:00+00:00",
+     "quando": "2026-11-17T16:00:00+00:00",
      "views": 2267,
      "curtidas": 30
     },
     {
      "base": "rs13",
-     "quando": "2026-11-01T18:00:00+00:00",
+     "quando": "2026-11-17T18:00:00+00:00",
      "views": 1501,
      "curtidas": 9
     },
     {
      "base": "rs15",
-     "quando": "2026-11-01T20:00:00+00:00",
+     "quando": "2026-11-17T20:00:00+00:00",
      "views": 939,
      "curtidas": 12
     },
     {
      "base": "rs20",
-     "quando": "2026-11-01T22:00:00+00:00",
+     "quando": "2026-11-17T22:00:00+00:00",
      "views": 671,
      "curtidas": 4
     },
     {
      "base": "rs26",
-     "quando": "2026-11-02T16:00:00+00:00",
+     "quando": "2026-11-18T16:00:00+00:00",
      "views": 448,
      "curtidas": 5
     },
     {
      "base": "rs09",
-     "quando": "2026-11-02T18:00:00+00:00",
+     "quando": "2026-11-18T18:00:00+00:00",
      "views": 511,
      "curtidas": 3
     },
     {
      "base": "rs24",
-     "quando": "2026-11-02T20:00:00+00:00",
+     "quando": "2026-11-18T20:00:00+00:00",
      "views": 607,
      "curtidas": 3
     },
     {
      "base": "rs30",
-     "quando": "2026-11-02T22:00:00+00:00",
+     "quando": "2026-11-18T22:00:00+00:00",
      "views": 348,
      "curtidas": 4
     },
     {
      "base": "rs02",
-     "quando": "2026-11-03T16:00:00+00:00",
+     "quando": "2026-11-19T16:00:00+00:00",
      "views": 440,
      "curtidas": 3
     },
     {
      "base": "rs10",
-     "quando": "2026-11-03T18:00:00+00:00",
+     "quando": "2026-11-19T18:00:00+00:00",
      "views": 341,
      "curtidas": 3
     },
     {
      "base": "rs07",
-     "quando": "2026-11-03T20:00:00+00:00",
+     "quando": "2026-11-19T20:00:00+00:00",
      "views": 320,
      "curtidas": 4
     },
     {
      "base": "rs21",
-     "quando": "2026-11-03T22:00:00+00:00",
+     "quando": "2026-11-19T22:00:00+00:00",
      "views": 351,
      "curtidas": 1
     }

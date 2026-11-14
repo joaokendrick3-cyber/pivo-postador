@@ -51,6 +51,9 @@ def checar_atrasos(problemas):
         redes = it.get("redes") or ["ig"]
         if "ig" in redes and "ig" not in (postados.get(it["id"]) or {}) and "media_id" not in (postados.get(it["id"]) or {}):
             problemas.append(f"ATRASADO: {it['id']} devia ter saído em {q.isoformat()} e não saiu.")
+    for iid, quando in (postados.get("_expirados") or {}).items():
+        if agora - datetime.fromisoformat(quando) < timedelta(hours=24):
+            problemas.append(f"EXPIRADO: {iid} passou de 6 h da hora e o robô NÃO postou (precisa de novo horário).")
     for chave, msg in (postados.get("_erros") or {}).items():
         if chave.endswith(":ig") or chave.startswith("story:"):
             problemas.append(f"ERRO registrado em {chave}: {str(msg)[:150]}")
@@ -81,6 +84,14 @@ def main():
             problemas.append(f"o próprio vigia falhou em {f.__name__}: {str(e)[:150]}")
     if problemas:
         print("\n".join("PROBLEMA: " + p for p in problemas))
+        if datetime.now(timezone.utc).hour % 6 == 0:   # e-mail só 4 vezes por dia (a cada 6 h) enquanto o problema durar
+            try:
+                import notificar
+                resumo = "\n".join("- " + p for p in problemas[:25])
+                notificar.alertar(f"PIVÔ: robô com {len(problemas)} problema(s)",
+                                  resumo + "\n\nVer: https://github.com/joaokendrick3-cyber/pivo-postador/actions")
+            except Exception as e:  # noqa: BLE001
+                print("e-mail do vigia falhou:", e)
         return 1
     print("tudo certo", datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     return 0

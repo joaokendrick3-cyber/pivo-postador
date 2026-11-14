@@ -21,5 +21,6 @@ jobs:
       - name: Vigiar
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GMAIL_APP_SENHA: ${{ secrets.GMAIL_APP_SENHA }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python vigia.py

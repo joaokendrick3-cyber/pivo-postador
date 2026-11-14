@@ -437,6 +437,37 @@ def limpar_arquivos_sem_uso(agenda, postados):
     return apagou
 
 
+ATRASO_MAX_H = 6   # item que passou mais de 6 h da hora não sai de uma vez (evita despejar dezenas de posts depois de uma pane): fica em _expirados e o vigia avisa
+
+
+def arquivos_do_item(item):
+    """Caminhos locais (relativos) que o item precisa para ir ao ar."""
+    return [item[k] for k in ("video", "capa") if item.get(k)] + list(item.get("imagens") or [])
+
+
+def arquivo_faltando(item):
+    """Primeiro arquivo do item que não existe no repositório (ou None). Sem isso o Instagram só devolve 'processamento falhou'."""
+    for rel in arquivos_do_item(item):
+        if not (PASTA / rel).is_file():
+            return rel
+    return None
+
+
+def fora_do_site(item):
+    """True se o vídeo/imagem ainda não está acessível no GitHub Pages (o site leva ~1 min para publicar depois de um push)."""
+    if DRY_RUN:
+        return False
+    for rel in arquivos_do_item(item)[:1]:
+        try:
+            req = urllib.request.Request(f"{BASE_URL}/{rel}", method="HEAD")
+            with urllib.request.urlopen(req, timeout=30) as r:
+                if r.status != 200:
+                    return True
+        except Exception:  # noqa: BLE001
+            return True
+    return False
+
+
 def rodada():
     global FB_PAUSADO
     agenda = json.loads((PASTA / "agenda.json").read_text(encoding="utf-8"))
@@ -461,6 +492,25 @@ def rodada():
             continue
         if feitos >= MAX_POR_RODADA:
             break
+        if not DRY_RUN and agora - datetime.fromisoformat(item["quando"]) > timedelta(hours=ATRASO_MAX_H):
+            exp = postados.setdefault("_expirados", {})
+            if item["id"] not in exp:
+                exp[item["id"]] = agora.isoformat()
+                print("EXPIRADO (passou de", ATRASO_MAX_H, "h da hora, não posto de uma vez):", item["id"], flush=True)
+                pf.write_text(json.dumps(postados, ensure_ascii=False, indent=1), encoding="utf-8")
+            continue
+        falta_arq = arquivo_faltando(item)
+        if falta_arq:   # não gasta chamada nem cota de falhas: o item só espera o arquivo voltar
+            if ESPERA_ERRO.get((item["id"], "arq"), agora) <= agora:
+                print("ARQUIVO AUSENTE:", item["id"], falta_arq, flush=True)
+                postados.setdefault("_erros", {})[f"{item['id']}:ig"] = "arquivo ausente no repositório: " + falta_arq
+                ESPERA_ERRO[(item["id"], "arq")] = agora + timedelta(minutes=60)
+            continue
+        if fora_do_site(item):   # acabou de subir e o site ainda não publicou: tenta de novo daqui a pouco, sem contar como falha
+            if ESPERA_ERRO.get((item["id"], "site"), agora) <= agora:
+                print("arquivo ainda não está no site, espero:", item["id"], flush=True)
+                ESPERA_ERRO[(item["id"], "site")] = agora + timedelta(minutes=2)
+            continue
         if item.get("trial") and sem_vaga_de_teste(postados, agora):
             continue   # limite de testes do Instagram: espera abrir vaga (24 h depois do mais antigo) sem tentar publicar
         if all(ESPERA_ERRO.get((item["id"], r), agora) > agora for r in pend):
@@ -518,6 +568,9 @@ def rodada():
     try:  # campeonatos: mede os testes com 24 h no ar e, na data de avaliação, escolhe os melhores para postar de verdade
         mudou = medir_testes(agenda, postados, agora)
         mudou = escolher_finais(agenda, postados, agora) or mudou
+        # os finais recém-decididos ainda não estavam na agenda desta rodada: sem isto a limpeza apagava o vídeo deles (bug de 29/10 que parou o robô)
+        ids = {i["id"] for i in agenda}
+        agenda = agenda + [x for x in itens_finais(agenda, postados) if x["id"] not in ids]
         if limpar_arquivos_sem_uso(agenda, postados):
             mudou = True
         if mudou:
