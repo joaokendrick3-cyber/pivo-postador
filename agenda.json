@@ -2021,5 +2021,13 @@
   "video": "videos/rl63.mp4",
   "capa": "capas/rl63.jpg",
   "legenda": "Financiar carro: um carro de R$ 60 mil em 48 parcelas vira R$ 93 mil no fim. Com a taxa média do Banco Central para financiamento de veículos (1,96% ao mês, ou 26,18% ao ano, setembro/2026), a parcela fica em R$ 1.940 e você paga R$ 33 mil só de juros, 55% a mais que o preço do carro.\n\nCompare: guardando a mesma parcela rendendo a Selic (13,75% ao ano, bruto, sem imposto), em 27 meses você teria R$ 60 mil e compraria o carro à vista, economizando uns R$ 40 mil. Simulação com preço do carro constante; a taxa real de cada contrato muda.\n\nSe for financiar: prazo menor custa menos (36x = R$ 84 mil; 48x = R$ 93 mil; 60x = R$ 103 mil, na mesma taxa) e peça o CET, o custo efetivo total, em vários bancos.\n\nManda pra quem quer financiar um carro e segue o PIVÔ: economia sem enrolação.\n#financiamento #carro #juros #educacaofinanceira #pivoeconomico"
+ },
+ {
+  "id": "rl64",
+  "tipo": "reel",
+  "quando": "2026-11-25T12:00:00+00:00",
+  "video": "videos/rl64.mp4",
+  "capa": "capas/rl64.jpg",
+  "legenda": "Poupança ou CDI? Em 12 meses (novembro/2025 a outubro/2026), R$ 10 mil na poupança viraram R$ 10.829. No CDI, mesmo depois do imposto de renda de 17,5%, viraram R$ 11.174. O ganho do CDI foi 42% maior.\n\nOs números (Banco Central): poupança 8,29%, CDI 14,23% (antes do imposto), inflação IPCA 4,63%. Para só manter o poder de compra, os R$ 10 mil precisavam virar R$ 10.463: a poupança deixou R$ 366 de sobra; o CDI, R$ 711.\n\nSe as taxas de hoje durassem 10 anos (simulação, as taxas mudam): poupança R$ 22 mil; CDI, depois do imposto de 15%, quase R$ 34 mil.\n\nTesouro Selic e CDB com liquidez diária acompanham o CDI; o FGC cobre até R$ 250 mil por CPF em cada instituição. Não é recomendação de investimento: compare as condições antes de aplicar.\n\nManda pra quem deixa dinheiro na poupança e segue o PIVÔ: economia sem enrolação.\n#poupanca #cdi #investimentos #educacaofinanceira #pivoeconomico"
  }
 ]
