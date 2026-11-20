@@ -2037,5 +2037,20 @@
   "video": "videos/rl65.mp4",
   "capa": "capas/rl65.jpg",
   "legenda": "IPCA de outubro: a inflação em 12 meses chegou a 4,63% e passou do teto da meta, que é 4,5% (a meta central é 3%). Dado do IBGE, divulgado em 12/11/2026.\n\nOutubro, sozinho, foi fraco: 0,14%. O que pesou foi o acumulado, que subiu de 4,58% para 4,63%. A comida em casa subiu 1,31% no mês, e a conta de luz ficou mais barata com a bandeira verde.\n\nPor que isso importa: o Banco Central olha a inflação para decidir os juros. A Selic está em 13,75% (decisão do Copom de 4 de novembro), e a próxima decisão sai em dezembro.\n\nNo bolso, em média: o que custava R$ 100 há um ano hoje custa R$ 104,63 (IPCA de 12 meses até outubro de 2026). Cada pessoa sente um número diferente, porque depende do que compra.\n\nManda pra quem acha tudo caro e segue o PIVÔ: economia sem enrolação.\n#ipca #inflacao #economia #educacaofinanceira #pivoeconomico"
+ },
+ {
+  "id": "cr76",
+  "tipo": "carrossel",
+  "quando": "2026-11-21T14:00:00+00:00",
+  "imagens": [
+   "imagens/cr76/01.jpg",
+   "imagens/cr76/02.jpg",
+   "imagens/cr76/03.jpg",
+   "imagens/cr76/04.jpg",
+   "imagens/cr76/05.jpg",
+   "imagens/cr76/06.jpg",
+   "imagens/cr76/07.jpg"
+  ],
+  "legenda": "Balanço da Nvidia: a receita foi de US$ 115,8 bilhões no trimestre encerrado em 25 de outubro, o dobro dos US$ 57,0 bilhões do mesmo trimestre do ano anterior (+103%). O lucro líquido subiu de US$ 31,9 bilhões para US$ 65,3 bilhões (+105%), e o lucro por ação foi de US$ 1,30 para US$ 2,70.\n\nO motor é o data center: US$ 107,6 bilhões, cerca de 93% de toda a receita (conta do PIVÔ). Para o próximo trimestre, a empresa projeta US$ 130 bilhões, mais ou menos 3%, sem contar vendas de data center para a China, e o trimestre terá uma semana a mais no calendário fiscal. O comunicado também cita Colette Kress como CEO interina, enquanto a empresa procura um novo CEO.\n\nResultado forte não garante que a ação suba. Manda pra quem acha que inteligência artificial é só moda passageira.\n\nFonte: Nvidia, comunicado de resultados do 3º trimestre fiscal de 2027 (17/11/2026). Conteúdo educativo, não é recomendação.\n\n#nvidia #balanco #inteligenciaartificial #bolsaamericana #pivoeconomico"
  }
 ]
