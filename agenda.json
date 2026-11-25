@@ -2268,5 +2268,65 @@
    "imagens/cr93/06.jpg"
   ],
   "legenda": "Nove pessoas votam em um número que mexe com o seu empréstimo, o seu investimento e a sua compra a prazo. É o Copom, formado pelo presidente do Banco Central e oito diretores.\n\nA Selic está em 13,75% ao ano. Na quarta, 9 de dezembro, o comitê decide se corta, mantém ou sobe. Um dos pontos na mesa é a inflação de 12 meses, que chegou a 4,63% em outubro, acima do teto de 4,5%.\n\nQuando o resultado sair, olhe três coisas: o número, o placar dos votos e o recado sobre os próximos passos.\n\nSe você tivesse um voto, qual botão apertaria? Manda pra quem tem boleto ou dinheiro guardado.\n\nFontes: Banco Central e IBGE (out/2026). Conteúdo educativo, sem previsão.\n#selic #copom #juros #economia #pivoeconomico"
+ },
+ {
+  "id": "gf01-trial",
+  "tipo": "reel",
+  "trial": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-11-25T15:15:00+00:00",
+  "video": "videos/gf01.mp4",
+  "capa": "capas/gf01.jpg",
+  "legenda": "Juro a zero e preço de imóvel: Paulo Guedes explica por que as propriedades sobem quando a taxa cai.\n\nA lógica: quanto menor o juro usado na conta, mais vale hoje a renda que um imóvel ou uma ação pode dar no futuro. É a visão dele; na vida real, renda, oferta e localização também pesam.\n\nOs imóveis do seu bairro subiram quando o juro caiu? Manda pra quem está pensando em comprar.\n\nCorte do Flow Podcast #271 com Paulo Guedes.\n#juros #imoveis #pauloguedes #economia #pivoeconomico"
+ },
+ {
+  "id": "gf02-trial",
+  "tipo": "reel",
+  "trial": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-11-25T17:00:00+00:00",
+  "video": "videos/gf02.mp4",
+  "capa": "capas/gf02.jpg",
+  "legenda": "O segredo do preço dos imóveis, segundo Paulo Guedes: olhe para a taxa de juro.\n\nA lógica: quanto menor o juro usado na conta, mais vale hoje a renda que um imóvel ou uma ação pode dar no futuro. É a visão dele; na vida real, renda, oferta e localização também pesam.\n\nOs imóveis do seu bairro subiram quando o juro caiu? Manda pra quem está pensando em comprar.\n\nCorte do Flow Podcast #271 com Paulo Guedes.\n#juros #imoveis #pauloguedes #economia #pivoeconomico"
+ },
+ {
+  "id": "gf03-trial",
+  "tipo": "reel",
+  "trial": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-11-25T19:00:00+00:00",
+  "video": "videos/gf03.mp4",
+  "capa": "capas/gf03.jpg",
+  "legenda": "Juro cai, imóvel sobe: o gráfico mostra a conta que Paulo Guedes faz nesta conversa.\n\nA lógica: quanto menor o juro usado na conta, mais vale hoje a renda que um imóvel ou uma ação pode dar no futuro. É a visão dele; na vida real, renda, oferta e localização também pesam.\n\nGráfico: conta simplificada do PIVÔ (aluguel do ano dividido pelo juro).\n\nOs imóveis do seu bairro subiram quando o juro caiu? Manda pra quem está pensando em comprar.\n\nCorte do Flow Podcast #271 com Paulo Guedes.\n#juros #imoveis #pauloguedes #economia #pivoeconomico"
+ },
+ {
+  "id": "gf04-trial",
+  "tipo": "reel",
+  "trial": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-11-25T21:00:00+00:00",
+  "video": "videos/gf04.mp4",
+  "capa": "capas/gf04.jpg",
+  "legenda": "Guedes explicou em 30 segundos por que o preço do imóvel depende do juro.\n\nA lógica: quanto menor o juro usado na conta, mais vale hoje a renda que um imóvel ou uma ação pode dar no futuro. É a visão dele; na vida real, renda, oferta e localização também pesam.\n\nOs imóveis do seu bairro subiram quando o juro caiu? Manda pra quem está pensando em comprar.\n\nCorte do Flow Podcast #271 com Paulo Guedes.\n#juros #imoveis #pauloguedes #economia #pivoeconomico"
+ },
+ {
+  "id": "gf05-trial",
+  "tipo": "reel",
+  "trial": true,
+  "redes": [
+   "ig"
+  ],
+  "quando": "2026-11-25T23:00:00+00:00",
+  "video": "videos/gf05.mp4",
+  "capa": "capas/gf05.jpg",
+  "legenda": "\"A propriedade tende a infinito\": a frase de Paulo Guedes sobre o juro perto de zero.\n\nA lógica: quanto menor o juro usado na conta, mais vale hoje a renda que um imóvel ou uma ação pode dar no futuro. É a visão dele; na vida real, renda, oferta e localização também pesam.\n\nOs imóveis do seu bairro subiram quando o juro caiu? Manda pra quem está pensando em comprar.\n\nCorte do Flow Podcast #271 com Paulo Guedes.\n#juros #imoveis #pauloguedes #economia #pivoeconomico"
  }
 ]
