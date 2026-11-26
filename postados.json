@@ -6,7 +6,8 @@
   }
  },
  "_erros": {
-  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\""
+  "pp02:fb": "HTTP 400: {\"error\":{\"message\":\"Limitamos a frequ\\u00eancia com que voc\\u00ea pode postar, comentar ou fazer outras coisas em um determinado intervalo de tempo para ajudar a proteger a comunidade contra spam. Voc\\u00ea pode tentar novamente mais tarde. Saiba mais\",\"type\":\"OAuthException\",\"code\":368,\"",
+  "gf07-trial:ig": "arquivo ausente no repositório: videos/gf07.mp4"
  },
  "_stories": {
   "2026-10-22_09": {
@@ -3109,6 +3110,16 @@
   "ig": {
    "media_id": "17906042121673310",
    "em": "2026-11-26T16:01:16.637266+00:00"
+  }
+ },
+ "pr11": {
+  "ig": {
+   "media_id": "18135917428812244",
+   "em": "2026-11-26T18:00:07.752475+00:00"
+  },
+  "fb": {
+   "media_id": "1169710055565304",
+   "em": "2026-11-26T18:00:15.736710+00:00"
   }
  }
 }
